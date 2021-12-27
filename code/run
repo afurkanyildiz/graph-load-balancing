@@ -1,3 +1,6 @@
+#!/bin/bash
+# give matrix ID
+
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-make clean; make rewrite
-./build/rewrite 894
+make clean; make release
+./build/release $1
