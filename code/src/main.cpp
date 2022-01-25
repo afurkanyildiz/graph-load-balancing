@@ -41,14 +41,16 @@ int main(int argc, char *argv[]) {
 
   Analyzer* analyzer = new Analyzer(matrixCSR, matrixCSC);
    analyzer->buildLevels();
+   printf("Levellarda ki Node'lar\n");
    analyzer->printLevelTable();
-//   analyzer->printDAG();
-//   analyzer->printValues();
-//   analyzer->printLevels();
-//   analyzer->printLevelTable();
-//   analyzer->calculateFLOPS();
-//   analyzer->reportBefore();
-//   analyzer->printDependencies();
+   printf("Node'ların Bağımlılıkları\n");
+   analyzer->printDAG();
+   analyzer->printValues();
+   analyzer->printLevels();
+   //analyzer->printLevelTable();
+   analyzer->calculateFLOPS();
+   analyzer->reportBefore();
+   analyzer->printDependencies();
 
   return 0;
 }
