@@ -73,9 +73,11 @@ void Matrix::extractLCSC() {
     for (int i = 0; i < cols; i++) {
       count = 0;
       for (int j = colIdx[i]; j < colIdx[i + 1]; j++) {
+  //        cout << "rowPtr[" << j << "]= " << rowPtr[j] << ", " << "i= " << i << ", nnzPtr= " << nnzPtr << "\n";
         if (rowPtr[j] >= i) {
           rowPtrL.push_back(rowPtr[j]);
           if((rowPtr[j] == i) && (rowPtr[j] == 0)) {
+          //if(rowPtr[j] == i) {
             valsL.push_back(1.0); // vals[j];
           } else {
             valsL.push_back(vals[j]); // vals[j];
@@ -132,6 +134,7 @@ void Matrix::extractLCSR() {
         if (colIdx[j] <= i) {
           colIdxL.push_back(colIdx[j]);
           if((colIdx[j] == i) && (colIdx[j] == 0)) {
+          //if(colIdx[j] == i) {
             valsL.push_back(1.0); // vals[j];
           } else {
             valsL.push_back(vals[j]); // vals[j];

@@ -22,6 +22,7 @@ template <class T>
 int dumpToMem(vector<T>& data, const char* filePath, int numOfElements) {
   int fd;
   int result;
+  //size_t size = data.size() * sizeof(T);
   size_t size = numOfElements * sizeof(T);
 
   cout << "data size: " << data.size() << "\n";
@@ -47,6 +48,7 @@ int dumpToMem(vector<T>& data, const char* filePath, int numOfElements) {
   }
 
   T* map = static_cast<T*>(mmap(0, size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0));
+  //T (*map)[NUMINTS] = static_cast<T (*)[NUMINTS]> (mmap(0, FILESIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0));
   if(map == MAP_FAILED) {
     close(fd);
     perror("Error mmapping the file");
@@ -54,6 +56,7 @@ int dumpToMem(vector<T>& data, const char* filePath, int numOfElements) {
   }
 
   // TODO: vectorize
+  //for(int i = 0; i < data.size(); i++) 
   for(int i = 0; i < numOfElements; i++) 
     map[i] = data[i];
 
@@ -70,7 +73,15 @@ int dumpToMem(vector<T>& data, const char* filePath, int numOfElements) {
     exit(EXIT_FAILURE);
   }
 
+/*  cout << "VALS:\n";
+//  for(int i = 0; i < data.size(); i++) 
+  for(int i = 0; i < numOfElements; i++) 
+    cout << i << ": " << map[i] << "\n";
+  cout << "\n";*/
+
+
   if(munmap(map, size) == -1 || munmap(map_r, size) == -1)
+//  if(munmap(map, size) == -1)
     perror("Error un-mmapping the file");
 
   close(fd);
@@ -86,6 +97,7 @@ void flattenDumpToMem(Part* LCSR, const char* filePath, const char* filePathRows
   int numVals = LCSR->getNNZs();
   int numRows = LCSR->getRows();
 
+  //cout << "numRows: " << --numRows << " numVals: " << numVals << "\n";
   cout << "numRows: " << numRows << " numVals: " << numVals << "\n";
   cout << "rowPtr size: " << rowPtrLCSR.size() << " colIdx size: " << colIdxLCSR.size() << "\n";
 
@@ -136,6 +148,11 @@ void flattenDumpToMem(Part* LCSR, const char* filePath, const char* filePathRows
     exit(EXIT_FAILURE);
   }
 
+/*  cout << "flatData read\n";
+  for(int i = 0; i < numVals ; i++) 
+    cout << "[" << i << "]:" << flatData_r[i] << "\n";
+  cout << "\n";*/
+
   // rowPtrLCSR
   size = (numRows) * sizeof(int);
 
@@ -183,6 +200,11 @@ void flattenDumpToMem(Part* LCSR, const char* filePath, const char* filePathRows
     exit(EXIT_FAILURE);
   }
 
+  /*cout << "flatData read\n";
+  for(int i = 0; i < numRows ; i++) 
+    cout << "[" << i << "]:" << flatData_rr[i] << "\n";
+  cout << "\n";*/
+
 
   if(munmap(flatData, size) == -1 || munmap(flatData_r, size) == -1 || munmap(flatDataRows, size) == -1 || munmap(flatData_rr, size) == -1)
     perror("Error un-mmapping the file");
@@ -215,6 +237,10 @@ void readWorkloadPartition(vector<vector<int>>& partitionList) {
       vec.push_back(value);
     }
     partitionList.push_back(vec);
+   /* cout << "level:\n";
+    for(auto& v : vec)
+      cout << v << ", ";
+    cout << "\n";*/
   }
 
   file.close();
