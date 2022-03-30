@@ -6,16 +6,19 @@
 #include <set>
 #include "matrix.h"
 
+#ifdef REWRITE_ENABLED
 // TODO: make user defined
   // should be tuned according to DOP or some other metric(s)
   // REWRITE_UP >= REWRITE_DEPTH
 //  #define REWRITE_UP      3       // upper bound to start rewriting
   #define REWRITE_DEPTH   0
   #define REWRITE_PERCENT 5
+#endif
 
 
 using namespace std;
 
+// indegree & outdegree vectors of a row: dependencies and children
 typedef pair< vector<int>,vector<int> > Connectivity;
 typedef vector<Connectivity> DAG;
 
@@ -34,8 +37,10 @@ class Analyzer {
     vector<int> flopsPerLevel;
     map<int,double> flopsBelowAvg;
     map<int,double> flopsAboveAvg;
+    #ifdef REWRITE_ENABLED
       // levels to avoid altering levelTable by rewriting while traversing it.
       vector<int> flopsPerLevelRewrite;
+    #endif
 
     Matrix* matrixCSR;
     Matrix* matrixCSC;
@@ -68,15 +73,19 @@ class Analyzer {
     double getAvgFLOPSPerLevel();
     void separateRows(int levelNum, int rowStartIndex, int rowEndIndex, vector<int>& loopedRows, vector<int>& unrolledRows);
 
+    #ifdef REWRITE_ENABLED
       typedef map<int,pair<int,int>> ToBeRewritten;
 
       vector<int>& getFlopsPerLevelRewrite();
       int findMaxLevelOfPredecessors(int row);
       void correctAfterRewritingStrategy(vector<int>& emptyLevels);
+    #endif
 
     void buildLevels();
     void calculateFLOPS();
+    #ifdef REWRITE_ENABLED
       void calculateLevelsToBeRewritten();
+    #endif
 
     void printLevels();
     void printLevelTable();
@@ -84,7 +93,9 @@ class Analyzer {
     void printValues();
     void printFLOPSPerLevel();
     void reportBefore();
+    #ifdef REWRITE_ENABLED
       void printFLOPSPerLevelRewrite();
       void reportAfter();
       void printDependencies();
+    #endif
 };
