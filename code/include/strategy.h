@@ -1048,3 +1048,172 @@ class RewriteLowestIndegree : public RewritingStrategy {
     }
 };
 
+
+class RewriteByThreeCriteria : public RewritingStrategy {
+  protected:
+    map< int,map<int,int> > costMap;
+    vector<int> levelCost;
+
+    double avgCostPerLevel;
+    double avgInPerRow;
+    double avgIndegrePerLevel;
+    
+    map<int,double> flopsBelowAvg;
+    vector<int> numOfLevels;
+
+    public:
+      RewriteByThreeCriteria(int rows, StartPoint startPoint, int* levels, vector< vector<int> >& levelTable, DAG& dag, vector<int>& flopsPerLevel, double avgFLOPSPerLevel, map<int,double> flopsBelowAvg) :
+                      RewritingStrategy(rows, startPoint, levels, levelTable, dag) {
+          levelCost = flopsPerLevel;
+
+          this->avgCostPerLevel = avgFLOPSPerLevel;
+          this->flopsBelowAvg = flopsBelowAvg;
+
+          cout << "Before Policy\n";
+          policy();
+          
+          cout << "num. of rewritten rows: " << toBeRewritten.size() << "\n";
+          printRowsToBeRewritten();
+
+      }
+
+      void policy() {
+        
+        AvgRowsPerLevel();
+        AvgInPerRow();
+        Rewrite(avgInPerRow,avgCostPerLevel,avgIndegrePerLevel);
+
+        //for(auto rit = flopsBelowAvg.rbegin(); rit != flopsBelowAvg.rend(); rit++) {
+    //    createCostMapMin(rit->first, rit_next->first);
+    //    rit_next++;
+       // Rewrite(rit->first, flopsBelowAvg.begin()->first,avgInPerRow, avgCostPerLevel,avgIndegrePerLevel);
+      //}
+        //Rewrite(avgInPerRow, avgCostPerLevel, avgIndegrePerLevel);
+        
+      }
+
+    int AvgInPerRow(){
+          double sum=0;
+          for(int i = 0; i < dag.size(); i++){
+
+            Connectivity& connectivity = dag[i];
+            vector<int>& parents = connectivity.first;
+            sum += parents.size();
+          }
+
+          //out<<dag.size()<<"\n";
+          avgIndegrePerLevel = sum / dag.size();        
+          cout<<"Total number of indegree:"<< sum <<"\n";
+          cout<<"Average Indegree Per Level:" << ceil(avgIndegrePerLevel)<<"\n";
+          
+          return ceil(avgIndegrePerLevel);
+      } 
+    int AvgRowsPerLevel()
+    { 
+      double rowSum = 0;
+      cout<<"Number of levels below average cost:"<< flopsBelowAvg.size()<< "\n";
+      // for(auto& level : flopsBelowAvg){
+      //   //if(level.second <= avgCostPerLevel)
+      //   numOfLevels.push_back(level.first);
+      //  }
+       //cout<< "Number of levels below average cost:"<<numOfLevels.size() <<"\n";
+       //cout<< levelTable[2].size();
+
+      for(auto it = flopsBelowAvg.begin(); it !=flopsBelowAvg.end(); it++){
+          //cout<< levelTable[it->first].size()<<"\n";
+          rowSum += levelTable[it->first].size();
+          //cout << "RowSum:" << rowSum<<"\n";      
+      }  
+      cout<<"Total number of rows:"<<rowSum<< "\n";
+      avgInPerRow = rowSum / flopsBelowAvg.size();
+      cout<<"Average number of rows per level at levels lower than Average Cost: "<< ceil(avgInPerRow)<<"\n";
+
+      return ceil(avgInPerRow);
+    } 
+    void Rewrite(double avgInPerRow, double avgCostPerLevel, double avgIndegrePerLevel)
+    {
+      for(auto it = flopsBelowAvg.rbegin(); it != flopsBelowAvg.rend(); it++){
+        //cout<< "Deneme:" << it->first << "\n";
+        vector<int>& levelRows = levelTable[it->first];
+
+        //double LevelRow = 0, RowIndegree = 0, CostPerLevel = 0 ;
+
+        //cout<< "Level Cost: "<< CostPerLevel << "\n";
+        //cout<<"Level Row:"<< LevelRow <<"\n";
+
+        for(auto& row : levelRows){
+
+          vector<int> predsWithMaxLevel;
+          vector<int> parents = dag[row].first;
+
+          //RowIndegree = parents.size();
+          //LevelRow = levelTable[it->first].size();
+          //CostPerLevel = flopsBelowAvg[it->second];
+          //cout<< "indegree : "<< RowIndegree <<"\n";
+          
+          int maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
+          while(maxLevel >= flopsBelowAvg.begin()->first){
+            for(auto& pred : predsWithMaxLevel)
+              expandPredsWith(pred,parents,row);
+            if(levelCost[maxLevel] < avgCostPerLevel && levelTable[maxLevel].size() < avgInPerRow && parents.size() < avgIndegrePerLevel){           
+              
+              int numOfPreds = parents.size();
+              int costRow = numOfPreds <= 4 ? (numOfPreds << 1) + 1 : (numOfPreds << 1);
+              levelCost[maxLevel] += costRow;
+             
+              //for(auto rewrittenRow = targetLevel.begin(); rewrittenRow != targetLevel.end(); rewrittenRow++){
+              toBeRewritten[row] = make_pair(levels[row],it->first);
+              //}
+            predsWithMaxLevel.clear();
+            }
+            else{
+              break;
+            }
+          }
+        }
+      }
+    }
+    void expandPredsWith(int row, vector<int>& preds, int child) {
+      auto it = lower_bound(preds.begin(),preds.end(),row);
+      // Replace row with first pred. of it instead of erasing and causing a shift.
+      // Then push back the rest since order doesnt matter.
+      if(it != preds.end()) {
+        vector<int>& parents = dag[row].first;
+
+        if(!parents.empty()) { 
+          preds[it-preds.begin()] = parents[0];
+          preds.insert(preds.end(),parents.begin()+1,parents.end());
+        }
+
+        sort(preds.begin(), preds.end());
+        auto it = unique(preds.begin(), preds.end());
+        preds.resize(std::distance(preds.begin(),it));
+      }
+      else
+        cout << "row " << row << " doesnt exist in predecessors\n";
+    }
+
+    // void Rewrite(double avgInPerRow, double avgCostPerLevel, double avgIndegrePerLevel)
+    // {
+    //   for(auto it = flopsBelowAvg.rbegin(); it != flopsBelowAvg.rend();it++)
+    //   {
+    //     map<int,int>& targetLevel = costMap[it->first];
+
+    //     //vector<int> parents = dag[row].first;
+
+    //     double currCost = it->second;
+    //     //double perRow = levelTable[it->first].size();
+    //     //double InPerLevel = parents[it->first].size();
+
+    //     for(auto rewrittenRow = targetLevel.rbegin();rewrittenRow != targetLevel.rend(); rewrittenRow++){
+    //       // if((currCost + rewrittenRow->second) < avgCostPerLevel && perRow < avgInPerRow && InPerLevel < avgIndegrePerLevel){
+    //       //   currCost += rewrittenRow->second;
+    //       //   perRow += levelTable[rewrittenRow ->first];
+    //       //   InPerLevel += parents[rewrittenRow -> first];
+    //       // }
+    //       cout << "First" << rewrittenRow->second <<"\n";
+    //     }
+
+    //   }
+    // }
+};

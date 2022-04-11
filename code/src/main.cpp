@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
   Analyzer* analyzer = new Analyzer(matrixCSR, matrixCSC);
  // analyzer->buildRowHist();
   analyzer->buildLevels();
-//  analyzer->printLevelTable();
+  analyzer->printLevelTable();
 //  analyzer->printDAG();
 //  analyzer->printValues();
   //analyzer->printRowHist();
@@ -59,11 +59,14 @@ int main(int argc, char *argv[]) {
   cout << "rewrite enabled\n";
     // MUST be called before the rewriting strategy
     analyzer->calculateLevelsToBeRewritten();
-    RewriteByLevel* rewritingStrategy = new RewriteByLevel(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, 
-                                        analyzer->getLevels(), analyzer->getLevelTable(), analyzer->getDAG(), analyzer->getFlopsBelowAvg());
+    //RewriteByLevel* rewritingStrategy = new RewriteByLevel(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, 
+    //                                    analyzer->getLevels(), analyzer->getLevelTable(), analyzer->getDAG(), analyzer->getFlopsBelowAvg());
     //RewriteByCostMap* rewritingStrategy = new RewriteByCostMap(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, 
     //                                    analyzer->getLevels(), analyzer->getLevelTable(), analyzer->getDAG(), analyzer->getFlopsPerLevel(),
-    //                                    analyzer->getAvgFLOPSPerLevel(), analyzer->getFlopsBelowAvg());
+    //                                  analyzer->getAvgFLOPSPerLevel(), analyzer->getFlopsBelowAvg());
+    RewriteByThreeCriteria* rewritingStrategy = new RewriteByThreeCriteria(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, 
+                                        analyzer->getLevels(), analyzer->getLevelTable(), analyzer->getDAG(), analyzer->getFlopsPerLevel(),
+                                      analyzer->getAvgFLOPSPerLevel(), analyzer->getFlopsBelowAvg());
 
     rewritingStrategy->shiftRowsUp();
 //    analyzer->printLevelTable();

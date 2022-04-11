@@ -22,7 +22,7 @@ algoritma:
    OSM = sum / number of rows
    
    OSS:
-   OSS = number of rows to be rewritten / number of levelsto be rewritten
+   OSS = number of rows to be rewritten / number of levels to be rewritten
    
 2. rewrite edilecek seviyeler OSM'ye gore belirlenir
 3. En alt seviyeden baslayarak, bir satır asagıdaki kosulların hepsini sagladıgı surece rewrite et
