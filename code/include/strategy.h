@@ -1160,10 +1160,10 @@ class RewriteByThreeCriteria : public RewritingStrategy {
              expandPredsWith(pred, parents, row);
 
            predsWithMaxLevel.clear();
-           int oldLevel = maxLevel;
+         int oldLevel = maxLevel;
 
-           // level with size > ARL cannot be a target level
-           // skip levels with cost > avgCostPerLevel (i.e. not in flopsBelowAvg)
+         // level with size > ARL cannot be a target level
+         // skip levels with cost > avgCostPerLevel (i.e. not in flopsBelowAvg)
            cout << "original maxLevel size: " << levelTable[maxLevel].size() << "\n";
            int maxLevelSize = levelTable[maxLevel].size();
            if(flopsBelowAvg.find(maxLevel) != flopsBelowAvg.end())
@@ -1179,11 +1179,13 @@ class RewriteByThreeCriteria : public RewritingStrategy {
              predsWithMaxLevel.clear();
 
              maxLevelSize = levelTable[maxLevel].size();
-             if(flopsBelowAvg.find(maxLevel) != flopsBelowAvg.end())
+             if(flopsBelowAvg.find(maxLevel) != flopsBelowAvg.end()) {
+               cout << maxLevel << " is in flopsBelowAvg" << " exists in levelSizeBelowAvg as well: " << (levelSizeBelowAvg.find(maxLevel) != levelSizeBelowAvg.end()) << "\n"; 
                maxLevelSize = levelSizeBelowAvg[maxLevel];
+             }
            }
 
-           cout << "levelcost maxlevel: " << levelCost[maxLevel] << " avgCostPerLevel: " << avgCostPerLevel << " indegrees: " << parents.size() << " AIR: " << avgIndegrePerLevel << "\n";
+           cout << "maxLevel: " << maxLevel << " maxLevelSize: " << maxLevelSize << " levelcost maxlevel: " << levelCost[maxLevel] << " avgCostPerLevel: " << avgCostPerLevel << " indegrees: " << parents.size() << " AIR: " << avgIndegrePerLevel << "\n";
            // we found a candidate level
            if(levelCost[maxLevel] < avgCostPerLevel && 
               parents.size() <= avgIndegrePerLevel) {
@@ -1196,7 +1198,7 @@ class RewriteByThreeCriteria : public RewritingStrategy {
              levelCost[maxLevel] += costRow;
              levelSizeBelowAvg[maxLevel]++;
              levelSizeBelowAvg[it->first]--;
-             if(levelSizeBelowAvg[it->first] == 0) {
+             if(levelSizeBelowAvg[it->first] == 0 && next(it) != flopsBelowAvg.end()) {
                it++;
                targetLevel = it->first;
              }
@@ -1206,8 +1208,8 @@ class RewriteByThreeCriteria : public RewritingStrategy {
 
            if(oldLevel == maxLevel) break;
          } // while
-        } // for
-      }
+        } // for each row
+      }  // for each level
     }
 
     void expandPredsWith(int row, vector<int>& preds, int child) {
