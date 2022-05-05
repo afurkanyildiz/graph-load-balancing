@@ -1164,14 +1164,23 @@ class RewriteByThreeCriteria : public RewritingStrategy {
 
            // level with size > ARL cannot be a target level
            // skip levels with cost > avgCostPerLevel (i.e. not in flopsBelowAvg)
-           cout << "maxLevel size: " << levelSizeBelowAvg[maxLevel] << "\n";
-           while(levelSizeBelowAvg[maxLevel] >= avgNumRowsPerLevel ||
-               flopsBelowAvg.find(maxLevel) == flopsBelowAvg.end()) {
-             cout << "max level: " << maxLevel << " with size: " << levelTable[maxLevel].size() << " with cost: "<< flopsBelowAvg[maxLevel] << "\n";
+           cout << "original maxLevel size: " << levelTable[maxLevel].size() << "\n";
+           int maxLevelSize = levelTable[maxLevel].size();
+           if(flopsBelowAvg.find(maxLevel) != flopsBelowAvg.end())
+             maxLevelSize = levelSizeBelowAvg[maxLevel];
+          
+           while(maxLevelSize >= avgNumRowsPerLevel ||
+   //              levelTable[maxLevel].size() == 0 ||
+                 flopsBelowAvg.find(maxLevel) == flopsBelowAvg.end()) {
+   //          cout << "max level: " << maxLevel << " with size: " << levelTable[maxLevel].size() << " with cost: "<< flopsBelowAvg[maxLevel] << "\n";
              maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
              for(auto& pred : predsWithMaxLevel)
                expandPredsWith(pred, parents, row);
              predsWithMaxLevel.clear();
+
+             maxLevelSize = levelTable[maxLevel].size();
+             if(flopsBelowAvg.find(maxLevel) != flopsBelowAvg.end())
+               maxLevelSize = levelSizeBelowAvg[maxLevel];
            }
 
            cout << "levelcost maxlevel: " << levelCost[maxLevel] << " avgCostPerLevel: " << avgCostPerLevel << " indegrees: " << parents.size() << " AIR: " << avgIndegrePerLevel << "\n";
@@ -1183,7 +1192,7 @@ class RewriteByThreeCriteria : public RewritingStrategy {
                 // maybe use distance between instances
              int numOfPreds = parents.size();
              int costRow = numOfPreds <= 4 ? (numOfPreds << 1) + 1 : (numOfPreds << 1);
-             cout << "indegree: " << parents.size() << " costRow: " << costRow << " oldLevel: " << oldLevel << "\n";
+             cout << "indegree: " << parents.size() << " costRow: " << costRow << " oldLevel: " << oldLevel << "\n\n";
              levelCost[maxLevel] += costRow;
              levelSizeBelowAvg[maxLevel]++;
              levelSizeBelowAvg[it->first]--;
