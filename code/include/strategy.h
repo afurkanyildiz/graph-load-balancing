@@ -1079,6 +1079,7 @@ class RewriteByThreeCriteria : public RewritingStrategy {
           cout << "num. of rewritten rows: " << toBeRewritten.size() << "\n";
           printRowsToBeRewritten();
 
+          flopsPerLevel = levelCost;
       }
 
       void policy() {
@@ -1193,10 +1194,12 @@ class RewriteByThreeCriteria : public RewritingStrategy {
                 // TODO: what if parents.size() > avgIndegrePerLevel
                 // maybe use distance between instances
              int numOfPreds = parents.size();
-             int costRow = numOfPreds <= 4 ? (numOfPreds << 1) + 1 : (numOfPreds << 1);
+             int costRow = numOfPreds == 0 ?  1 : (numOfPreds << 1);
+//             int costRow = numOfPreds <= 4 ? (numOfPreds << 1) + 1 : (numOfPreds << 1);
              cout << "indegree: " << parents.size() << " costRow: " << costRow << " oldLevel: " << oldLevel << "\n\n";
              levelCost[maxLevel] += costRow;
              levelSizeBelowAvg[maxLevel]++;
+             levelCost[it->first] -= costRow;
              levelSizeBelowAvg[it->first]--;
              if(levelSizeBelowAvg[it->first] == 0 && next(it) != flopsBelowAvg.end()) {
                it++;
