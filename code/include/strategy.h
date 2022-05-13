@@ -1191,11 +1191,14 @@ class RewriteByThreeCriteria : public RewritingStrategy {
                if(levelSizeBelowAvg[maxLevel] == avgNumRowsPerLevel) {
                  if(levelSizeBelowAvg[it->first] == 0 && next(it) != flopsBelowAvg.end())
                    it++;
+                 while(levelSizeBelowAvg[it->first] >= avgNumRowsPerLevel)
+                   it++;
+                
                  targetLevel = it->first;
-                 if(levelSizeBelowAvg[it->first] != 0)
+                 //if(levelSizeBelowAvg[it->first] != 0)
                    break;
                } 
-             } else {cout << "indegree: " << parents.size() << "\n";}
+             }
         //     break;
            } 
         } // for each row
