@@ -1086,13 +1086,13 @@ class RewriteByThreeCriteria : public RewritingStrategy {
         AvgRowsPerLevel();
         AvgInPerRow();
 
-        cout << "old level sizes:\n";
+        cout << "old level sizes:" << levelSizeBelowAvg.size() << "\n";
         for(auto& level : levelSizeBelowAvg)
           cout << level.first << ", " << level.second << "\n";
 
         Rewrite(avgNumRowsPerLevel,avgCostPerLevel,avgIndegrePerRow);
       
-        cout << "new level sizes:\n";
+        cout << "new level sizes:" << levelSizeBelowAvg.size() << "\n";
         for(auto& level : levelSizeBelowAvg)
           cout << level.first << ", " << level.second << "\n";
       }
@@ -1142,20 +1142,22 @@ class RewriteByThreeCriteria : public RewritingStrategy {
       it++;
       for(; it != flopsBelowAvg.end(); it++){
         vector<int>& levelRows = levelTable[it->first];
-        cout << "level: " << it->first << " level size: " << levelRows.size() << "\n";
-          cout << "target level: " << targetLevel << " with size: " << levelSizeBelowAvg[targetLevel] << "\n";
+
+/*        cout << "level: " << it->first << " level size: " << levelRows.size() << "\n";
+          cout << "target level: " << targetLevel << " with size: " << levelSizeBelowAvg[targetLevel] << "\n";*/
 
         int rewriteCount = 0;
         for(auto& row : levelRows){
           vector<int> predsWithMaxLevel;
           vector<int> parents = dag[row].first;
+          int originalCost = (parents.size() << 1) + 1;
 
           int newLevel;
           int maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
 
-          cout << "\nrow: " << row << "\n";
+   /*       cout << "\nrow: " << row << "\n";
           cout << "max level: " << maxLevel << "\n";
-          cout<< "indegree : "<< parents.size() <<"\n";
+          cout<< "indegree : "<< parents.size() <<"\n";*/
 
           while(maxLevel > targetLevel) {
             for(auto& pred : predsWithMaxLevel)
@@ -1167,9 +1169,10 @@ class RewriteByThreeCriteria : public RewritingStrategy {
             if(oldLevel == maxLevel) break;
           }
 
-          cout << "maxLevel: " << maxLevel << "\n";
+/*          cout << "maxLevel: " << maxLevel << "\n";
           cout << "target level: " << targetLevel << " with size: " << levelSizeBelowAvg[targetLevel] << "\n";
           cout << "levelCost[maxLevel]: " << levelCost[maxLevel] << " avgCost : " << avgCostPerLevel << " parents size: " << parents.size() << "\n";
+          */
 
            int numOfPreds = parents.size();
            int costRow = numOfPreds == 0 ?  1 : (numOfPreds << 1);
@@ -1184,7 +1187,9 @@ class RewriteByThreeCriteria : public RewritingStrategy {
 
                levelCost[maxLevel] += costRow;
                levelSizeBelowAvg[maxLevel]++;
-               levelCost[it->first] -= costRow;
+               //levelCost[it->first] -= costRow;
+               levelCost[it->first] -= originalCost;
+//               cout << "decrease size of level " << it->first << " for row: " << row << " level: " << levels[row] << "\n"; 
                levelSizeBelowAvg[it->first]--;
 
                toBeRewritten[row] = make_pair(levels[row],maxLevel);
