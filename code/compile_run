@@ -1,0 +1,26 @@
+#!/bin/bash
+# $1: matrix name: e.g. lung2
+# $2: matrix ID :  e.g. 894
+# $3: lib path:    e.g. /usr/local/lib
+
+lib_path="/usr/local/lib"
+
+if [ "$1" = "--help" ] || [ "$#" -lt 2 ]
+then
+  echo "num of vars: $#"
+  echo "\$1: matrix name: e.g. lung2"
+  echo "\$2: matrix ID :  e.g. 894"
+  echo "\$3: lib path:    e.g. /usr/local/lib"
+  exit
+fi
+
+if [ $# -eq 3 ]
+then
+  lib_path="$3"
+fi
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$lib_path"
+make clean; make rewrite
+
+rm -rf $1 report."$2"
+./build/rewrite $2 &> report."$2"

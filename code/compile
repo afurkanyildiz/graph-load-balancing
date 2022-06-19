@@ -1,0 +1,20 @@
+#!/bin/bash
+# can develop the script more to compile rewrite/release/debug
+# $1: lib path:    e.g. /usr/local/lib
+
+lib_path="/usr/local/lib"
+
+if [ "$1" == "--help" ] || [ "$#" -gt 1 ]
+then
+  echo "num of vars: $#"
+  echo "\$1: lib path:    e.g. /usr/local/lib"
+  exit
+fi
+
+if [ $# -eq 1 ]; then lib_path="$3"; fi
+
+echo "Compiling with lib path set to $lib_path"
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$lib_path"
+make clean; make rewrite
+

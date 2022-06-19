@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while read matrix
+do
+  ID=`echo $matrix | cut -d',' -f1`
+  name=`echo $matrix | cut -d',' -f2`
+
+  set -x
+  rm -rf $name report."$name"
+  ./build/rewrite "$ID" &> report."$name"
+  set +x
+done < matrix.ID.name
+
