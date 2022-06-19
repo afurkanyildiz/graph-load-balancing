@@ -1,0 +1,32 @@
+parent = dependency = indegree
+
+Kriterler:
+ortalama seviye maaliyeti -- OSM (avg. level cost -- ALC)
+ortalama giren düğüm derecesi -- OGD (avg. indegree per row -- AIR)
+(yeniden yazılacak seviyelerde) seviye basına dusen ortalama satır sayısı -- OSS (avg. rows per level in levels to be rewritten -- ARL)
+
+algoritma:
+1. OSM, OGD, OSS degerleri hesaplanır
+   OSM:
+   for each level
+     for each row 
+        sum += row cost
+        
+   OSM = sum / number of levels
+   
+   OGD:
+   for each level
+     for each row 
+        sum += number of parents
+        
+   OSM = sum / number of rows
+   
+   OSS:
+   OSS = number of rows to be rewritten / number of levels to be rewritten
+   
+2. rewrite edilecek seviyeler OSM'ye gore belirlenir
+3. En alt seviyeden baslayarak, bir satır asagıdaki kosulların hepsini sagladıgı surece rewrite et
+   (birini ihlal ediyorsa rewrite etme)
+   a. satırın düğüm derecesi < OGD
+   b. rewrite edilen seviyenin maaliyeti (target/destination level) < OSM
+   c. rewrite edilen seviyenin satır sayısı < OSS
