@@ -5,5 +5,5 @@
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 make clean; make rewrite
 
-rm -rf lung2 report_894
-./build/rewrite 894 &> report_894
+rm -rf ohne2 report_971
+./build/rewrite 971 &> report_971
