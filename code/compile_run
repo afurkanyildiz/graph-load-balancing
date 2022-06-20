@@ -22,5 +22,5 @@ fi
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$lib_path"
 make clean; make rewrite
 
-rm -rf $1 report."$2"
-./build/rewrite $2 &> report."$2"
+rm -rf $1 report."$1"
+./build/rewrite $2 &> report."$1"
