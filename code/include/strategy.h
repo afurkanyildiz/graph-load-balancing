@@ -9,6 +9,8 @@
 #include <shared_mutex>
 #include <thread>
 #include "analyzer.h"
+// for criteria analysis
+#include <tuple>
 
 #define REWRITE_UP    3
 #define REWRITE_LOW   5
@@ -432,95 +434,79 @@ class RewriteByCostMap : public RewritingStrategy {
        this->avgCostPerLevel = avgFLOPSPerLevel;
        this->flopsBelowAvg = flopsBelowAvg;
 
-       cout << "before policy\n";
+       cout << "before policy improved\n";
        policy();
 
        flopsPerLevel = levelCost;
 
-      /* for(int i = 0; i < levelTable.size(); i++) {
-         vector<int>& level = levelTable[i];
-         cout << "level " << i << ":\n";
-         for(auto& row : level)
-           cout << row << ", ";
-
-         if(costMap.find(i) != costMap.end()) {
-           map<int, int>& rows = costMap[i];
-           for(auto& row : rows)
-             cout << row.first << ", ";
-           cout << "\n";
-         }
-       }*/
-
        cout << "num. of rewritten rows: " << toBeRewritten.size() << "\n";
        printRowsToBeRewritten();
     }
-    
+
     void policy() {
-      // we can drag a level's cost up to the cost of level with the maximum cost in the original graph 
+      // we can drag a level's cost up to the cost of level with the maximum cost in the original graph
       //int maxCostPerLevel = *max_element(begin(levelCost),end(levelCost));
 
-      // choose a level to start the process
-//      auto rit_next = flopsBelowAvg.rbegin(); rit_next++;
-      for(auto rit = flopsBelowAvg.rbegin(); rit != flopsBelowAvg.rend(); rit++) {
-    //    createCostMapMin(rit->first, rit_next->first);
-    //    rit_next++;
-        createCostMapMax(rit->first, flopsBelowAvg.begin()->first, avgCostPerLevel);
-      }
-
-      prune(avgCostPerLevel);
-      //pruneReverse(avgCostPerLevel);
-
-
- /*      cout << "levelCost:\n";
-       for(auto& flop : levelCost)
-         cout << flop<< " ";
-       cout << "\n";*/
-
-       // printing just the rows at each level in the costMap
-     /*  for(auto it = costMap.begin(); it !=  costMap.end(); ++it) {
-         cout << "level " << it->first << ":\n";
-         map<int, int> rows = it->second;
-         for(auto& row : rows)
-           cout << row.first << ", ";
-         cout << "\n";
-       }*/
+      // start from level 1 and try rewriting to level 0 prioritizing the levels close to each other
+      auto it_source = flopsBelowAvg.begin();
+      auto it_target = it_source;
+      it_source++;
+      int level = it_source->first;
+      vector<int>& levelRows = levelTable[level];
+      auto nextRow = levelRows.begin();
+      // TODO: modifying it_source in createCostMapMax: FIX IT!!
+      for(; it_source != flopsBelowAvg.end(); it_source++)
+        createCostMapMax(it_source, it_target, nextRow);
     }
 
-    // 2 ways:
-    // move a row up the furthest it can go   : createCostMapMax
-    // move rows up level by level            : createCostMapMin
-    void createCostMapMax(int level, int levelEnd, int maxCostPerLevel) {
+    void createCostMapMax(map<int,double>::iterator& sourceLevel, map<int,double>::iterator& targetLevel, vector<int>::iterator& nextRow) {
+      int level = sourceLevel->first;
+      int levelEnd = targetLevel->first;
+
       vector<int>& levelRows = levelTable[level];
 
-  //    cout << "level: " << level << "\n";
-      for(auto& row : levelRows) {
+      cout << "level: " << level << "\n";
+      for(; nextRow != levelRows.end() ; ++nextRow) {
          vector<int> predsWithMaxLevel;
-    
+
  //        cout << "row: " << row << "\n";
-         vector<int> parents = dag[row].first;
+         vector<int> parents = dag[*nextRow].first;
          int maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
 
          while(maxLevel >= levelEnd) {
            for(auto& pred : predsWithMaxLevel)
-             expandPredsWith(pred, parents, row);
-
-           int numOfPreds = parents.size();
-           int costRow = numOfPreds <= 4 ? (numOfPreds << 1) + 1 : (numOfPreds << 1);
-
-           if(flopsBelowAvg.find(maxLevel) != flopsBelowAvg.end()) {
-             levelCost[maxLevel] += costRow;
-
-             map<int,int>& newLevel = costMap[maxLevel];
-             newLevel[row] = costRow;
-
-   //          cout << "adding to level " << maxLevel << "\n";
-           }
+             expandPredsWith(pred, parents, *nextRow);
 
            predsWithMaxLevel.clear();
            int oldLevel = maxLevel;
            maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
            if(oldLevel == maxLevel) break;
          }
+
+         int numOfPreds = parents.size();
+         int costRow = numOfPreds <= 4 ? (numOfPreds << 1) + 1 : (numOfPreds << 1);
+         if(levelCost[maxLevel] + costRow <= avgCostPerLevel) {
+           map<int,int>& newLevel = costMap[maxLevel];
+           newLevel[*nextRow] = costRow;
+           toBeRewritten[*nextRow] = make_pair(levels[level],levelEnd);
+         } else { // target level is full, continue with the next level as the target level
+           targetLevel++;
+           if(sourceLevel->first == targetLevel->first) {
+             sourceLevel++;
+             int level = sourceLevel->first;
+             vector<int>& levelRows = levelTable[level];
+             nextRow = levelRows.begin();
+             return;
+           }
+         }
+      }
+
+      // consumed the current source level. Move to the next level
+      if(sourceLevel != prev(flopsBelowAvg.end())) {
+      sourceLevel++;
+      level = sourceLevel->first;
+      levelRows = levelTable[level];
+      nextRow = levelRows.begin();
       }
     }
 
@@ -532,7 +518,7 @@ class RewriteByCostMap : public RewritingStrategy {
       if(it != preds.end()) {
         vector<int>& parents = dag[row].first;
 
-        if(!parents.empty()) { 
+        if(!parents.empty()) {
           preds[it-preds.begin()] = parents[0];
           preds.insert(preds.end(),parents.begin()+1,parents.end());
         }
@@ -543,163 +529,6 @@ class RewriteByCostMap : public RewritingStrategy {
       }
       else
         cout << "row " << row << " doesnt exist in predecessors\n";
-    }
-
-    void prune(int avgCostPerLevel) {
-      for(auto it = flopsBelowAvg.begin(); it != flopsBelowAvg.end(); it++) {
-        // TODO: add index distance as a stopping criteria
-        map<int,int>& targetLevel = costMap[it->first];
-
-        int currCost = it->second;
-        map<int,int>::iterator itr = targetLevel.end();
-        for(auto rewrittenRow = targetLevel.begin(); rewrittenRow != targetLevel.end(); rewrittenRow++) {
-          if((currCost + rewrittenRow->second) < avgCostPerLevel) {
-            currCost += rewrittenRow->second;
-            toBeRewritten[rewrittenRow->first] = make_pair(levels[rewrittenRow->first],it->first);
-          } else {
-            itr = rewrittenRow;
-            break;
-          }
-        }
-
-        // now remove the remaining from the current level
-        if(itr != targetLevel.end()) {
-          for( auto it_target = itr; it_target != targetLevel.end(); it_target++)
-            levelCost[it->first] -= it_target->second;
-
-          targetLevel.erase(itr, targetLevel.end());
-        }
-
-        // now remove these rows from the following levels
-        for(auto iter = next(it); iter != flopsBelowAvg.end() ; iter++) {
-          map<int,int>& currLevel = costMap[iter->first];
-          for(auto iter_targetLevel = targetLevel.begin();  iter_targetLevel != targetLevel.end(); iter_targetLevel++) {
-            auto it_erase = currLevel.find(iter_targetLevel->first);
-            if(it_erase != currLevel.end()) {
-              currLevel.erase(it_erase);
-              levelCost[iter->first] -= it_erase->second;
-            }
-          }
-        } // for
-      }
-    }
-
-    void pruneReverse(int avgCostPerLevel) {
-      for(auto it = flopsBelowAvg.begin(); it != flopsBelowAvg.end(); it++) {
-        // TODO: add index distance as a stopping criteria
-        map<int,int>& targetLevel = costMap[it->first];
-
-/*        cout << "level: " << it->first << "\n";
-        cout << "costMap:\n";
-        for(auto& row : targetLevel)
-          cout << row.first << ", ";
-        cout << "\n";*/
-
-        int currCost = it->second;
-        map<int,int>::reverse_iterator itr = targetLevel.rend();
-        for(auto rewrittenRow = targetLevel.rbegin(); rewrittenRow != targetLevel.rend(); rewrittenRow++) {
-          if((currCost + rewrittenRow->second) < avgCostPerLevel) {
- //           cout << "row " << rewrittenRow->first << " stays\n";
-            currCost += rewrittenRow->second;
-            toBeRewritten[rewrittenRow->first] = make_pair(levels[rewrittenRow->first],it->first);
-          } else {
-            itr = rewrittenRow;
-            break;
-          }
-        }
-
-        if(itr != targetLevel.rend())
-          cout << "stopped at row " << itr->first << "\n";
-
-        // now remove the remaining from the current level
-        auto pivot = targetLevel.begin(); 
-        if(itr != targetLevel.rend()) {
-          for( auto it_target = targetLevel.rbegin(); it_target != itr; it_target++)
-            levelCost[it->first] -= it_target->second;
-
-          int dist = distance(begin(targetLevel), itr.base())-1;
-          advance(pivot, dist);
-
-          targetLevel.erase(targetLevel.begin(), pivot);
-        }
-
-  /*      cout << "after erasing costMap:\n";
-        for(auto& row : targetLevel)
-          cout << row.first << ", ";
-        cout << "\n";*/
-
-        // now remove these rows from the following levels
-        for(auto iter = next(it); iter != flopsBelowAvg.end() ; iter++) {
-          map<int,int>& currLevel = costMap[iter->first];
-          for(auto iter_targetLevel = pivot;  iter_targetLevel != targetLevel.end(); iter_targetLevel++) {
-            auto it_erase = currLevel.find(iter_targetLevel->first);
-            if(it_erase != currLevel.end()) {
-              currLevel.erase(it_erase);
-              levelCost[iter->first] -= it_erase->second;
-            }
-          }
-        } // for
-      }
-    }
-    void createCostMapMin(int level, int lastLevelSeen) {
-      // do for original rows of that level + rows in the costMap
-      vector<int>& levelRows = levelTable[level];
-      map<int,int>& costMapRows = costMap[level];
-
-      for(auto& row : levelRows) {
-         vector<int> predsWithMaxLevel;
-     
-         vector<int> parents = dag[row].first;
-         int maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
-
-         while(maxLevel >= lastLevelSeen) {
-           for(auto& pred : predsWithMaxLevel)
-             expandPredsWith(pred, parents, row);
-  
-           int numOfPreds = parents.size();
-           int costRow = numOfPreds <= 4 ? (numOfPreds << 1) + 1 : (numOfPreds << 1);
-  
-           if(flopsBelowAvg.find(maxLevel) != flopsBelowAvg.end() &&
-              maxLevel != level) {
-             levelCost[maxLevel] += costRow;
- 
-             map<int,int>& newLevel = costMap[maxLevel];
-             newLevel[row] = costRow;
-           }
-         
-           predsWithMaxLevel.clear();
-           maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
-           if(lastLevelSeen == 0) break;
-         }
-      }
-
-      for(auto& costMapRow : costMapRows) {
-        int row = costMapRow.first;
-         vector<int> predsWithMaxLevel;
-     
-         vector<int> parents = dag[row].first;
-         int maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
-
-         while(maxLevel >= lastLevelSeen) {
-           for(auto& pred : predsWithMaxLevel)
-             expandPredsWith(pred, parents, row);
-  
-           int numOfPreds = parents.size();
-           int costRow = numOfPreds <= 4 ? (numOfPreds << 1) + 1 : (numOfPreds << 1);
-  
-           if(flopsBelowAvg.find(maxLevel) != flopsBelowAvg.end() &&
-              maxLevel != level) {
-             levelCost[maxLevel] += costRow;
-  
-             map<int,int>& newLevel = costMap[maxLevel];
-             newLevel[row] = costRow;
-           }
-
-           predsWithMaxLevel.clear();
-           maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
-           if(lastLevelSeen == 0) break;
-         }
-      }
     }
 };
 
@@ -1137,6 +966,12 @@ class RewriteByThreeCriteria : public RewritingStrategy {
     } 
 
     void Rewrite(double avgNumRowsPerLevel, double avgCostPerLevel, double avgIndegrePerLevel) {
+
+      // for analyzing criteria 
+      map<int,tuple<int,int>> failedRowsIndegree; // AIR: row level, row indegree
+      map<int,tuple<int,int>> failedRowsCost;     // ALC: row level, row cost
+      vector<int> failedRowsSize;                // ARL: curr level, level size
+
       auto it = flopsBelowAvg.begin();
       int targetLevel = it->first;
       it++;
@@ -1155,9 +990,9 @@ class RewriteByThreeCriteria : public RewritingStrategy {
           int newLevel;
           int maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
 
-   /*       cout << "\nrow: " << row << "\n";
+          cout << "\nrow: " << row << "\n";
           cout << "max level: " << maxLevel << "\n";
-          cout<< "indegree : "<< parents.size() <<"\n";*/
+          cout<< "indegree : "<< parents.size() <<"\n";
 
           while(maxLevel > targetLevel) {
             for(auto& pred : predsWithMaxLevel)
@@ -1187,7 +1022,6 @@ class RewriteByThreeCriteria : public RewritingStrategy {
 
                levelCost[maxLevel] += costRow;
                levelSizeBelowAvg[maxLevel]++;
-               //levelCost[it->first] -= costRow;
                levelCost[it->first] -= originalCost;
 //               cout << "decrease size of level " << it->first << " for row: " << row << " level: " << levels[row] << "\n"; 
                levelSizeBelowAvg[it->first]--;
@@ -1195,6 +1029,9 @@ class RewriteByThreeCriteria : public RewritingStrategy {
                toBeRewritten[row] = make_pair(levels[row],maxLevel);
 
                if(levelSizeBelowAvg[maxLevel] == avgNumRowsPerLevel) {
+                 
+                 failedRowsSize.push_back(maxLevel);
+
                  if(levelSizeBelowAvg[it->first] == 0 && next(it) != flopsBelowAvg.end())
                    it++;
                  while(levelSizeBelowAvg[it->first] >= avgNumRowsPerLevel)
@@ -1203,8 +1040,14 @@ class RewriteByThreeCriteria : public RewritingStrategy {
                  targetLevel = it->first;
                  break;
                } 
+             } else {
+               cout << "row: " << row << " level: " << it->first << " indegrees: " << parents.size() << "\n";
+               failedRowsIndegree[row] = make_pair(it->first,parents.size());
              }
-           } 
+           } else {
+               cout << "row: " << row << " level: " << it->first << " cost: " << costRow << "\n";
+               failedRowsCost[row] = make_pair(it->first,costRow);
+           }
         } // for each row
 
         if(rewriteCount == 0) { // no rewrite happened for this level. change the target level
