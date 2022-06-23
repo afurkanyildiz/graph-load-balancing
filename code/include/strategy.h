@@ -990,9 +990,9 @@ class RewriteByThreeCriteria : public RewritingStrategy {
           int newLevel;
           int maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
 
-          cout << "\nrow: " << row << "\n";
+/*          cout << "\nrow: " << row << "\n";
           cout << "max level: " << maxLevel << "\n";
-          cout<< "indegree : "<< parents.size() <<"\n";
+          cout<< "indegree : "<< parents.size() <<"\n";*/
 
           while(maxLevel > targetLevel) {
             for(auto& pred : predsWithMaxLevel)
@@ -1029,7 +1029,7 @@ class RewriteByThreeCriteria : public RewritingStrategy {
                toBeRewritten[row] = make_pair(levels[row],maxLevel);
 
                if(levelSizeBelowAvg[maxLevel] == avgNumRowsPerLevel) {
-                 
+                 //cout << "failedRowsSize: row: " << row << " level: " << it->first << " full level: " << maxLevel << "\n";
                  failedRowsSize.push_back(maxLevel);
 
                  if(levelSizeBelowAvg[it->first] == 0 && next(it) != flopsBelowAvg.end())
@@ -1041,11 +1041,11 @@ class RewriteByThreeCriteria : public RewritingStrategy {
                  break;
                } 
              } else {
-               cout << "row: " << row << " level: " << it->first << " indegrees: " << parents.size() << "\n";
+               //cout << "failedRowsIndegree: row: " << row << " level: " << it->first << " indegrees: " << parents.size() << "\n";
                failedRowsIndegree[row] = make_pair(it->first,parents.size());
              }
            } else {
-               cout << "row: " << row << " level: " << it->first << " cost: " << costRow << "\n";
+               //cout << "failedRowCost: row: " << row << " level: " << it->first << " cost: " << costRow << "\n";
                failedRowsCost[row] = make_pair(it->first,costRow);
            }
         } // for each row
@@ -1057,6 +1057,22 @@ class RewriteByThreeCriteria : public RewritingStrategy {
           targetLevel = it->first;
         }
       }  // for each level
+         
+      // report on failed rows
+      cout << "AIR:" << avgIndegrePerRow << "\n";
+      cout << "failedRowsIndegree: " << failedRowsIndegree.size() << "\n";
+      cout << "indegrees:\n";
+      for(auto& row : failedRowsIndegree)
+        cout << get<1>(row.second) << "\n";
+      
+      cout << "ALC:" << avgCostPerLevel << "\n";
+      cout << "failedRowsCost: " << failedRowsCost.size() << "\n";
+      cout << "costs:\n";
+      for(auto& row : failedRowsCost)
+        cout << get<1>(row.second) << "\n";
+
+      cout << "failedRowsSize: " << failedRowsSize.size() << "\n\n";
+
     }
 
     void expandPredsWith(int row, vector<int>& preds, int child) {
