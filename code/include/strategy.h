@@ -943,7 +943,7 @@ class RewriteByThreeCriteria : public RewritingStrategy {
     } 
 
     int AvgRowsPerLevel() { 
-  /*    double rowSum = 0;
+      double rowSum = 0;
       //cout<<"Number of levels below average cost:"<< flopsBelowAvg.size()<< "\n";
 
       for(auto it = flopsBelowAvg.begin(); it !=flopsBelowAvg.end(); it++){
@@ -955,13 +955,21 @@ class RewriteByThreeCriteria : public RewritingStrategy {
       cout << "Total number of rows:" << rowSum << "\n";
       avgNumRowsPerLevel = ceil(rowSum / flopsBelowAvg.size());
       cout << "Average number of rows per level at levels lower than Average Cost: "<< avgNumRowsPerLevel <<"\n";
-*/
-      avgNumRowsPerLevel = ceil(rows/levelTable.size());
-      cout << "Average number of rows per level: "<< avgNumRowsPerLevel <<"\n";
+
+     /* avgNumRowsPerLevel = ceil(rows/levelTable.size());
+      cout << "Average number of rows per level: "<< avgNumRowsPerLevel <<"\n";*/
       return avgNumRowsPerLevel;
     } 
 
-    void Rewrite(double avgNumRowsPerLevel, double avgCostPerLevel, double avgIndegrePerLevel) {
+    void Rewrite(double avgNumRowsPerLevel, double avgCostPerLevel, double avgIndegrePerRow) {
+
+      // to recalculate AIR, keep the sum
+      double indegreeSum=0;
+      for(int i = 0; i < dag.size(); i++){
+        Connectivity& connectivity = dag[i];
+        vector<int>& parents = connectivity.first;
+        indegreeSum += parents.size();
+      }
 
       // for analyzing criteria 
       map<int,tuple<int,int>> failedRowsIndegree; // AIR: row level, row indegree
@@ -982,6 +990,10 @@ class RewriteByThreeCriteria : public RewritingStrategy {
           vector<int> predsWithMaxLevel;
           vector<int> parents = dag[row].first;
           int originalCost = (parents.size() << 1) + 1;
+
+          // remove the current row's indegree
+          int originalIndegreeCount = parents.size();
+          indegreeSum -= originalIndegreeCount;
 
           int newLevel;
           int maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
@@ -1009,12 +1021,14 @@ class RewriteByThreeCriteria : public RewritingStrategy {
            int costRow = numOfPreds == 0 ?  1 : (numOfPreds << 1);
 
            if(levelCost[maxLevel]+costRow < avgCostPerLevel) { 
-             if(parents.size() <= avgIndegrePerLevel) {
+             // relaxing the indegree constraint with rewriting distance == 1 
+             //if((parents.size() <= avgIndegrePerRow) || (it->first - maxLevel == 1)) {
+             if(parents.size() <= avgIndegrePerRow) {
                 rewriteCount++;
-                // TODO: what if parents.size() > avgIndegrePerLevel
-                // maybe use distance between instances
-//               int numOfPreds = parents.size();
-//               int costRow = numOfPreds == 0 ?  1 : (numOfPreds << 1);
+
+               // update AIR with new indegree value of the current row
+               indegreeSum += parents.size();
+               avgIndegrePerRow = ceil(indegreeSum / dag.size());        
 
                levelCost[maxLevel] += costRow;
                levelSizeBelowAvg[maxLevel]++;
@@ -1037,12 +1051,15 @@ class RewriteByThreeCriteria : public RewritingStrategy {
                  break;
                } 
              } else {
-               //cout << "failedRowsIndegree: row: " << row << " level: " << it->first << " indegrees: " << parents.size() << "\n";
+               //cout << "failedRowsIndegree: row: " << row << " level: " << it->first << " target level: " << maxLevel << " indegrees: " << parents.size() << "\n";
                failedRowsIndegree[row] = make_pair(it->first,parents.size());
              }
            } else {
                //cout << "failedRowCost: row: " << row << " level: " << it->first << " cost: " << costRow << "\n";
                failedRowsCost[row] = make_pair(it->first,costRow);
+
+               indegreeSum += originalIndegreeCount;
+               avgIndegrePerRow = ceil(indegreeSum / dag.size());        
            }
         } // for each row
 
