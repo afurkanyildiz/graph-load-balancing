@@ -943,14 +943,8 @@ class RewriteByThreeCriteria : public RewritingStrategy {
     } 
 
     int AvgRowsPerLevel() { 
-      double rowSum = 0;
-      cout<<"Number of levels below average cost:"<< flopsBelowAvg.size()<< "\n";
-      // for(auto& level : flopsBelowAvg){
-      //   //if(level.second <= avgCostPerLevel)
-      //   numOfLevels.push_back(level.first);
-      //  }
-       //cout<< "Number of levels below average cost:"<<numOfLevels.size() <<"\n";
-       //cout<< levelTable[2].size();
+  /*    double rowSum = 0;
+      //cout<<"Number of levels below average cost:"<< flopsBelowAvg.size()<< "\n";
 
       for(auto it = flopsBelowAvg.begin(); it !=flopsBelowAvg.end(); it++){
           //cout<< levelTable[it->first].size()<<"\n";
@@ -961,7 +955,9 @@ class RewriteByThreeCriteria : public RewritingStrategy {
       cout << "Total number of rows:" << rowSum << "\n";
       avgNumRowsPerLevel = ceil(rowSum / flopsBelowAvg.size());
       cout << "Average number of rows per level at levels lower than Average Cost: "<< avgNumRowsPerLevel <<"\n";
-
+*/
+      avgNumRowsPerLevel = ceil(rows/levelTable.size());
+      cout << "Average number of rows per level: "<< avgNumRowsPerLevel <<"\n";
       return avgNumRowsPerLevel;
     } 
 

@@ -89,6 +89,7 @@ class Analyzer {
 
     void printLevels();
     void printLevelTable();
+    void printLevelSizes();
     void printDAG();
     void printValues();
     void printFLOPSPerLevel();

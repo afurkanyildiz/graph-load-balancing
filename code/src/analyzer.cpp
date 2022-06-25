@@ -334,6 +334,17 @@ void Analyzer::printLevelTable() {
   }
 }
 
+void Analyzer::printLevelSizes(){
+  cout << "num levels: " << levelTable.size() << "\n";
+  cout << "new level sizes:\n";
+  if(matrixCSC != nullptr) {
+    for(auto& level : levelTable)
+      cout << level.size() << "\n";
+  } else {
+    printf("Wrong format while printing level table.\n");
+  }
+}
+
 void Analyzer::printDAG() {
   cout << "DAG:\n";
   for(int i = 0 ; i < dag.size(); i++) {
