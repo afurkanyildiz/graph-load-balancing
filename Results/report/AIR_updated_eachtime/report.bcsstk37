@@ -13146,8 +13146,8 @@ old level sizes:3064
 5027, 1
 5028, 1
 5029, 1
-AIR:20
-failedRowsIndegree: 2093
+AIR:22
+failedRowsIndegree: 1997
 indegrees:
 33
 30
@@ -13987,6 +13987,28 @@ indegrees:
 24
 25
 26
+26
+28
+29
+24
+25
+26
+27
+28
+23
+24
+25
+26
+27
+23
+24
+25
+26
+27
+28
+24
+25
+26
 27
 28
 29
@@ -14035,40 +14057,18 @@ indegrees:
 28
 29
 24
-25
-26
-27
-28
 23
-24
 25
-26
-27
-23
-24
-25
-26
-27
-28
-24
-25
-26
 27
 28
 29
-24
-23
-25
+35
+35
+26
 27
-28
-28
-24
-25
-26
-26
-28
+27
 29
-24
+35
 25
 26
 27
@@ -14079,11 +14079,11 @@ indegrees:
 24
 24
 26
-26
-28
-29
+27
+27
+27
 24
-25
+24
 26
 27
 28
@@ -14114,8 +14114,8 @@ indegrees:
 28
 29
 24
-25
-26
+24
+24
 27
 28
 23
@@ -14137,23 +14137,19 @@ indegrees:
 24
 25
 26
-27
+26
 28
 29
 23
-22
 23
-24
+23
 25
 26
 27
 23
-22
+25
 23
 23
-22
-22
-22
 25
 24
 25
@@ -14178,11 +14174,8 @@ indegrees:
 24
 25
 26
-22
-23
 24
 25
-22
 23
 24
 25
@@ -14194,16 +14187,13 @@ indegrees:
 26
 27
 28
-22
 23
 24
 25
 26
-22
 23
 24
 25
-22
 23
 24
 25
@@ -14215,16 +14205,13 @@ indegrees:
 26
 27
 28
-22
 23
 24
 25
 26
-22
 23
 24
 25
-22
 23
 24
 25
@@ -14236,12 +14223,10 @@ indegrees:
 26
 27
 28
-22
 23
 24
 25
 26
-22
 23
 24
 25
@@ -14249,8 +14234,8 @@ indegrees:
 23
 24
 23
-22
-24
+33
+40
 25
 26
 27
@@ -14260,11 +14245,8 @@ indegrees:
 25
 26
 32
-22
-22
-24
-25
-22
+23
+23
 23
 24
 25
@@ -14286,11 +14268,16 @@ indegrees:
 26
 27
 28
-22
 23
 24
 25
 25
+26
+27
+28
+23
+23
+23
 26
 27
 28
@@ -14304,31 +14291,21 @@ indegrees:
 24
 25
 26
-27
-28
-22
 23
 24
-25
-26
-23
-24
-22
-23
 24
 25
 23
 25
 27
-24
 25
-26
+25
 27
 28
 29
 24
-24
-24
+25
+25
 27
 24
 23
@@ -14353,10 +14330,8 @@ indegrees:
 27
 28
 24
-25
 26
 27
-22
 23
 24
 25
@@ -14368,16 +14343,13 @@ indegrees:
 26
 27
 28
-22
 23
 24
 25
 26
-22
 23
 24
 25
-22
 23
 24
 25
@@ -14389,16 +14361,13 @@ indegrees:
 26
 27
 28
-22
 23
 24
 25
 26
-22
 23
 24
 25
-22
 23
 24
 25
@@ -14410,12 +14379,10 @@ indegrees:
 26
 27
 28
-22
 23
 24
 25
 26
-22
 23
 24
 25
@@ -14423,18 +14390,17 @@ indegrees:
 23
 23
 23
-22
-26
-24
-26
+23
+23
+27
+25
+25
 27
 28
 29
 24
 23
-22
 24
-25
 26
 27
 28
@@ -14444,13 +14410,15 @@ indegrees:
 25
 26
 27
-22
 23
 24
 25
-22
 23
 24
+25
+26
+27
+23
 25
 26
 27
@@ -14458,14 +14426,6 @@ indegrees:
 24
 25
 26
-27
-23
-24
-25
-26
-22
-23
-24
 25
 26
 23
@@ -14475,7 +14435,6 @@ indegrees:
 27
 28
 23
-24
 25
 26
 27
@@ -14484,105 +14443,62 @@ indegrees:
 26
 27
 23
-24
 25
 26
 23
 25
 27
-28
-22
-23
 24
 25
 26
-22
-22
-22
-22
+24
+23
 25
 24
 25
-22
+26
 23
 23
-25
+24
+24
 27
 24
 25
+26
 24
 25
-26
+25
 27
 28
 29
-22
 23
 26
 26
 27
-22
+23
 24
 26
 27
 24
-28
+25
 29
 24
 25
 26
 27
 28
-22
-22
-22
-24
-26
 23
-22
+23
+23
+26
 23
 24
 25
-22
 23
 24
 25
 26
 27
-24
-25
-26
-27
-28
-28
-24
-25
-26
-27
-28
-22
-23
-22
-23
-25
-26
-27
-22
-26
-22
-23
-24
-25
-26
-26
-23
-24
-25
-26
-27
-28
-28
-22
 24
 25
 26
@@ -14594,14 +14510,45 @@ indegrees:
 26
 27
 28
-28
-25
+23
 24
+23
+25
+27
+23
+23
+24
+25
+26
+27
+23
+24
+25
+26
+27
 28
+23
+24
+26
+27
 28
 29
 24
 25
+26
+27
+28
+24
+24
+25
+24
+29
+26
+28
+29
+24
+25
+26
 24
 25
 26
@@ -14609,44 +14556,37 @@ indegrees:
 28
 29
 29
-22
+23
+25
 27
 23
 24
+25
 23
 25
 25
 26
 27
 51
-25
-22
+23
 24
-25
+24
 23
-23
-22
 23
 24
 37
+23
+23
 25
-22
+25
 24
-24
-26
-24
-24
-22
-22
-22
+25
 27
 29
 26
 26
 29
-27
-27
-30
+29
 35
 27
 28
@@ -14664,28 +14604,14 @@ indegrees:
 23
 23
 25
-22
-23
 24
-22
-22
-22
-22
-22
-22
-22
 23
-22
 23
-24
-32
-22
-24
+23
 25
 25
 27
 33
-22
 26
 26
 27
@@ -14700,21 +14626,29 @@ indegrees:
 25
 26
 24
+25
+26
+27
+28
+29
+24
 24
 25
 26
 27
 28
 24
+25
 29
 24
 25
-25
+26
 24
 25
+26
 24
+25
 28
-22
 23
 24
 24
@@ -14723,6 +14657,13 @@ indegrees:
 28
 23
 28
+23
+24
+25
+26
+27
+28
+23
 23
 24
 25
@@ -14730,27 +14671,18 @@ indegrees:
 27
 28
 23
-23
 24
 25
 26
 27
-28
-22
 23
-24
-25
-26
-27
-22
 23
-24
-24
+23
 26
-27
-35
-24
-24
+26
+23
+23
+23
 26
 26
 38
@@ -14768,22 +14700,6 @@ indegrees:
 25
 26
 24
-23
-24
-25
-26
-27
-23
-23
-24
-24
-24
-25
-23
-28
-24
-23
-24
 25
 26
 27
@@ -14797,53 +14713,81 @@ indegrees:
 27
 23
 24
+23
+24
+25
+24
+25
+26
+23
+24
+28
+23
+24
+25
+26
+27
+28
+29
+24
+23
+24
+25
+26
+27
+24
 25
 26
 27
 23
-22
+24
 23
 24
 23
 24
 38
-22
 23
-22
 23
 24
 25
 26
 27
-22
-22
-22
-22
-22
-22
+24
+23
+24
 25
 26
+27
+23
+23
+23
+23
+23
+25
+25
+26
+29
+27
+23
 28
-36
-32
-27
 24
-25
 23
 24
 25
 26
 27
-28
 23
 25
 27
-22
+23
 29
 30
-22
-22
-22
+32
+23
+30
+31
+32
+33
 29
 30
 31
@@ -14862,7 +14806,6 @@ indegrees:
 32
 32
 34
-22
 23
 41
 31
@@ -14878,34 +14821,32 @@ indegrees:
 32
 32
 35
+35
 23
-41
-31
-31
+30
+30
+30
 33
 33
 29
 30
-31
-22
+30
 30
 34
 35
 35
-22
-29
+39
 30
-30
-32
-32
-34
+31
+31
+33
+33
 29
 30
 31
 32
 33
 34
-22
 39
 30
 31
@@ -14925,36 +14866,35 @@ indegrees:
 32
 33
 34
-22
-87
-21
-21
-23
-41
-31
-31
+30
+30
+32
 33
-21
-22
+33
+35
 23
 36
+37
+38
 33
 32
-22
-27
-27
+23
 27
 38
+25
+23
 24
+25
+25
 24
+25
 42
+44
 26
-22
 23
 24
 23
 24
-23
 24
 25
 40
@@ -14971,54 +14911,47 @@ indegrees:
 30
 32
 32
-25
 29
 23
 24
-22
+25
+25
 23
-25
-25
-22
-22
-24
-24
+23
+23
 26
 31
-22
-24
-26
-22
 23
-24
+25
+23
+23
 25
 26
-22
+29
 37
-25
-27
-29
+26
+28
 25
 26
-27
+26
 28
+40
+41
+29
+26
+26
+26
 23
-22
-28
-26
-26
-26
-22
-24
-27
+23
+23
 24
 27
 27
-28
-24
-26
-28
-24
+29
+35
+35
+27
+29
 25
 27
 27
@@ -15032,7 +14965,7 @@ indegrees:
 26
 26
 29
-24
+35
 25
 27
 33
@@ -15068,80 +15001,26 @@ indegrees:
 31
 31
 24
-22
-22
-24
-24
-22
-22
-24
-25
-26
-26
-27
-28
-24
-22
 23
-24
-23
-24
-21
-24
 25
-26
-27
-28
-22
-21
-22
-23
-24
-25
-23
-24
-25
-26
-22
-25
-26
-21
-22
-23
-24
-25
-26
-21
-22
-23
-24
-25
-26
-22
-24
-26
-30
 31
-31
-33
-33
+23
+24
+24
+26
+28
+24
+25
+26
+34
+24
+23
 24
 25
 26
 27
-28
-28
-23
-23
-25
-25
-27
 27
 23
-24
-25
-26
-28
 23
 24
 25
@@ -15149,60 +15028,86 @@ indegrees:
 23
 23
 25
+26
 25
-27
-28
-22
-31
-21
+26
+25
+26
+24
+25
+26
+25
+26
 30
 31
 32
-21
-21
-30
 32
+34
+23
+25
+26
+27
+28
+28
+23
+23
+25
+26
+26
+26
+23
+24
+25
+26
+28
+23
+24
+25
+26
+23
+23
+25
+26
+26
+28
+31
+31
+33
+31
+31
 33
 34
 35
-22
-30
-30
-32
-33
-22
-40
-30
-31
-31
-33
-34
-21
-22
 23
-22
-40
-30
+41
+41
+32
+33
+29
+29
 31
 31
 33
-33
-21
+34
+23
+29
+29
+29
+32
+32
+34
 31
 32
 32
 34
-22
-22
-40
-31
+30
+30
 32
 33
 34
-21
 39
-39
-30
+29
+29
 31
 32
 33
@@ -15213,37 +15118,36 @@ indegrees:
 33
 34
 35
-22
-23
+34
 24
 25
 26
 27
 23
-24
 25
 31
 30
 32
-32
-21
-26
-30
-27
+33
+33
+33
 29
+30
+26
 28
-30
-29
+28
+28
+38
 30
 31
 32
-23
+33
 24
 25
 26
 27
 ALC:226.834
-failedRowsCost: 192
+failedRowsCost: 205
 costs:
 58
 58
@@ -15314,32 +15218,39 @@ costs:
 64
 58
 58
-94
+58
+58
+58
 58
 56
-58
 60
 148
+62
 174
+68
+70
 154
 68
 154
 160
 168
-168
-152
+150
+150
 154
 156
 158
 36
 70
+70
 64
 66
 68
+152
+62
 38
 40
 172
-156
+176
 158
 160
 162
@@ -15353,30 +15264,33 @@ costs:
 164
 34
 174
-158
-158
-158
+156
+156
+156
+162
 164
 36
-68
-70
 180
-88
 168
 42
 56
+72
 52
 54
 56
 58
 58
-48
+126
+68
+126
 48
 50
+82
 80
 132
 146
 166
+70
 50
 52
 54
@@ -15389,36 +15303,35 @@ costs:
 58
 48
 50
-38
+36
+42
 44
 46
 54
 56
-24
-26
-30
+28
 54
 54
 46
 64
-66
 68
-66
 68
 70
 152
-156
-148
-148
 152
-152
+150
+150
+150
 68
 70
 38
 152
 156
-78
-70
+68
+40
+42
+80
+68
 156
 158
 160
@@ -15428,16 +15341,20 @@ costs:
 128
 128
 42
-138
+156
+144
 146
-146
+148
 22
 68
+32
 34
-62
+36
+60
+60
 64
 66
-failedRowsSize: 1006
+failedRowsSize: 1081
 
 new level sizes:3064
 0, 4
@@ -17401,12 +17318,12 @@ new level sizes:3064
 3279, 3
 3280, 3
 3281, 4
-3282, 2
-3283, 3
-3284, 3
+3282, 4
+3283, 2
+3284, 2
 3285, 3
-3286, 3
-3287, 3
+3286, 4
+3287, 2
 3288, 3
 3289, 3
 3290, 3
@@ -17417,18 +17334,18 @@ new level sizes:3064
 3295, 3
 3296, 3
 3297, 3
-3298, 3
-3299, 3
+3298, 4
+3299, 2
 3300, 3
 3301, 3
 3302, 3
 3303, 4
-3304, 2
-3305, 3
+3304, 4
+3305, 1
 3306, 3
 3307, 3
-3308, 3
-3309, 3
+3308, 4
+3309, 2
 3310, 3
 3311, 3
 3312, 3
@@ -17439,18 +17356,18 @@ new level sizes:3064
 3317, 3
 3318, 3
 3319, 3
-3320, 3
-3321, 3
+3320, 4
+3321, 2
 3322, 3
 3323, 3
 3324, 3
 3325, 4
-3326, 2
-3327, 3
+3326, 4
+3327, 1
 3328, 3
 3329, 3
-3330, 3
-3331, 3
+3330, 4
+3331, 2
 3332, 3
 3333, 3
 3334, 3
@@ -17461,14 +17378,14 @@ new level sizes:3064
 3339, 3
 3340, 3
 3341, 3
-3342, 3
-3343, 3
+3342, 4
+3343, 2
 3344, 3
 3345, 3
 3346, 3
 3347, 4
-3348, 2
-3349, 3
+3348, 4
+3349, 1
 3350, 3
 3351, 3
 3352, 4
@@ -17494,13 +17411,13 @@ new level sizes:3064
 3372, 4
 3373, 4
 3374, 4
-3375, 2
-3376, 4
-3377, 4
+3375, 4
+3376, 2
+3377, 3
 3378, 4
-3379, 2
+3379, 4
 3380, 2
-3381, 4
+3381, 3
 3382, 2
 3383, 3
 3384, 3
@@ -17520,12 +17437,12 @@ new level sizes:3064
 3398, 4
 3399, 2
 3400, 4
-3401, 2
+3401, 4
 3402, 2
-3403, 4
-3404, 2
-3405, 3
-3406, 3
+3403, 2
+3404, 4
+3405, 2
+3406, 2
 3407, 3
 3408, 3
 3409, 3
@@ -17535,19 +17452,19 @@ new level sizes:3064
 3413, 3
 3414, 3
 3415, 3
-3422, 3
-3423, 3
+3422, 4
+3423, 2
 3424, 3
 3425, 3
-3426, 3
-3427, 3
+3426, 4
+3427, 2
 3428, 3
 3429, 3
 3430, 3
 3431, 3
 3432, 3
-3433, 3
-3434, 3
+3433, 4
+3434, 2
 3435, 3
 3436, 3
 3437, 3
@@ -17562,10 +17479,10 @@ new level sizes:3064
 3458, 3
 3459, 3
 3460, 4
-3461, 1
-3462, 3
-3463, 3
-3464, 3
+3461, 4
+3462, 2
+3463, 2
+3464, 2
 3465, 3
 3466, 3
 3467, 3
@@ -17574,8 +17491,8 @@ new level sizes:3064
 3470, 3
 3471, 3
 3472, 3
-3473, 3
-3474, 3
+3473, 4
+3474, 2
 3475, 3
 3476, 3
 3477, 3
@@ -17585,9 +17502,9 @@ new level sizes:3064
 3481, 2
 3482, 3
 3483, 4
-3484, 2
-3485, 3
-3486, 3
+3484, 4
+3485, 2
+3486, 2
 3487, 3
 3488, 4
 3489, 4
@@ -17595,20 +17512,20 @@ new level sizes:3064
 3491, 4
 3492, 2
 3493, 2
-3494, 3
-3495, 3
-3496, 3
-3497, 3
+3494, 4
+3495, 4
+3496, 2
+3497, 2
 3498, 3
 3499, 3
 3500, 4
 3501, 4
 3502, 4
-3503, 2
-3504, 2
-3505, 4
+3503, 1
+3504, 4
+3505, 2
 3506, 4
-3507, 3
+3507, 4
 3508, 3
 3509, 3
 3510, 4
@@ -17630,13 +17547,13 @@ new level sizes:3064
 3535, 3
 3536, 4
 3537, 4
-3538, 2
-3539, 4
+3538, 4
+3539, 2
 3540, 2
 3541, 2
 3542, 4
-3543, 3
-3544, 4
+3543, 4
+3544, 3
 3545, 4
 3546, 4
 3547, 4
@@ -17644,22 +17561,22 @@ new level sizes:3064
 3549, 4
 3550, 4
 3551, 2
-3552, 2
-3553, 3
+3552, 4
+3553, 1
 3554, 4
-3555, 2
-3556, 3
-3557, 3
+3555, 4
+3556, 2
+3557, 2
 3558, 4
 3559, 4
 3560, 4
-3561, 2
-3562, 4
+3561, 4
+3562, 2
 3563, 4
-3564, 3
-3565, 3
-3566, 3
-3567, 3
+3564, 4
+3565, 2
+3566, 4
+3567, 2
 3568, 3
 3569, 3
 3570, 3
@@ -17668,8 +17585,8 @@ new level sizes:3064
 3573, 4
 3574, 4
 3575, 4
-3576, 3
-3577, 3
+3576, 4
+3577, 2
 3578, 3
 3579, 3
 3580, 3
@@ -17680,8 +17597,8 @@ new level sizes:3064
 3585, 4
 3586, 4
 3587, 4
-3588, 3
-3589, 4
+3588, 4
+3589, 3
 3590, 4
 3591, 4
 3592, 4
@@ -17692,18 +17609,18 @@ new level sizes:3064
 3597, 4
 3598, 4
 3599, 4
-3600, 3
+3600, 4
 3601, 4
 3602, 4
 3603, 4
 3604, 4
 3605, 4
-3606, 4
+3606, 3
 3607, 4
 3608, 4
 3609, 4
-3610, 3
-3611, 4
+3610, 4
+3611, 3
 3612, 4
 3613, 4
 3614, 4
@@ -17716,28 +17633,28 @@ new level sizes:3064
 3621, 4
 3622, 4
 3623, 4
-3624, 3
+3624, 4
 3625, 4
-3626, 3
+3626, 4
 3627, 4
-3628, 4
-3629, 2
-3630, 4
-3631, 2
+3628, 1
+3629, 4
+3630, 2
+3631, 4
 3632, 4
-3633, 4
-3634, 2
+3633, 1
+3634, 4
 3635, 2
 3636, 4
 3637, 1
 3638, 4
-3639, 1
-3640, 1
-3641, 4
-3642, 0
-3643, 4
+3639, 0
+3640, 4
+3641, 0
+3642, 4
+3643, 1
 3644, 1
-3645, 1
+3645, 2
 3646, 1
 3647, 4
 3648, 0
@@ -17795,30 +17712,30 @@ new level sizes:3064
 3700, 0
 3701, 0
 3702, 0
-3703, 1
-3704, 1
-3705, 1
-3706, 4
-3707, 1
-3708, 1
-3709, 3
-3710, 1
-3711, 1
-3712, 1
-3713, 3
+3703, 4
+3704, 0
+3705, 0
+3706, 0
+3707, 4
+3708, 0
+3709, 4
+3710, 0
+3711, 2
+3712, 4
+3713, 1
 3714, 1
-3715, 2
-3716, 2
-3717, 4
-3718, 1
-3719, 4
+3715, 4
+3716, 1
+3717, 1
+3718, 4
+3719, 2
 3720, 2
 3721, 3
 3722, 2
 3723, 4
 3724, 1
-3725, 2
-3726, 3
+3725, 4
+3726, 1
 3727, 3
 3728, 4
 3729, 4
@@ -17834,13 +17751,13 @@ new level sizes:3064
 3739, 4
 3740, 4
 3741, 4
-3742, 3
+3742, 4
 3743, 4
 3744, 4
 3745, 4
 3746, 4
 3747, 4
-3748, 4
+3748, 3
 3749, 4
 3750, 4
 3751, 4
@@ -17851,35 +17768,35 @@ new level sizes:3064
 3757, 4
 3758, 3
 3759, 4
-3760, 3
-3761, 4
+3760, 4
+3761, 3
 3762, 4
 3763, 4
 3764, 4
 3765, 4
 3766, 4
-3767, 3
-3768, 3
+3767, 4
+3768, 2
 3769, 4
 3770, 4
 3771, 3
 3772, 4
-3773, 3
-3774, 4
+3773, 4
+3774, 3
 3775, 4
 3776, 4
 3777, 4
-3778, 3
-3779, 4
+3778, 4
+3779, 3
 3780, 4
 3783, 4
 3784, 4
 3787, 4
 3788, 4
 3789, 3
-3790, 3
+3790, 4
 3796, 4
-3797, 5
+3797, 4
 3802, 4
 3813, 4
 3814, 4
@@ -17943,8 +17860,8 @@ new level sizes:3064
 3895, 4
 3896, 4
 3897, 4
-3898, 2
-3899, 4
+3898, 4
+3899, 2
 3900, 4
 3901, 4
 3902, 4
@@ -18012,10 +17929,10 @@ new level sizes:3064
 4226, 4
 4227, 4
 4228, 4
-4229, 3
+4229, 4
 4230, 4
 4231, 4
-4232, 5
+4232, 4
 4233, 4
 4234, 4
 4235, 4
@@ -18025,7 +17942,7 @@ new level sizes:3064
 4248, 4
 4249, 4
 4250, 4
-4251, 3
+4251, 4
 4252, 4
 4253, 4
 4254, 4
@@ -18037,7 +17954,7 @@ new level sizes:3064
 4260, 4
 4261, 4
 4262, 4
-4263, 3
+4263, 2
 4270, 4
 4271, 4
 4272, 4
@@ -18092,8 +18009,8 @@ new level sizes:3064
 4338, 1
 4339, 1
 4340, 4
-4341, 1
-4342, 1
+4341, 0
+4342, 2
 4343, 1
 4344, 2
 4345, 2
@@ -18121,36 +18038,36 @@ new level sizes:3064
 4367, 4
 4368, 1
 4369, 1
-4370, 1
-4371, 4
+4370, 4
+4371, 1
 4372, 1
 4373, 4
 4374, 1
 4375, 1
 4376, 4
-4377, 2
-4378, 4
+4377, 4
+4378, 2
 4379, 2
 4380, 3
 4381, 2
-4382, 3
+4382, 4
 4383, 4
-4384, 4
-4385, 2
-4386, 4
-4387, 2
+4384, 2
+4385, 4
+4386, 2
+4387, 4
 4388, 4
 4389, 4
-4390, 4
+4390, 3
 4391, 4
 4392, 3
-4393, 3
+4393, 4
 4394, 4
 4395, 4
 4396, 4
 4397, 4
 4398, 4
-4399, 4
+4399, 3
 4406, 5
 4532, 5
 4544, 4
@@ -18166,8 +18083,8 @@ new level sizes:3064
 4555, 4
 4556, 4
 4557, 4
-4558, 3
-4559, 4
+4558, 4
+4559, 3
 4566, 5
 4567, 5
 4568, 5
@@ -18194,13 +18111,13 @@ new level sizes:3064
 4613, 2
 4622, 4
 4623, 4
-4624, 2
+4624, 3
 4625, 2
-4626, 4
+4626, 2
 4627, 4
-4628, 2
-4629, 4
-4630, 2
+4628, 4
+4629, 2
+4630, 3
 4631, 2
 4632, 4
 4633, 1
@@ -18218,8 +18135,8 @@ new level sizes:3064
 4645, 4
 4646, 1
 4647, 1
-4648, 1
-4649, 2
+4648, 2
+4649, 1
 4650, 2
 4651, 2
 4652, 2
@@ -18275,33 +18192,33 @@ new level sizes:3064
 4702, 1
 4703, 1
 4704, 4
-4705, 1
-4706, 1
-4707, 3
+4705, 0
+4706, 3
+4707, 1
 4708, 1
-4709, 1
+4709, 2
 4710, 2
 4711, 2
 4712, 4
 4713, 1
 4714, 4
-4715, 2
-4716, 4
-4717, 2
-4718, 4
-4719, 2
-4720, 2
-4721, 3
-4722, 3
+4715, 4
+4716, 1
+4717, 3
+4718, 2
+4719, 4
+4720, 4
+4721, 2
+4722, 2
 4723, 4
 4724, 4
 4725, 4
 4726, 4
 4727, 4
 4728, 4
-4729, 2
+4729, 4
 4730, 4
-4731, 4
+4731, 2
 4732, 4
 4734, 4
 4735, 4
@@ -18348,38 +18265,38 @@ new level sizes:3064
 4858, 4
 4859, 3
 4860, 3
-4861, 3
-4862, 3
-4863, 4
+4861, 4
+4862, 4
+4863, 2
 4864, 4
 4865, 4
 4866, 4
 4867, 4
-4868, 2
-4869, 2
-4870, 3
-4871, 3
-4872, 3
+4868, 4
+4869, 1
+4870, 4
+4871, 2
+4872, 2
 4873, 3
 4874, 3
 4875, 4
 4876, 4
-4877, 1
+4877, 0
 4878, 4
-4879, 2
-4880, 2
-4882, 3
-4883, 3
-4884, 1
-4885, 3
+4879, 4
+4880, 4
+4882, 2
+4883, 1
+4884, 3
+4885, 1
 4886, 1
 4887, 4
 4888, 0
 4889, 4
 4890, 4
-4891, 2
-4892, 4
-4893, 2
+4891, 4
+4892, 1
+4893, 3
 4894, 2
 4895, 2
 4896, 2
@@ -18389,8 +18306,8 @@ new level sizes:3064
 4900, 4
 4901, 1
 4902, 4
-4903, 2
-4904, 3
+4903, 3
+4904, 2
 4905, 2
 4906, 2
 4907, 3
@@ -18416,10 +18333,10 @@ new level sizes:3064
 4931, 4
 4932, 1
 4933, 4
-4934, 2
+4934, 4
 4935, 4
 4936, 4
-4937, 4
+4937, 2
 4938, 4
 4939, 4
 4941, 3
@@ -18427,28 +18344,28 @@ new level sizes:3064
 4947, 4
 4948, 2
 4949, 4
-4950, 2
-4951, 4
-4952, 4
-4953, 1
-4954, 4
-4955, 2
-4956, 4
-4959, 2
+4950, 4
+4951, 2
+4952, 2
+4953, 4
+4954, 2
+4955, 3
+4956, 2
+4959, 3
 4960, 3
-4961, 2
+4961, 3
 4963, 4
 4964, 4
 4965, 2
-4966, 2
-4967, 3
+4966, 3
+4967, 2
 4968, 4
 4969, 1
 4970, 4
 4971, 0
 4972, 4
-4973, 1
-4974, 1
+4973, 0
+4974, 2
 4975, 1
 4976, 2
 4977, 2
@@ -18458,8 +18375,8 @@ new level sizes:3064
 4981, 4
 4982, 0
 4983, 4
-4984, 1
-4985, 1
+4984, 0
+4985, 2
 4986, 1
 4987, 2
 4988, 2
@@ -18492,8 +18409,8 @@ new level sizes:3064
 5015, 0
 5016, 0
 5017, 0
-5018, 1
-5019, 1
+5018, 2
+5019, 0
 5020, 1
 5021, 1
 5022, 1
@@ -18504,7 +18421,7 @@ new level sizes:3064
 5027, 0
 5028, 2
 5029, 0
-num. of rewritten rows: 2035
+num. of rewritten rows: 2173
 Rows to be rewritten:
 row : 2 at level 1 to 0
 row : 3 at level 1 to 0
@@ -20015,11 +19932,15 @@ row : 18507 at level 3490 to 3489
 row : 18508 at level 3491 to 3489
 row : 18509 at level 3492 to 3491
 row : 18510 at level 3493 to 3491
+row : 18544 at level 3495 to 3494
 row : 18550 at level 3501 to 3500
 row : 18551 at level 3502 to 3501
 row : 18552 at level 3503 to 3502
 row : 18553 at level 3504 to 3502
-row : 18554 at level 3505 to 3502
+row : 18554 at level 3505 to 3504
+row : 18555 at level 3506 to 3504
+row : 18584 at level 3502 to 3501
+row : 18588 at level 3507 to 3506
 row : 18602 at level 3229 to 3228
 row : 18603 at level 3229 to 3228
 row : 18606 at level 3232 to 3231
@@ -20037,34 +19958,50 @@ row : 18627 at level 3245 to 3242
 row : 18647 at level 3265 to 3264
 row : 18659 at level 3277 to 3276
 row : 18664 at level 3282 to 3281
+row : 18665 at level 3283 to 3282
+row : 18666 at level 3284 to 3282
+row : 18669 at level 3287 to 3286
+row : 18681 at level 3299 to 3298
 row : 18686 at level 3304 to 3303
+row : 18687 at level 3305 to 3304
+row : 18691 at level 3309 to 3308
+row : 18703 at level 3321 to 3320
 row : 18708 at level 3326 to 3325
+row : 18709 at level 3327 to 3326
+row : 18713 at level 3331 to 3330
+row : 18725 at level 3343 to 3342
 row : 18730 at level 3348 to 3347
+row : 18731 at level 3349 to 3348
 row : 18747 at level 3365 to 3364
 row : 18748 at level 3366 to 3365
 row : 18761 at level 3374 to 3373
 row : 18762 at level 3375 to 3374
-row : 18765 at level 3376 to 3374
-row : 18766 at level 3377 to 3376
-row : 18767 at level 3378 to 3377
-row : 18768 at level 3377 to 3376
-row : 18769 at level 3378 to 3377
+row : 18765 at level 3376 to 3375
+row : 18766 at level 3377 to 3375
+row : 18767 at level 3378 to 3375
 row : 18770 at level 3379 to 3378
-row : 18771 at level 3380 to 3378
+row : 18771 at level 3380 to 3379
+row : 18772 at level 3381 to 3379
 row : 18773 at level 3382 to 3381
+row : 18792 at level 3401 to 3400
+row : 18796 at level 3405 to 3404
+row : 18797 at level 3406 to 3404
+row : 18825 at level 3434 to 3433
+row : 18864 at level 3474 to 3473
 row : 18869 at level 3479 to 3478
 row : 18870 at level 3480 to 3479
 row : 18871 at level 3481 to 3479
 row : 18874 at level 3484 to 3483
-row : 18932 at level 3506 to 3505
+row : 18875 at level 3485 to 3484
+row : 18876 at level 3486 to 3484
 row : 18933 at level 3507 to 3506
-row : 18934 at level 3508 to 3506
-row : 18935 at level 3509 to 3506
+row : 18934 at level 3508 to 3507
+row : 18935 at level 3509 to 3507
 row : 18954 at level 3537 to 3536
 row : 18955 at level 3538 to 3537
-row : 18956 at level 3539 to 3537
-row : 18957 at level 3540 to 3539
-row : 18958 at level 3541 to 3539
+row : 18956 at level 3539 to 3538
+row : 18957 at level 3540 to 3538
+row : 18958 at level 3541 to 3538
 row : 18970 at level 3242 to 3241
 row : 18977 at level 3246 to 3245
 row : 19006 at level 3260 to 3259
@@ -20074,30 +20011,45 @@ row : 19012 at level 3266 to 3265
 row : 19013 at level 3267 to 3265
 row : 19014 at level 3268 to 3265
 row : 19015 at level 3269 to 3268
+row : 19051 at level 3305 to 3304
+row : 19073 at level 3327 to 3326
+row : 19095 at level 3349 to 3348
+row : 19121 at level 3375 to 3374
 row : 19133 at level 3387 to 3386
 row : 19134 at level 3388 to 3387
 row : 19151 at level 3398 to 3397
 row : 19152 at level 3399 to 3398
 row : 19153 at level 3400 to 3398
 row : 19156 at level 3401 to 3400
-row : 19157 at level 3402 to 3400
-row : 19159 at level 3404 to 3403
+row : 19157 at level 3402 to 3401
+row : 19158 at level 3403 to 3401
+row : 19159 at level 3404 to 3401
+row : 19178 at level 3423 to 3422
+row : 19182 at level 3427 to 3426
 row : 19216 at level 3461 to 3460
-row : 19257 at level 3502 to 3501
-row : 19261 at level 3506 to 3505
+row : 19217 at level 3462 to 3461
+row : 19218 at level 3463 to 3461
+row : 19219 at level 3464 to 3461
+row : 19251 at level 3496 to 3495
+row : 19252 at level 3497 to 3495
+row : 19258 at level 3503 to 3502
 row : 19297 at level 3550 to 3549
 row : 19298 at level 3551 to 3550
 row : 19299 at level 3552 to 3550
+row : 19300 at level 3553 to 3552
 row : 19353 at level 3561 to 3560
-row : 19354 at level 3562 to 3560
-row : 19355 at level 3563 to 3562
+row : 19354 at level 3562 to 3561
+row : 19355 at level 3563 to 3561
 row : 19356 at level 3564 to 3563
+row : 19357 at level 3565 to 3564
 row : 19366 at level 3124 to 3123
 row : 19387 at level 3543 to 3542
+row : 19388 at level 3544 to 3543
 row : 19410 at level 3573 to 3572
 row : 19411 at level 3574 to 3573
 row : 19412 at level 3575 to 3574
 row : 19413 at level 3576 to 3575
+row : 19414 at level 3577 to 3576
 row : 19418 at level 3131 to 3130
 row : 19420 at level 3133 to 3132
 row : 19421 at level 3134 to 3133
@@ -20106,27 +20058,39 @@ row : 19423 at level 3136 to 3135
 row : 19424 at level 3137 to 3136
 row : 19425 at level 3138 to 3136
 row : 19426 at level 3139 to 3136
+row : 19444 at level 3538 to 3537
 row : 19454 at level 3555 to 3554
+row : 19455 at level 3556 to 3555
+row : 19456 at level 3557 to 3555
+row : 19459 at level 3567 to 3566
 row : 19477 at level 3585 to 3584
 row : 19478 at level 3586 to 3585
 row : 19479 at level 3587 to 3586
 row : 19480 at level 3588 to 3587
+row : 19481 at level 3589 to 3588
+row : 19489 at level 3553 to 3552
 row : 19495 at level 3560 to 3559
+row : 19496 at level 3561 to 3560
+row : 19501 at level 3573 to 3572
 row : 19525 at level 3597 to 3596
 row : 19526 at level 3598 to 3597
 row : 19527 at level 3599 to 3598
 row : 19528 at level 3600 to 3599
+row : 19529 at level 3601 to 3600
 row : 19531 at level 3559 to 3558
 row : 19532 at level 3560 to 3559
 row : 19533 at level 3561 to 3560
+row : 19534 at level 3562 to 3561
+row : 19567 at level 3603 to 3602
+row : 19568 at level 3604 to 3603
+row : 19570 at level 3606 to 3605
 row : 19573 at level 3609 to 3608
 row : 19574 at level 3610 to 3609
-row : 19575 at level 3611 to 3609
-row : 19576 at level 3612 to 3611
+row : 19575 at level 3611 to 3610
+row : 19576 at level 3612 to 3610
 row : 19577 at level 3613 to 3612
 row : 19578 at level 3614 to 3613
 row : 19579 at level 3572 to 3571
-row : 19580 at level 3573 to 3572
 row : 19581 at level 3574 to 3573
 row : 19582 at level 3575 to 3574
 row : 19583 at level 3576 to 3575
@@ -20134,36 +20098,46 @@ row : 19584 at level 3577 to 3576
 row : 19622 at level 3622 to 3621
 row : 19623 at level 3623 to 3622
 row : 19624 at level 3624 to 3623
+row : 19625 at level 3625 to 3624
 row : 19648 at level 3616 to 3615
+row : 19658 at level 3627 to 3626
 row : 19659 at level 3628 to 3627
+row : 19663 at level 3632 to 3631
 row : 19664 at level 3633 to 3632
-row : 19665 at level 3634 to 3633
-row : 19666 at level 3635 to 3633
-row : 19667 at level 3636 to 3633
+row : 19665 at level 3634 to 3632
+row : 19666 at level 3635 to 3634
+row : 19667 at level 3636 to 3634
+row : 19668 at level 3602 to 3601
+row : 19671 at level 3605 to 3604
 row : 19673 at level 3608 to 3607
 row : 19674 at level 3609 to 3608
+row : 19675 at level 3610 to 3609
 row : 19679 at level 3615 to 3614
+row : 19688 at level 3626 to 3625
+row : 19689 at level 3627 to 3626
+row : 19694 at level 3632 to 3631
 row : 19695 at level 3633 to 3632
 row : 19699 at level 3637 to 3636
 row : 19700 at level 3638 to 3636
-row : 19704 at level 3642 to 3641
-row : 19705 at level 3643 to 3641
-row : 19706 at level 3644 to 3643
-row : 19707 at level 3645 to 3643
-row : 19708 at level 3646 to 3643
+row : 19701 at level 3639 to 3638
+row : 19702 at level 3640 to 3638
+row : 19703 at level 3641 to 3640
+row : 19704 at level 3642 to 3640
+row : 19705 at level 3643 to 3642
+row : 19706 at level 3644 to 3642
+row : 19707 at level 3645 to 3642
+row : 19708 at level 3646 to 3645
 row : 19713 at level 3617 to 3616
 row : 19714 at level 3618 to 3617
 row : 19715 at level 3619 to 3618
 row : 19716 at level 3620 to 3619
 row : 19717 at level 3621 to 3619
-row : 19725 at level 3629 to 3628
-row : 19726 at level 3630 to 3628
-row : 19727 at level 3631 to 3630
-row : 19728 at level 3632 to 3630
+row : 19724 at level 3628 to 3627
+row : 19725 at level 3629 to 3627
+row : 19726 at level 3630 to 3629
+row : 19727 at level 3631 to 3629
 row : 19735 at level 3639 to 3638
-row : 19736 at level 3640 to 3638
-row : 19737 at level 3641 to 3638
-row : 19738 at level 3642 to 3641
+row : 19737 at level 3641 to 3640
 row : 19744 at level 3648 to 3647
 row : 19745 at level 3649 to 3647
 row : 19746 at level 3650 to 3647
@@ -20196,26 +20170,44 @@ row : 19797 at level 3698 to 3695
 row : 19799 at level 3700 to 3699
 row : 19800 at level 3701 to 3699
 row : 19801 at level 3702 to 3699
-row : 19813 at level 3714 to 3713
-row : 20172 at level 3707 to 3706
-row : 20173 at level 3708 to 3706
-row : 20174 at level 3709 to 3706
+row : 19803 at level 3704 to 3703
+row : 19804 at level 3705 to 3703
+row : 19805 at level 3706 to 3703
+row : 19807 at level 3708 to 3707
+row : 19809 at level 3710 to 3709
+row : 19812 at level 3713 to 3712
+row : 19813 at level 3714 to 3712
+row : 19814 at level 3715 to 3712
+row : 19815 at level 3716 to 3715
+row : 19816 at level 3717 to 3715
+row : 19817 at level 3718 to 3715
+row : 19825 at level 3726 to 3725
+row : 19895 at level 3796 to 3790
+row : 19896 at level 3797 to 3796
+row : 19992 at level 3893 to 3892
+row : 19998 at level 3899 to 3898
+row : 20173 at level 3708 to 3707
 row : 20175 at level 3710 to 3709
-row : 20176 at level 3711 to 3709
 row : 20302 at level 3869 to 3868
-row : 20500 at level 3718 to 3717
-row : 20501 at level 3719 to 3717
-row : 20502 at level 3720 to 3719
-row : 20503 at level 3721 to 3719
+row : 20501 at level 3719 to 3718
+row : 20502 at level 3720 to 3718
+row : 20503 at level 3721 to 3718
 row : 20504 at level 3722 to 3721
 row : 20505 at level 3724 to 3723
 row : 20506 at level 3725 to 3723
+row : 20507 at level 3726 to 3725
 row : 20510 at level 3730 to 3729
 row : 20511 at level 3731 to 3730
 row : 20512 at level 3732 to 3730
+row : 20516 at level 3738 to 3737
+row : 20520 at level 3743 to 3742
+row : 20538 at level 3761 to 3760
 row : 20542 at level 3766 to 3765
 row : 20543 at level 3767 to 3766
+row : 20544 at level 3768 to 3767
 row : 20547 at level 3773 to 3772
+row : 20548 at level 3774 to 3773
+row : 20553 at level 3779 to 3778
 row : 20626 at level 3863 to 3862
 row : 20627 at level 3864 to 3863
 row : 20628 at level 3865 to 3863
@@ -20230,12 +20222,12 @@ row : 20640 at level 3879 to 3878
 row : 20641 at level 3880 to 3879
 row : 20642 at level 3881 to 3880
 row : 20648 at level 3892 to 3891
-row : 20649 at level 3893 to 3892
 row : 20650 at level 3894 to 3893
 row : 20651 at level 3895 to 3894
 row : 20652 at level 3896 to 3895
 row : 20653 at level 3897 to 3896
 row : 20654 at level 3898 to 3897
+row : 20655 at level 3899 to 3898
 row : 20847 at level 3729 to 3728
 row : 20848 at level 3730 to 3729
 row : 20849 at level 3731 to 3730
@@ -20244,7 +20236,11 @@ row : 20852 at level 3734 to 3733
 row : 20853 at level 3735 to 3734
 row : 20854 at level 3736 to 3735
 row : 20855 at level 3737 to 3735
-row : 20856 at level 3738 to 3737
+row : 20862 at level 3744 to 3743
+row : 20863 at level 3745 to 3744
+row : 20864 at level 3746 to 3745
+row : 20865 at level 3747 to 3746
+row : 20866 at level 3748 to 3747
 row : 20873 at level 3755 to 3754
 row : 20874 at level 3756 to 3755
 row : 20875 at level 3757 to 3756
@@ -20269,9 +20265,12 @@ row : 21634 at level 4238 to 4236
 row : 21644 at level 4248 to 4247
 row : 21645 at level 4249 to 4248
 row : 21646 at level 4250 to 4249
+row : 21647 at level 4251 to 4250
+row : 21655 at level 4259 to 4258
 row : 21656 at level 4260 to 4259
 row : 21657 at level 4261 to 4260
 row : 21658 at level 4262 to 4261
+row : 21659 at level 4263 to 4262
 row : 21668 at level 4272 to 4271
 row : 21669 at level 4273 to 4272
 row : 21670 at level 4274 to 4273
@@ -20294,31 +20293,37 @@ row : 21733 at level 4337 to 4335
 row : 21734 at level 4338 to 4337
 row : 21735 at level 4339 to 4337
 row : 21736 at level 4340 to 4337
+row : 21737 at level 4341 to 4340
 row : 21745 at level 4349 to 4348
 row : 21747 at level 4351 to 4350
 row : 21757 at level 4361 to 4360
 row : 21758 at level 4362 to 4360
 row : 21759 at level 4363 to 4362
 row : 21760 at level 4364 to 4362
-row : 21768 at level 4372 to 4371
-row : 21769 at level 4373 to 4371
 row : 21770 at level 4374 to 4373
 row : 21771 at level 4375 to 4373
 row : 21772 at level 4376 to 4373
 row : 21780 at level 4384 to 4383
-row : 21781 at level 4385 to 4384
-row : 21782 at level 4386 to 4384
-row : 21783 at level 4387 to 4386
-row : 21784 at level 4388 to 4386
+row : 21781 at level 4385 to 4383
+row : 21782 at level 4386 to 4385
+row : 21783 at level 4387 to 4385
+row : 21784 at level 4388 to 4387
+row : 21791 at level 4395 to 4394
+row : 21792 at level 4396 to 4395
+row : 21793 at level 4397 to 4396
+row : 21794 at level 4398 to 4397
+row : 21795 at level 4399 to 4398
 row : 21951 at level 4555 to 4554
 row : 21952 at level 4556 to 4555
 row : 21953 at level 4557 to 4556
+row : 21954 at level 4558 to 4557
 row : 22007 at level 4611 to 4610
 row : 22008 at level 4612 to 4611
 row : 22009 at level 4613 to 4611
 row : 22019 at level 4623 to 4622
 row : 22020 at level 4624 to 4623
-row : 22021 at level 4625 to 4623
+row : 22021 at level 4625 to 4624
+row : 22022 at level 4626 to 4624
 row : 22029 at level 4633 to 4632
 row : 22030 at level 4634 to 4632
 row : 22031 at level 4635 to 4634
@@ -20329,6 +20334,7 @@ row : 22041 at level 4645 to 4643
 row : 22042 at level 4646 to 4645
 row : 22043 at level 4647 to 4645
 row : 22044 at level 4648 to 4645
+row : 22045 at level 4649 to 4648
 row : 22053 at level 4657 to 4656
 row : 22054 at level 4658 to 4656
 row : 22055 at level 4659 to 4658
@@ -20352,24 +20358,43 @@ row : 22097 at level 4701 to 4699
 row : 22098 at level 4702 to 4701
 row : 22099 at level 4703 to 4701
 row : 22100 at level 4704 to 4701
+row : 22101 at level 4705 to 4704
 row : 22109 at level 4713 to 4712
 row : 22110 at level 4714 to 4712
+row : 22111 at level 4715 to 4714
+row : 22112 at level 4716 to 4715
+row : 22113 at level 4717 to 4715
 row : 22120 at level 4724 to 4723
 row : 22121 at level 4725 to 4724
 row : 22122 at level 4726 to 4725
+row : 22123 at level 4727 to 4726
+row : 22124 at level 4728 to 4727
 row : 22935 at level 4229 to 4228
+row : 22936 at level 4230 to 4229
+row : 22960 at level 4232 to 4231
 row : 22966 at level 4238 to 4236
+row : 22983 at level 4231 to 4230
 row : 23000 at level 4249 to 4248
 row : 23001 at level 4250 to 4249
 row : 23002 at level 4251 to 4250
-row : 23003 at level 4252 to 4250
+row : 23003 at level 4252 to 4251
+row : 23004 at level 4253 to 4252
+row : 23027 at level 4254 to 4253
+row : 23028 at level 4255 to 4254
+row : 23033 at level 4260 to 4259
+row : 23034 at level 4261 to 4260
+row : 23035 at level 4262 to 4261
 row : 23036 at level 4263 to 4262
+row : 23046 at level 4252 to 4251
 row : 23070 at level 4275 to 4274
+row : 23073 at level 4256 to 4255
+row : 23074 at level 4257 to 4256
+row : 23075 at level 4258 to 4257
 row : 23093 at level 4277 to 4276
+row : 23094 at level 4278 to 4277
 row : 23099 at level 4283 to 4282
 row : 23100 at level 4284 to 4283
 row : 23101 at level 4285 to 4284
-row : 23135 at level 4278 to 4277
 row : 23136 at level 4279 to 4278
 row : 23137 at level 4280 to 4279
 row : 23193 at level 4316 to 4315
@@ -20385,7 +20410,7 @@ row : 23229 at level 4332 to 4329
 row : 23230 at level 4333 to 4332
 row : 23238 at level 4341 to 4340
 row : 23239 at level 4342 to 4340
-row : 23240 at level 4343 to 4340
+row : 23240 at level 4343 to 4342
 row : 23246 at level 4349 to 4348
 row : 23248 at level 4351 to 4350
 row : 23250 at level 4353 to 4352
@@ -20401,96 +20426,125 @@ row : 23264 at level 4367 to 4364
 row : 23265 at level 4368 to 4367
 row : 23266 at level 4369 to 4367
 row : 23267 at level 4370 to 4367
+row : 23268 at level 4371 to 4370
+row : 23269 at level 4372 to 4370
+row : 23270 at level 4373 to 4370
+row : 23274 at level 4377 to 4376
+row : 23280 at level 4383 to 4382
+row : 23285 at level 4388 to 4387
+row : 23286 at level 4389 to 4388
+row : 23291 at level 4394 to 4393
 row : 23412 at level 4377 to 4376
-row : 23413 at level 4378 to 4376
-row : 23414 at level 4379 to 4378
-row : 23415 at level 4380 to 4378
+row : 23413 at level 4378 to 4377
+row : 23414 at level 4379 to 4377
+row : 23415 at level 4380 to 4377
 row : 23416 at level 4381 to 4380
 row : 23580 at level 4389 to 4388
 row : 23581 at level 4390 to 4389
-row : 23582 at level 4391 to 4390
+row : 23582 at level 4391 to 4389
 row : 23583 at level 4392 to 4391
-row : 23731 at level 4558 to 4557
+row : 23732 at level 4559 to 4558
 row : 24127 at level 4608 to 4607
 row : 24128 at level 4609 to 4608
 row : 24129 at level 4610 to 4608
 row : 24130 at level 4611 to 4610
-row : 24146 at level 4627 to 4626
+row : 24143 at level 4624 to 4623
 row : 24147 at level 4628 to 4627
-row : 24148 at level 4629 to 4627
-row : 24149 at level 4630 to 4629
-row : 24150 at level 4631 to 4629
+row : 24148 at level 4629 to 4628
+row : 24149 at level 4630 to 4628
+row : 24150 at level 4631 to 4630
 row : 24444 at level 4705 to 4704
 row : 24445 at level 4706 to 4704
-row : 24446 at level 4707 to 4704
-row : 24447 at level 4708 to 4707
-row : 24448 at level 4709 to 4707
-row : 24599 at level 4715 to 4714
-row : 24600 at level 4716 to 4714
-row : 24601 at level 4717 to 4716
-row : 24602 at level 4718 to 4716
-row : 24603 at level 4719 to 4718
-row : 24604 at level 4720 to 4718
+row : 24446 at level 4707 to 4706
+row : 24447 at level 4708 to 4706
+row : 24454 at level 4715 to 4714
+row : 24600 at level 4716 to 4715
+row : 24602 at level 4718 to 4717
+row : 24604 at level 4720 to 4719
+row : 24605 at level 4721 to 4720
+row : 24606 at level 4722 to 4720
+row : 24613 at level 4730 to 4729
+row : 24614 at level 4731 to 4730
 row : 24736 at level 4865 to 4864
 row : 24737 at level 4866 to 4865
 row : 24738 at level 4867 to 4866
 row : 24739 at level 4868 to 4867
-row : 24740 at level 4869 to 4867
-row : 24745 at level 4727 to 4726
-row : 24746 at level 4728 to 4727
+row : 24740 at level 4869 to 4868
+row : 24741 at level 4870 to 4868
 row : 24747 at level 4729 to 4728
+row : 24748 at level 4730 to 4729
+row : 24749 at level 4731 to 4730
+row : 24858 at level 4865 to 4864
 row : 24869 at level 4877 to 4876
-row : 24870 at level 4878 to 4876
 row : 24871 at level 4879 to 4878
-row : 24872 at level 4880 to 4878
-row : 24876 at level 4884 to 4883
-row : 24878 at level 4886 to 4885
+row : 24872 at level 4880 to 4879
+row : 24874 at level 4882 to 4880
+row : 24875 at level 4883 to 4880
+row : 24876 at level 4884 to 4880
+row : 24877 at level 4885 to 4884
+row : 24878 at level 4886 to 4884
 row : 24880 at level 4888 to 4887
+row : 25007 at level 4862 to 4861
+row : 25008 at level 4863 to 4862
+row : 25009 at level 4864 to 4862
+row : 25014 at level 4871 to 4870
+row : 25015 at level 4872 to 4870
+row : 25019 at level 4877 to 4876
 row : 25032 at level 4890 to 4889
 row : 25033 at level 4891 to 4890
-row : 25034 at level 4892 to 4890
-row : 25035 at level 4893 to 4892
-row : 25036 at level 4894 to 4892
+row : 25034 at level 4892 to 4891
+row : 25035 at level 4893 to 4891
+row : 25036 at level 4894 to 4893
 row : 25055 at level 4901 to 4900
 row : 25056 at level 4902 to 4900
 row : 25057 at level 4903 to 4902
-row : 25058 at level 4904 to 4902
-row : 25059 at level 4905 to 4904
+row : 25058 at level 4904 to 4903
+row : 25059 at level 4905 to 4903
 row : 25074 at level 4922 to 4917
 row : 25082 at level 4930 to 4929
 row : 25083 at level 4931 to 4930
 row : 25084 at level 4932 to 4931
 row : 25085 at level 4933 to 4931
-row : 25205 at level 4864 to 4863
-row : 25206 at level 4865 to 4864
+row : 25086 at level 4934 to 4933
 row : 25207 at level 4866 to 4865
 row : 25208 at level 4867 to 4866
+row : 25209 at level 4868 to 4867
+row : 25210 at level 4869 to 4868
 row : 25217 at level 4876 to 4875
 row : 25218 at level 4877 to 4876
+row : 25221 at level 4880 to 4879
 row : 25229 at level 4888 to 4887
+row : 25232 at level 4891 to 4890
+row : 25233 at level 4892 to 4891
 row : 25240 at level 4899 to 4898
 row : 25241 at level 4900 to 4898
 row : 25242 at level 4901 to 4900
+row : 25244 at level 4903 to 4902
 row : 25252 at level 4911 to 4910
 row : 25253 at level 4912 to 4911
 row : 25254 at level 4913 to 4912
 row : 25255 at level 4914 to 4912
+row : 25256 at level 4915 to 4914
 row : 25275 at level 4934 to 4933
-row : 25276 at level 4935 to 4933
+row : 25276 at level 4935 to 4934
 row : 25277 at level 4936 to 4935
+row : 25278 at level 4937 to 4936
+row : 25279 at level 4938 to 4936
 row : 25288 at level 4947 to 4946
 row : 25289 at level 4948 to 4947
 row : 25290 at level 4949 to 4947
-row : 25300 at level 4959 to 4956
-row : 25301 at level 4960 to 4956
+row : 25291 at level 4950 to 4949
 row : 25310 at level 4969 to 4968
 row : 25311 at level 4970 to 4968
 row : 25312 at level 4971 to 4970
 row : 25313 at level 4972 to 4970
+row : 25314 at level 4973 to 4972
+row : 25315 at level 4974 to 4972
 row : 25321 at level 4980 to 4979
 row : 25322 at level 4981 to 4979
 row : 25323 at level 4982 to 4981
 row : 25324 at level 4983 to 4981
+row : 25325 at level 4984 to 4983
 row : 25332 at level 4991 to 4990
 row : 25333 at level 4992 to 4990
 row : 25334 at level 4993 to 4992
@@ -20504,6 +20558,7 @@ row : 25348 at level 5007 to 5004
 row : 25356 at level 5015 to 5014
 row : 25357 at level 5016 to 5014
 row : 25358 at level 5017 to 5014
+row : 25360 at level 5019 to 5018
 row : 25366 at level 5025 to 5024
 row : 25367 at level 5026 to 5024
 row : 25368 at level 5027 to 5024
@@ -20511,41 +20566,41 @@ row : 25370 at level 5029 to 5028
 row : 25371 at level 4912 to 4911
 row : 25372 at level 4913 to 4912
 row : 25374 at level 4915 to 4914
-row : 25375 at level 4916 to 4914
+row : 25375 at level 4916 to 4915
+row : 25387 at level 4935 to 4934
+row : 25388 at level 4936 to 4935
 row : 25393 at level 4941 to 4939
+row : 25398 at level 4935 to 4934
+row : 25399 at level 4936 to 4935
 row : 25400 at level 4937 to 4936
-row : 25401 at level 4938 to 4937
 row : 25402 at level 4939 to 4938
-row : 25414 at level 4952 to 4951
-row : 25415 at level 4953 to 4952
-row : 25416 at level 4954 to 4952
-row : 25417 at level 4955 to 4954
-row : 25418 at level 4956 to 4954
+row : 25416 at level 4954 to 4953
+row : 25417 at level 4955 to 4953
+row : 25418 at level 4956 to 4955
 row : 25426 at level 4964 to 4963
 row : 25427 at level 4965 to 4964
 row : 25428 at level 4966 to 4964
+row : 25429 at level 4967 to 4966
 row : 25437 at level 4931 to 4930
 row : 25438 at level 4932 to 4931
 row : 25456 at level 4950 to 4949
-row : 25457 at level 4951 to 4949
-row : 25458 at level 4952 to 4951
-row : 25459 at level 4953 to 4952
-row : 25467 at level 4961 to 4960
+row : 25457 at level 4951 to 4950
+row : 25458 at level 4952 to 4950
+row : 25459 at level 4953 to 4950
 row : 25477 at level 4971 to 4970
 row : 25479 at level 4973 to 4972
-row : 25480 at level 4974 to 4972
-row : 25481 at level 4975 to 4972
+row : 25481 at level 4975 to 4974
 row : 25488 at level 4982 to 4981
 row : 25490 at level 4984 to 4983
 row : 25491 at level 4985 to 4983
-row : 25492 at level 4986 to 4983
+row : 25492 at level 4986 to 4985
 row : 25499 at level 4993 to 4992
 row : 25501 at level 4995 to 4994
 
 before numOfLevels: 5030
-after numOfLevels: 4742
-total FLOPS: 1.13877e+06
-avg. FLOPS per level: 240.145
+after numOfLevels: 4730
+total FLOPS: 1.13869e+06
+avg. FLOPS per level: 240.737
 FLOPS per Level:
 6
 22
@@ -23593,12 +23648,12 @@ FLOPS per Level:
 157
 163
 201
-98
-147
-153
+186
+102
+106
 159
-165
-139
+209
+94
 145
 151
 157
@@ -23609,18 +23664,18 @@ FLOPS per Level:
 155
 161
 157
-163
-141
+207
+96
 147
 153
 159
 197
-94
-143
+182
+53
 149
 155
-161
-139
+205
+94
 145
 151
 157
@@ -23631,18 +23686,18 @@ FLOPS per Level:
 155
 161
 157
-163
-141
+207
+96
 147
 153
 159
 197
-94
-143
+182
+53
 149
 155
-161
-139
+205
+94
 145
 151
 157
@@ -23653,14 +23708,14 @@ FLOPS per Level:
 155
 161
 157
-163
-141
+207
+96
 147
 153
 159
 197
-94
-143
+182
+53
 149
 155
 201
@@ -23685,14 +23740,14 @@ FLOPS per Level:
 138
 146
 153
-168
-102
-164
-160
-182
+178
+129
 106
+131
+177
+190
 110
-185
+140
 110
 151
 157
@@ -23711,13 +23766,13 @@ FLOPS per Level:
 157
 160
 102
-174
+178
+179
+102
+106
+198
 98
 102
-185
-110
-143
-149
 155
 161
 167
@@ -23733,19 +23788,19 @@ FLOPS per Level:
 243
 249
 255
-137
-143
+181
+98
 149
 155
-161
-147
+205
+102
 143
 149
 155
 161
 157
-153
-145
+197
+100
 151
 157
 163
@@ -23772,10 +23827,10 @@ FLOPS per Level:
 155
 161
 209
-59
-141
-147
-153
+191
+96
+100
+104
 159
 165
 151
@@ -23784,8 +23839,8 @@ FLOPS per Level:
 157
 163
 159
-153
-145
+197
+100
 151
 157
 153
@@ -23795,9 +23850,9 @@ FLOPS per Level:
 106
 157
 195
-96
-145
-151
+184
+100
+104
 157
 199
 176
@@ -23805,20 +23860,20 @@ FLOPS per Level:
 182
 102
 106
-157
-151
-143
-149
+201
+194
+98
+102
 155
 161
 203
-164
-165
-92
-96
+166
+167
+47
+184
+100
+170
 182
-173
-139
 145
 151
 206
@@ -23848,14 +23903,14 @@ FLOPS per Level:
 220
 177
 219
-188
-92
-180
+194
+167
+96
 100
 104
 197
-143
-194
+187
+149
 202
 210
 218
@@ -23863,32 +23918,32 @@ FLOPS per Level:
 163
 172
 96
-100
-143
+188
+53
 191
-98
-147
-153
+186
+102
+106
 183
 176
-159
-94
-169
+167
+155
+98
 177
-141
-155
-155
-145
+185
+110
+199
+100
 151
 157
 163
 193
-176
-160
+194
+142
 168
 176
-140
-155
+184
+110
 161
 145
 151
@@ -23899,8 +23954,8 @@ FLOPS per Level:
 185
 193
 201
-165
-216
+209
+171
 224
 172
 174
@@ -23911,18 +23966,18 @@ FLOPS per Level:
 179
 173
 195
-153
-208
-176
-164
-158
-180
-182
+197
+183
+199
+151
+151
+197
+137
 203
 182
-156
-145
-185
+166
+176
+151
 197
 171
 165
@@ -23935,27 +23990,26 @@ FLOPS per Level:
 167
 137
 191
-151
-202
-147
-183
-142
-98
-172
+195
+199
+192
+153
+47
+166
 100
-158
-165
-102
+178
+153
+51
+182
 104
 188
 59
-127
-45
-37
-137
-149
+151
+153
+123
+53
 55
-57
+87
 59
 151
 75
@@ -23983,30 +24037,25 @@ FLOPS per Level:
 143
 85
 139
-49
-45
-47
-121
-45
-33
-109
-45
+181
+128
+152
+80
+181
 47
 49
-124
-49
-100
-98
-142
-49
-142
+183
+53
+55
+87
+94
 94
 130
 104
 188
 55
-96
-139
+184
+49
 151
 175
 172
@@ -24017,18 +24066,18 @@ FLOPS per Level:
 167
 138
 114
-159
-147
+185
+121
 204
 212
 220
-175
-202
-180
-188
-196
-204
-212
+219
+187
+181
+189
+197
+205
+173
 198
 206
 214
@@ -24040,26 +24089,26 @@ FLOPS per Level:
 193
 161
 220
-157
-198
+201
+153
 206
 214
 190
 185
 172
-134
-145
+178
+100
 206
 214
 171
 219
-161
-212
+205
+167
 200
 208
 216
-155
-196
+199
+151
 204
 243
 253
@@ -24070,14 +24119,14 @@ FLOPS per Level:
 194
 202
 157
-163
+207
 235
 245
 255
 265
 275
-222
-223
+209
+180
 233
 243
 253
@@ -24172,14 +24221,14 @@ FLOPS per Level:
 191
 199
 197
-191
-161
+201
+151
 169
 177
 185
 191
-98
-182
+186
+92
 190
 198
 206
@@ -24509,10 +24558,10 @@ FLOPS per Level:
 167
 181
 185
-165
-216
-180
-189
+209
+215
+179
+144
 188
 192
 171
@@ -24530,20 +24579,20 @@ FLOPS per Level:
 177
 160
 168
-156
-143
-180
-202
-176
-168
-192
-190
-198
-161
-165
-153
+162
+178
+181
+201
 177
-139
+149
+187
+191
+209
+158
+166
+154
+182
+94
 296
 247
 274
@@ -24557,8 +24606,8 @@ FLOPS per Level:
 181
 157
 205
-143
-181
+173
+151
 183
 203
 163
@@ -24619,9 +24668,8 @@ FLOPS per Level:
 177
 65
 35
-151
-45
-149
+157
+191
 151
 204
 208
@@ -24645,36 +24693,36 @@ FLOPS per Level:
 157
 65
 67
-69
-188
-47
-169
+201
+71
+37
+159
 51
 53
-120
-92
-168
+138
+131
+108
 112
 150
 120
+205
+194
+100
+184
+108
+198
+144
+166
 161
-203
-176
-104
-192
-112
-143
+199
+173
+223
+199
 183
 191
 199
-173
-179
-210
-182
-190
-198
-206
-164
+207
+121
 317
 327
 337
@@ -24832,9 +24880,9 @@ FLOPS per Level:
 191
 185
 181
-187
-153
-218
+189
+195
+173
 306
 349
 298
@@ -24898,14 +24946,14 @@ FLOPS per Level:
 251
 257
 169
-178
-102
+182
+141
 106
+98
 173
-174
-114
-190
-122
+182
+118
+160
 126
 186
 51
@@ -24923,8 +24971,8 @@ FLOPS per Level:
 165
 53
 55
-57
-104
+101
+59
 206
 210
 214
@@ -24979,34 +25027,33 @@ FLOPS per Level:
 175
 63
 65
-87
-45
-155
-223
+109
+207
+157
 159
-161
+202
 206
 210
 160
 49
-108
-88
-144
-96
-192
-108
+150
+135
+47
+104
 112
-161
-167
+191
+200
+116
+120
 209
 147
 155
-147
+163
 171
-189
-104
-208
-216
+173
+188
+210
+126
 224
 232
 210
@@ -25136,38 +25183,37 @@ FLOPS per Level:
 202
 157
 163
-169
-163
-203
-174
-168
+211
+208
+124
+170
+160
 176
-182
-94
-98
-149
-155
-161
+184
+179
+53
+192
+110
+114
 167
 173
 215
+175
 167
-45
-168
-92
-96
+178
+183
 251
-223
-208
-149
-210
+176
+157
+205
+151
 153
 138
 149
-158
-106
-174
-128
+172
+167
+65
+162
 132
 114
 118
@@ -25176,9 +25222,9 @@ FLOPS per Level:
 57
 147
 47
-148
-96
-132
+164
+111
+100
 116
 120
 159
@@ -25188,8 +25234,8 @@ FLOPS per Level:
 168
 159
 47
-126
-96
+144
+79
 112
 150
 227
@@ -25207,12 +25253,12 @@ FLOPS per Level:
 130
 163
 69
-162
-98
-163
+170
 157
-179
-187
+165
+169
+106
+173
 161
 230
 159
@@ -25223,31 +25269,30 @@ FLOPS per Level:
 189
 198
 122
-158
-110
-194
+170
 167
-63
-194
-122
-194
+126
+94
+170
+118
+162
+126
 233
 239
-174
-212
-190
+213
+219
+225
 231
 171
 194
 122
-126
-173
+168
+130
 206
 65
 147
-151
-45
-47
+163
+83
 61
 122
 126
@@ -25255,9 +25300,8 @@ FLOPS per Level:
 202
 67
 179
-151
-43
-57
+155
+99
 59
 108
 112
@@ -25281,8 +25325,7 @@ FLOPS per Level:
 67
 69
 179
-43
-45
+87
 47
 49
 51
@@ -25290,7 +25333,7 @@ FLOPS per Level:
 151
 79
 
-num levels: 4742
+num levels: 4730
 new level sizes:
 4
 4
@@ -28338,17 +28381,12 @@ new level sizes:
 3
 3
 4
+4
+2
 2
 3
-3
-3
-3
-3
-3
-3
-3
-3
-3
+4
+2
 3
 3
 3
@@ -28364,13 +28402,13 @@ new level sizes:
 3
 3
 3
+4
+4
+1
 3
 3
-3
-3
-3
-3
-3
+4
+2
 3
 3
 3
@@ -28386,13 +28424,13 @@ new level sizes:
 3
 3
 3
+4
+4
+1
 3
 3
-3
-3
-3
-3
-3
+4
+2
 3
 3
 3
@@ -28406,6 +28444,11 @@ new level sizes:
 4
 2
 3
+3
+3
+4
+4
+1
 3
 3
 4
@@ -28431,13 +28474,13 @@ new level sizes:
 4
 4
 4
-2
-4
-4
 4
 2
-2
+3
 4
+4
+2
+3
 2
 3
 3
@@ -28457,8 +28500,38 @@ new level sizes:
 4
 2
 4
+4
 2
 2
+4
+2
+2
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+4
+2
+3
+3
+4
+2
+3
+3
+3
+3
+3
 4
 2
 3
@@ -28486,6 +28559,11 @@ new level sizes:
 3
 3
 3
+4
+4
+2
+2
+2
 3
 3
 3
@@ -28494,76 +28572,41 @@ new level sizes:
 3
 3
 3
+4
+2
 3
 3
 3
+4
+4
+2
+2
+3
+4
+4
+2
+2
+3
+4
+4
+2
+4
+2
+2
+4
+4
+2
+2
 3
 3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
+4
+4
 4
 1
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-4
-4
-2
-2
-3
-4
-2
-3
-3
-3
-4
 4
 2
 4
-2
-2
-3
-3
-3
-3
-3
-3
 4
-4
-4
-2
-2
-4
-4
-3
 3
 3
 4
@@ -28594,82 +28637,13 @@ new level sizes:
 3
 4
 4
-2
 4
 2
 2
-4
-3
-4
-4
-4
-4
-4
-4
-4
-2
-2
-3
-4
-2
-3
-3
-4
-4
-4
 2
 4
 4
 3
-3
-3
-3
-3
-3
-3
-4
-4
-4
-4
-4
-3
-3
-3
-3
-3
-3
-3
-3
-4
-4
-4
-4
-3
-4
-4
-4
-4
-4
-4
-4
-4
-4
-4
-4
-3
-4
-4
-4
-4
-4
-4
-4
-4
-4
-3
-4
-4
-4
 4
 4
 4
@@ -28678,29 +28652,97 @@ new level sizes:
 4
 2
 4
+1
+4
+4
+2
+2
+4
+4
+4
+4
+2
+4
+4
+2
+4
+2
+3
+3
+3
+4
+4
+4
+4
+4
+4
+2
+3
+3
+3
+3
+3
+3
+4
+4
+4
 4
 4
 3
 4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
 3
 4
 4
+4
+4
+3
+4
+4
+4
+4
+4
+4
+4
+4
 2
 4
+4
+4
+4
+4
+4
+4
+1
+4
 2
 4
 4
+1
+4
 2
+4
+1
+4
+4
+4
+1
+1
 2
-4
-1
-4
-1
-1
-4
-4
-1
-1
 1
 4
 2
@@ -28728,30 +28770,25 @@ new level sizes:
 4
 4
 4
-1
+4
+4
+4
+2
+4
 1
 1
 4
 1
 1
-3
-1
-1
-1
-3
-1
-2
-2
 4
-1
-4
+2
 2
 3
 2
 4
 1
-2
-3
+4
+1
 3
 4
 4
@@ -28767,16 +28804,6 @@ new level sizes:
 4
 4
 4
-3
-4
-4
-4
-4
-4
-4
-4
-4
-4
 4
 4
 4
@@ -28785,6 +28812,17 @@ new level sizes:
 4
 3
 4
+4
+4
+4
+4
+4
+4
+4
+4
+3
+4
+4
 3
 4
 4
@@ -28792,19 +28830,18 @@ new level sizes:
 4
 4
 4
-3
-3
+2
 4
 4
 3
 4
-3
-4
-4
-4
 4
 3
 4
+4
+4
+4
+3
 4
 5
 5
@@ -28815,14 +28852,14 @@ new level sizes:
 4
 4
 3
-3
+4
 5
 5
 5
 5
 5
 4
-5
+4
 5
 5
 5
@@ -28923,8 +28960,8 @@ new level sizes:
 4
 4
 4
-2
 4
+2
 4
 4
 4
@@ -29254,7 +29291,21 @@ new level sizes:
 4
 4
 4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+2
+4
+4
+4
 3
+4
 4
 4
 5
@@ -29263,32 +29314,18 @@ new level sizes:
 4
 4
 4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
 2
-4
-4
-4
-3
-4
-4
-4
-5
-4
-4
-4
-4
-3
-4
-4
-4
-4
-4
-4
-4
-4
-4
-4
-4
-3
 4
 3
 4
@@ -29365,8 +29402,7 @@ new level sizes:
 1
 1
 4
-1
-1
+2
 1
 2
 2
@@ -29390,19 +29426,18 @@ new level sizes:
 4
 1
 1
-1
-4
-1
 4
 1
 1
 4
-2
+1
+1
 4
+4
+2
 2
 3
 2
-3
 4
 4
 2
@@ -29411,15 +29446,16 @@ new level sizes:
 4
 4
 4
-4
-3
 3
 4
+3
 4
 4
 4
 4
 4
+4
+3
 5
 5
 5
@@ -29578,8 +29614,8 @@ new level sizes:
 4
 4
 4
-3
 4
+3
 4
 5
 4
@@ -29644,24 +29680,13 @@ new level sizes:
 3
 4
 4
+3
 2
 2
 4
 4
 2
-4
-2
-2
-4
-1
-4
-1
-1
-1
-2
-2
-2
-2
+3
 2
 4
 1
@@ -29670,6 +29695,17 @@ new level sizes:
 1
 1
 2
+2
+2
+2
+2
+4
+1
+4
+1
+1
+2
+1
 2
 2
 2
@@ -29725,176 +29761,167 @@ new level sizes:
 1
 1
 4
-1
-1
 3
 1
 1
 2
 2
+2
 4
 1
 4
-2
 4
-2
-4
-2
-2
+1
 3
-3
+2
 4
 4
-4
-4
-4
-4
+2
 2
 4
 4
 4
-4
-4
-4
-5
-5
-5
-5
-4
-4
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-4
-4
-5
-5
-5
-5
-4
-4
-5
-5
-5
-5
-4
-4
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-5
-5
-5
-5
-5
-5
-5
-5
-5
-5
-5
-4
-5
-5
-5
-5
-4
-4
-5
-5
-5
-5
-4
-4
-5
-5
-5
-5
-4
-4
-4
-4
-4
-4
-4
-3
-3
-3
-3
 4
 4
 4
 4
 4
 2
+4
+4
+4
+4
+5
+5
+5
+5
+4
+4
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+4
+4
+5
+5
+5
+5
+4
+4
+5
+5
+5
+5
+4
+4
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+4
+5
+5
+5
+5
+4
+4
+5
+5
+5
+5
+4
+4
+5
+5
+5
+5
+4
+4
+4
+4
+4
+4
+4
+3
+3
+4
+4
 2
-3
-3
-3
-3
-3
+4
+4
+4
 4
 4
 1
@@ -29903,16 +29930,23 @@ new level sizes:
 2
 3
 3
+4
+4
+4
+4
+4
 3
+2
 1
 3
 1
+1
 4
 4
 4
-2
 4
-2
+1
+3
 2
 2
 2
@@ -29922,8 +29956,8 @@ new level sizes:
 4
 1
 4
-2
 3
+2
 2
 2
 3
@@ -29953,10 +29987,10 @@ new level sizes:
 4
 1
 4
+4
+4
+4
 2
-4
-4
-4
 4
 4
 4
@@ -29969,30 +30003,38 @@ new level sizes:
 4
 2
 4
-2
-4
-4
-1
 4
 2
+2
 4
-3
-3
 2
 3
 2
 3
-4
-4
-2
-2
+3
+3
+3
+3
 3
 4
+4
+2
+3
+2
+4
 1
 4
 4
+2
 1
+2
+2
+2
+4
 1
+4
+4
+2
 1
 2
 2
@@ -30004,16 +30046,6 @@ new level sizes:
 1
 1
 1
-2
-2
-2
-4
-1
-4
-4
-1
-1
-1
 1
 1
 1
@@ -30026,8 +30058,7 @@ new level sizes:
 1
 1
 4
-1
-1
+2
 1
 1
 1

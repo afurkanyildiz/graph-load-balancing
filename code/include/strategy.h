@@ -934,9 +934,8 @@ class RewriteByThreeCriteria : public RewritingStrategy {
         sum += parents.size();
       }
 
-      //out<<dag.size()<<"\n";
       avgIndegrePerRow = ceil(sum / dag.size());        
-      cout<<"Total number of indegree:"<< sum <<"\n";
+//      cout<<"Total number of indegree:"<< sum <<"\n";
       cout<<"Average Indegree Per row:" << avgIndegrePerRow <<"\n";
       
       return avgIndegrePerRow;
@@ -944,12 +943,9 @@ class RewriteByThreeCriteria : public RewritingStrategy {
 
     int AvgRowsPerLevel() { 
       double rowSum = 0;
-      //cout<<"Number of levels below average cost:"<< flopsBelowAvg.size()<< "\n";
 
       for(auto it = flopsBelowAvg.begin(); it !=flopsBelowAvg.end(); it++){
-          //cout<< levelTable[it->first].size()<<"\n";
           rowSum += levelTable[it->first].size();
-          //cout << "RowSum:" << rowSum<<"\n";      
       }  
 
       cout << "Total number of rows:" << rowSum << "\n";
@@ -962,14 +958,15 @@ class RewriteByThreeCriteria : public RewritingStrategy {
     } 
 
     void Rewrite(double avgNumRowsPerLevel, double avgCostPerLevel, double avgIndegrePerRow) {
-
-      // to recalculate AIR, keep the sum
+      /*// to recalculate AIR, keep the sum
       double indegreeSum=0;
       for(int i = 0; i < dag.size(); i++){
         Connectivity& connectivity = dag[i];
         vector<int>& parents = connectivity.first;
         indegreeSum += parents.size();
       }
+
+      cout << "indegreesum: " << indegreeSum << " avgIndegrePerRow: " << avgIndegrePerRow << "\n";*/
 
       // for analyzing criteria 
       map<int,tuple<int,int>> failedRowsIndegree; // AIR: row level, row indegree
@@ -982,8 +979,6 @@ class RewriteByThreeCriteria : public RewritingStrategy {
       for(; it != flopsBelowAvg.end(); it++){
         vector<int>& levelRows = levelTable[it->first];
 
-/*        cout << "level: " << it->first << " level size: " << levelRows.size() << "\n";
-          cout << "target level: " << targetLevel << " with size: " << levelSizeBelowAvg[targetLevel] << "\n";*/
 
         int rewriteCount = 0;
         for(auto& row : levelRows){
@@ -991,16 +986,12 @@ class RewriteByThreeCriteria : public RewritingStrategy {
           vector<int> parents = dag[row].first;
           int originalCost = (parents.size() << 1) + 1;
 
-          // remove the current row's indegree
+/*          // remove the current row's indegree
           int originalIndegreeCount = parents.size();
-          indegreeSum -= originalIndegreeCount;
+          indegreeSum -= originalIndegreeCount;*/
 
           int newLevel;
           int maxLevel = findPredecessorsWithMaxLevel(parents, predsWithMaxLevel);
-
-/*          cout << "\nrow: " << row << "\n";
-          cout << "max level: " << maxLevel << "\n";
-          cout<< "indegree : "<< parents.size() <<"\n";*/
 
           while(maxLevel > targetLevel) {
             for(auto& pred : predsWithMaxLevel)
@@ -1012,11 +1003,6 @@ class RewriteByThreeCriteria : public RewritingStrategy {
             if(oldLevel == maxLevel) break;
           }
 
-/*          cout << "maxLevel: " << maxLevel << "\n";
-          cout << "target level: " << targetLevel << " with size: " << levelSizeBelowAvg[targetLevel] << "\n";
-          cout << "levelCost[maxLevel]: " << levelCost[maxLevel] << " avgCost : " << avgCostPerLevel << " parents size: " << parents.size() << "\n";
-          */
-
            int numOfPreds = parents.size();
            int costRow = numOfPreds == 0 ?  1 : (numOfPreds << 1);
 
@@ -1026,20 +1012,21 @@ class RewriteByThreeCriteria : public RewritingStrategy {
              if(parents.size() <= avgIndegrePerRow) {
                 rewriteCount++;
 
-               // update AIR with new indegree value of the current row
+/*               // update AIR with new indegree value of the current row
                indegreeSum += parents.size();
                avgIndegrePerRow = ceil(indegreeSum / dag.size());        
+               cout << "rewritten row: " << originalIndegreeCount << ", " << parents.size() << "\n";
+      cout << "indegreesum: " << indegreeSum << " avgIndegrePerRow: " << avgIndegrePerRow << "\n";*/
+
 
                levelCost[maxLevel] += costRow;
                levelSizeBelowAvg[maxLevel]++;
                levelCost[it->first] -= originalCost;
-//               cout << "decrease size of level " << it->first << " for row: " << row << " level: " << levels[row] << "\n"; 
                levelSizeBelowAvg[it->first]--;
 
                toBeRewritten[row] = make_pair(levels[row],maxLevel);
 
                if(levelSizeBelowAvg[maxLevel] == avgNumRowsPerLevel) {
-                 //cout << "failedRowsSize: row: " << row << " level: " << it->first << " full level: " << maxLevel << "\n";
                  failedRowsSize.push_back(maxLevel);
 
                  if(levelSizeBelowAvg[it->first] == 0 && next(it) != flopsBelowAvg.end())
@@ -1051,15 +1038,16 @@ class RewriteByThreeCriteria : public RewritingStrategy {
                  break;
                } 
              } else {
-               //cout << "failedRowsIndegree: row: " << row << " level: " << it->first << " target level: " << maxLevel << " indegrees: " << parents.size() << "\n";
                failedRowsIndegree[row] = make_pair(it->first,parents.size());
+
+               /*indegreeSum += originalIndegreeCount;
+               avgIndegrePerRow = ceil(indegreeSum / dag.size());        */
              }
            } else {
-               //cout << "failedRowCost: row: " << row << " level: " << it->first << " cost: " << costRow << "\n";
                failedRowsCost[row] = make_pair(it->first,costRow);
 
-               indegreeSum += originalIndegreeCount;
-               avgIndegrePerRow = ceil(indegreeSum / dag.size());        
+              /* indegreeSum += originalIndegreeCount;
+               avgIndegrePerRow = ceil(indegreeSum / dag.size());        */
            }
         } // for each row
 
@@ -1085,7 +1073,6 @@ class RewriteByThreeCriteria : public RewritingStrategy {
         cout << get<1>(row.second) << "\n";
 
       cout << "failedRowsSize: " << failedRowsSize.size() << "\n\n";
-
     }
 
     void expandPredsWith(int row, vector<int>& preds, int child) {
