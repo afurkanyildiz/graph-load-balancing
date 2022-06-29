@@ -6,6 +6,7 @@ then
   echo -e "report name"
   echo -e "parameter #2:"
   echo -e "output file name for new level sizes\n"
+  exit
 fi
 
 start=`grep -n new $1 | head -1 | cut -d':' -f1`
