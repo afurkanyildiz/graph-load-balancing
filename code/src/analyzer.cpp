@@ -91,23 +91,17 @@ bool Analyzer::getSingleLoopRows() {
     for(auto& level : emptyLevels) {
       levelTable.erase(levelTable.begin()+level);
       flopsPerLevel.erase(flopsPerLevel.begin()+level);
-  //    flopsPerLevelRewrite.erase(flopsPerLevelRewrite.begin()+level);
     }
 
- //   cout << "levelTable size: " << levelTable.size() << "\n",
-    cout << "after numOfLevels: " << numOfLevels << "\n";
-/*    cout << "emptyLevels:\n";
-    for(auto& emptyLevel : emptyLevels)
-      cout << emptyLevel << "\n";*/
-
     flopsPerLevelRewrite.reserve(numOfLevels);
-    //fill(flopsPerLevelRewrite.begin(), flopsPerLevelRewrite.begin() + numOfLevels, 0);
     for(int i = 0 ; i < numOfLevels ; i++)
       flopsPerLevelRewrite.push_back(0);
 
     flopsPerLevelRewrite.shrink_to_fit();
-  //  avgFLOPSPerLevel = (double)accumulate(flopsPerLevelRewrite.begin(), flopsPerLevelRewrite.end(), 0)/numOfLevels;
-  //  cout << "avg. FLOPS per level after rewrite : " << avgFLOPSPerLevel << "\n";
+
+    // recalculate total and avg. cost per level
+    totalFLOPSPerLevel = accumulate(flopsPerLevel.begin(), flopsPerLevel.end(), 0.0);
+    avgFLOPSPerLevel = totalFLOPSPerLevel/numOfLevels;
   }
 #endif
 
@@ -274,7 +268,7 @@ void Analyzer::calculateFLOPS() {
 
   flopsPerLevel.shrink_to_fit();
 
-  double totalFLOPSPerLevel = accumulate(flopsPerLevel.begin(), flopsPerLevel.end(), 0.0);
+  totalFLOPSPerLevel = accumulate(flopsPerLevel.begin(), flopsPerLevel.end(), 0.0);
   avgFLOPSPerLevel = totalFLOPSPerLevel/numOfLevels;
 }
 
@@ -335,8 +329,7 @@ void Analyzer::printLevelTable() {
 }
 
 void Analyzer::printLevelSizes(){
-  cout << "num levels: " << levelTable.size() << "\n";
-  cout << "new level sizes:\n";
+  cout << "num. of levels:, " << levelTable.size() << "\n";
   if(matrixCSC != nullptr) {
     for(auto& level : levelTable)
       cout << level.size() << "\n";
@@ -379,37 +372,23 @@ void Analyzer::printValues() {
 }
 
 void Analyzer::printFLOPSPerLevel() {
-  cout << "FLOPS per Level:\n";
+  cout << "\ntotal cost:, " << totalFLOPSPerLevel << "\n";
+  cout << "avg. cost per level:, " << avgFLOPSPerLevel << "\n";
+  cout << "cost(FLOPS) per Level:\n";
   for(auto& level : flopsPerLevel)
     cout << level << "\n";
   cout << "\n";
 }
 
-void Analyzer::reportBefore() {
-  double totalFLOPSPerLevel = accumulate(flopsPerLevel.begin(), flopsPerLevel.end(), 0.0);
-  avgFLOPSPerLevel = totalFLOPSPerLevel/numOfLevels;
-  cout << "total FLOPS: " << totalFLOPSPerLevel << "\n";
-  cout << "avg. FLOPS per level: " << avgFLOPSPerLevel << "\n";
+void Analyzer::report(string reportStep) {
+  cout << "REPORT:, " << reportStep << "\n";
+  printLevelSizes();
   printFLOPSPerLevel();
+  cout << "REPORT:, " << reportStep << "\n\n";
 }
 
 
 #ifdef REWRITE_ENABLED
-  void Analyzer::printFLOPSPerLevelRewrite() {
-    cout << "FLOPS per Level:\n";
-    for(auto& level : flopsPerLevelRewrite)
-      cout << level << "\n";
-    cout << "\n";
-  }
-
-  void Analyzer::reportAfter() {
-    double totalFLOPSPerLevel = accumulate(flopsPerLevelRewrite.begin(), flopsPerLevelRewrite.end(), 0.0);
-    avgFLOPSPerLevel = totalFLOPSPerLevel/numOfLevels;
-    cout << "total FLOPS: " << totalFLOPSPerLevel << "\n";
-    cout << "avg. FLOPS per level: " << avgFLOPSPerLevel << "\n";
-    printFLOPSPerLevelRewrite();
-  }
-
   // helper function to validate if rewriting is done correctly
   void Analyzer::printDependencies() {
     Part* L = matrixCSR->getL();

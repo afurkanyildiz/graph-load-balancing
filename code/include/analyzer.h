@@ -34,6 +34,7 @@ class Analyzer {
     bool singleLoopRows;  // if at least 2 rows exist with nnzs > 10 in a level, loops will be merged, CSR loop will be used
     // 2*nnzs-rows FLOPS in total
     double avgFLOPSPerLevel;
+    double totalFLOPSPerLevel;
     vector<int> flopsPerLevel;
     map<int,double> flopsBelowAvg;
     map<int,double> flopsAboveAvg;
@@ -93,10 +94,8 @@ class Analyzer {
     void printDAG();
     void printValues();
     void printFLOPSPerLevel();
-    void reportBefore();
+    void report(string reportStep);
     #ifdef REWRITE_ENABLED
-      void printFLOPSPerLevelRewrite();
-      void reportAfter();
       void printDependencies();
     #endif
 };

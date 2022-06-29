@@ -75,6 +75,7 @@ class RewritingStrategy {
     }
 
     void printRowsToBeRewritten() {
+      cout << "num. of rewritten rows: " << toBeRewritten.size() << "\n";
       cout << "Rows to be rewritten:\n";
       for(auto& row : toBeRewritten)
         cout << "row : " << row.first << " at level " << row.second.first << " to " << row.second.second << "\n";
@@ -307,7 +308,7 @@ class RewritingStrategy {
     // reflect the changes to related data structures (e.g. levelTable)
     void findEmptyLevels(vector<int>& emptyLevels) {
       int numOfLevels = levelTable.size();
-      cout << "before numOfLevels: " << numOfLevels << "\n";
+  //    cout << "before numOfLevels: " << numOfLevels << "\n";
       for(vector<vector<int>>::reverse_iterator rit = levelTable.rbegin() ; rit != levelTable.rend() ; ++rit) {
         if(rit->empty()) {
        //   cout << "empty level: " << numOfLevels-1-(rit-levelTable.rbegin()) << "\n";
@@ -902,12 +903,8 @@ class RewriteByThreeCriteria : public RewritingStrategy {
           this->avgCostPerLevel = avgFLOPSPerLevel;
           this->flopsBelowAvg = flopsBelowAvg;
 
-          cout << "Before Policy\n";
           policy();
           
-          cout << "num. of rewritten rows: " << toBeRewritten.size() << "\n";
-          printRowsToBeRewritten();
-
           flopsPerLevel = levelCost;
       }
 
@@ -915,15 +912,7 @@ class RewriteByThreeCriteria : public RewritingStrategy {
         AvgRowsPerLevel();
         AvgInPerRow();
 
-        cout << "old level sizes:" << levelSizeBelowAvg.size() << "\n";
-        for(auto& level : levelSizeBelowAvg)
-          cout << level.first << ", " << level.second << "\n";
-
         Rewrite(avgNumRowsPerLevel,avgCostPerLevel,avgIndegrePerRow);
-      
-        cout << "new level sizes:" << levelSizeBelowAvg.size() << "\n";
-        for(auto& level : levelSizeBelowAvg)
-          cout << level.first << ", " << level.second << "\n";
       }
 
     int AvgInPerRow(){
@@ -1008,8 +997,8 @@ class RewriteByThreeCriteria : public RewritingStrategy {
 
            if(levelCost[maxLevel]+costRow < avgCostPerLevel) { 
              // relaxing the indegree constraint with rewriting distance == 1 
-             //if((parents.size() <= avgIndegrePerRow) || (it->first - maxLevel == 1)) {
-             if(parents.size() <= avgIndegrePerRow) {
+             if((parents.size() <= avgIndegrePerRow) || (it->first - maxLevel == 1)) {
+ //            if(parents.size() <= avgIndegrePerRow) {
                 rewriteCount++;
 
 /*               // update AIR with new indegree value of the current row

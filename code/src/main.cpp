@@ -35,23 +35,17 @@ int main(int argc, char *argv[]) {
 //  cout << "################################################################ Printing after extractLCSR\n";
 //  matrixCSR->print();
 
-//  matrixCSC->print();
   matrixCSC->extractLCSC();
-  // cout << " ############################################################### Printing after extractLCSC\n";
-//  matrixCSC->print();
 
   Analyzer* analyzer = new Analyzer(matrixCSR, matrixCSC);
- // analyzer->buildRowHist();
   analyzer->buildLevels();
-  analyzer->printLevelTable();
+//  analyzer->printLevelTable();
 //  analyzer->printDAG();
 //  analyzer->printValues();
-  //analyzer->printRowHist();
 //  analyzer->printLevels();
-//  cout << "reporting before\n";
-//  analyzer->printLevelTable();
   analyzer->calculateFLOPS();
-//  analyzer->reportBefore();
+//  analyzer->printFLOPSPerLevel();
+  analyzer->report(string ("BEFORE"));
 
   #ifdef REWRITE_ENABLED
     //analyzer->printDependencies();
@@ -69,16 +63,12 @@ int main(int argc, char *argv[]) {
                                       analyzer->getAvgFLOPSPerLevel(), analyzer->getFlopsBelowAvg());
 
     rewritingStrategy->shiftRowsUp();
-//    analyzer->printLevelTable();
     vector<int> emptyLevels;
     rewritingStrategy->findEmptyLevels(emptyLevels);
     analyzer->correctAfterRewritingStrategy(emptyLevels);
 
-    // TODO: we dont need to calculate anymore
-//    analyzer->calculateFLOPS();
-    analyzer->reportBefore();
-//    analyzer->printLevelTable();
-    // no need for RewriteByLevel    
+    analyzer->report(string ("AFTER"));
+    rewritingStrategy->printRowsToBeRewritten();
   #endif
 
   #ifdef REWRITE_ENABLED
@@ -87,12 +77,12 @@ int main(int argc, char *argv[]) {
     Rewrite rewriter(matrixCSR, matrixCSC, std::string(matrixCSR->getUF_matrix()->name), analyzer);
   #endif
 
-  rewriter.rewrite();
+//  rewriter.rewrite();
    
   #ifdef REWRITE_ENABLED
 //    rewritingStrategy->printRowsToBeRewritten();
 //    rewritingStrategy->printRewritingMap();
-    analyzer->reportAfter();
+//    analyzer->report(string("AFTER"));
   #endif
 
   return 0;
