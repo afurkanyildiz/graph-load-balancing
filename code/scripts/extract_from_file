@@ -2,4 +2,16 @@
 #$1: starting row
 #$2: ending row
 #$3: file name
+
+if [ "$1" == "--help" ] || [ "$#" -ne 3 ]
+then
+  echo -e "parameter #1:"
+  echo "start line"
+  echo -e "parameter #2:"
+  echo "end line"
+  echo -e "parameter #3:"
+  echo -e "report name"
+  exit
+fi
+
 sed -ne "$1,$2p" "$3" 

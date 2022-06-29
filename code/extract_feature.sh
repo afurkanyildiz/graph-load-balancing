@@ -11,5 +11,6 @@ do
   echo "matrix: $name"
   grep "$1" report."$name"
   echo  ""
-done < matrix.ID.name
+#done < matrix.ID.name
+done < torso
 
