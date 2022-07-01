@@ -602,10 +602,11 @@ class RewriteByThreeCriteria : public RewritingStrategy {
       }
 
       void policy() {
-        Rewrite(avgLevelSize, avgCostPerLevel, avgIndegreePerRow);
+        //Rewrite(avgLevelSize, avgCostPerLevel, avgIndegreePerRow);
+        Rewrite();
       }
 
-void Rewrite(double avgNumRowsPerLevel, double avgCostPerLevel, double avgIndegrePerLevel) {
+void Rewrite() {
     /*// to recalculate AIR, keep the sum
       double indegreeSum=0;
       for(int i = 0; i < dag.size(); i++){
@@ -628,6 +629,8 @@ void Rewrite(double avgNumRowsPerLevel, double avgCostPerLevel, double avgIndegr
   for(; it != flopsBelowAvg.end(); it++){
     vector<int>& levelRows = levelTable[it->first];
 
+//    cout << "level: " << it->first << "\n";
+//
     int rewriteCount = 0;
     for(auto& row : levelRows){
       vector<int> predsWithMaxLevel;
@@ -656,8 +659,8 @@ void Rewrite(double avgNumRowsPerLevel, double avgCostPerLevel, double avgIndegr
 
        if(levelCost[maxLevel]+costRow < avgCostPerLevel) {
          // relaxing the indegree constraint with rewriting distance == 1
- //      if((parents.size() <= avgIndegrePerRow) || (it->first - maxLevel == 1)) {
-         if(parents.size() <= avgIndegrePerLevel) {
+ //      if((parents.size() <= avgIndegreePerRow) || (it->first - maxLevel == 1)) {
+         if(parents.size() <= avgIndegreePerRow) {
             rewriteCount++;
 
 
@@ -674,12 +677,12 @@ void Rewrite(double avgNumRowsPerLevel, double avgCostPerLevel, double avgIndegr
 
            toBeRewritten[row] = make_pair(levels[row],maxLevel);
 
-           if(levelSizeBelowAvg[maxLevel] == avgNumRowsPerLevel) {
+           if(levelSizeBelowAvg[maxLevel] == avgLevelSize) {
              failedRowsSize.push_back(maxLevel);
 
              if(levelSizeBelowAvg[it->first] == 0 && next(it) != flopsBelowAvg.end())
                it++;
-             while(levelSizeBelowAvg[it->first] >= avgNumRowsPerLevel)
+             while(levelSizeBelowAvg[it->first] >= avgLevelSize)
                it++;
 
              targetLevel = it->first;
@@ -698,7 +701,7 @@ void Rewrite(double avgNumRowsPerLevel, double avgCostPerLevel, double avgIndegr
     } // for each row
 
     if(rewriteCount == 0) { // no rewrite happened for this level. change the target level
-      while(levelSizeBelowAvg[it->first] >= avgNumRowsPerLevel)
+      while(levelSizeBelowAvg[it->first] >= avgLevelSize)
        it++;
 
       targetLevel = it->first;
