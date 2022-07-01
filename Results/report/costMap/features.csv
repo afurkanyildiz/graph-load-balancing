@@ -1,0 +1,32 @@
+matrix,failed indegree, failed row cost, failed level size
+ lung2, torso2, venkat01, bcsstk17
+ bcsstk37, cfd2, gearbox, Si41Ge41H72
+ pwtk, PR02R, ohne2, af_0_k101
+
+matrix,# of rewritten rows
+ lung2, 1332
+ torso2, 14591
+ venkat01, 12640
+ bcsstk17, 1585
+ bcsstk37, 5046
+ cfd2, 23434
+ gearbox, 11620
+ Si41Ge41H72, 80388
+ pwtk, 442
+ PR02R, 26441
+ ohne2, 53791
+ af_0_k101, 155646
+
+matrix, # of levels after rewrite
+ lung2 , 23
+ torso2 , 340
+ venkat01 , 3494
+ bcsstk17 , 1008
+ bcsstk37 , 3885
+ cfd2 , 3460
+ gearbox , 2806
+ Si41Ge41H72 , 102732
+ pwtk , 141752
+ PR02R , 2415
+ ohne2 , 4955
+ af_0_k101 , 5563

@@ -1,0 +1,2855 @@
+UF Sparse Matrix Collection Database contains 2893 matrices.
+Analyzing Matrix[ 894] Norris/lung2
+109460, 109460, 492564
+success (0) for COO --> CSR:0
+Analyzing Matrix[ 894] Norris/lung2
+109460, 109460, 492564
+success (0) for COO --> CSC:0
+extract L for CSR format
+A's unit-lower triangular L: ( 109460, 109460 ) nnz = 273647
+extract L for CSC format
+A's unit-lower triangular L: ( 109460, 109460 ) nnz = 273647
+rows: 273647 cols: 109461
+REPORT:, BEFORE
+num. of levels:, 479
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+2
+4
+8
+16
+32
+64
+120
+228
+456
+870
+1704
+3252
+5630
+8702
+11830
+14296
+15198
+14122
+11816
+8650
+5528
+3230
+1678
+724
+270
+100
+26
+2
+
+total cost:, 437834
+avg. cost per level:, 914.058
+cost(FLOPS) per Level:
+2
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+16
+32
+64
+128
+256
+480
+912
+1824
+3480
+6816
+13008
+22520
+34808
+47320
+57184
+60792
+56488
+47264
+34600
+22112
+12920
+6712
+2896
+1080
+400
+104
+8
+
+REPORT:, BEFORE
+
+avg. FLOPS per Level: 914.058
+flopsBelowAvg:
+0 : 2
+1 : 8
+2 : 8
+3 : 8
+4 : 8
+5 : 8
+6 : 8
+7 : 8
+8 : 8
+9 : 8
+10 : 8
+11 : 8
+12 : 8
+13 : 8
+14 : 8
+15 : 8
+16 : 8
+17 : 8
+18 : 8
+19 : 8
+20 : 8
+21 : 8
+22 : 8
+23 : 8
+24 : 8
+25 : 8
+26 : 8
+27 : 8
+28 : 8
+29 : 8
+30 : 8
+31 : 8
+32 : 8
+33 : 8
+34 : 8
+35 : 8
+36 : 8
+37 : 8
+38 : 8
+39 : 8
+40 : 8
+41 : 8
+42 : 8
+43 : 8
+44 : 8
+45 : 8
+46 : 8
+47 : 8
+48 : 8
+49 : 8
+50 : 8
+51 : 8
+52 : 8
+53 : 8
+54 : 8
+55 : 8
+56 : 8
+57 : 8
+58 : 8
+59 : 8
+60 : 8
+61 : 8
+62 : 8
+63 : 8
+64 : 8
+65 : 8
+66 : 8
+67 : 8
+68 : 8
+69 : 8
+70 : 8
+71 : 8
+72 : 8
+73 : 8
+74 : 8
+75 : 8
+76 : 8
+77 : 8
+78 : 8
+79 : 8
+80 : 8
+81 : 8
+82 : 8
+83 : 8
+84 : 8
+85 : 8
+86 : 8
+87 : 8
+88 : 8
+89 : 8
+90 : 8
+91 : 8
+92 : 8
+93 : 8
+94 : 8
+95 : 8
+96 : 8
+97 : 8
+98 : 8
+99 : 8
+100 : 8
+101 : 8
+102 : 8
+103 : 8
+104 : 8
+105 : 8
+106 : 8
+107 : 8
+108 : 8
+109 : 8
+110 : 8
+111 : 8
+112 : 8
+113 : 8
+114 : 8
+115 : 8
+116 : 8
+117 : 8
+118 : 8
+119 : 8
+120 : 8
+121 : 8
+122 : 8
+123 : 8
+124 : 8
+125 : 8
+126 : 8
+127 : 8
+128 : 8
+129 : 8
+130 : 8
+131 : 8
+132 : 8
+133 : 8
+134 : 8
+135 : 8
+136 : 8
+137 : 8
+138 : 8
+139 : 8
+140 : 8
+141 : 8
+142 : 8
+143 : 8
+144 : 8
+145 : 8
+146 : 8
+147 : 8
+148 : 8
+149 : 8
+150 : 8
+151 : 8
+152 : 8
+153 : 8
+154 : 8
+155 : 8
+156 : 8
+157 : 8
+158 : 8
+159 : 8
+160 : 8
+161 : 8
+162 : 8
+163 : 8
+164 : 8
+165 : 8
+166 : 8
+167 : 8
+168 : 8
+169 : 8
+170 : 8
+171 : 8
+172 : 8
+173 : 8
+174 : 8
+175 : 8
+176 : 8
+177 : 8
+178 : 8
+179 : 8
+180 : 8
+181 : 8
+182 : 8
+183 : 8
+184 : 8
+185 : 8
+186 : 8
+187 : 8
+188 : 8
+189 : 8
+190 : 8
+191 : 8
+192 : 8
+193 : 8
+194 : 8
+195 : 8
+196 : 8
+197 : 8
+198 : 8
+199 : 8
+200 : 8
+201 : 8
+202 : 8
+203 : 8
+204 : 8
+205 : 8
+206 : 8
+207 : 8
+208 : 8
+209 : 8
+210 : 8
+211 : 8
+212 : 8
+213 : 8
+214 : 8
+215 : 8
+216 : 8
+217 : 8
+218 : 8
+219 : 8
+220 : 8
+221 : 8
+222 : 8
+223 : 8
+224 : 8
+225 : 8
+226 : 8
+227 : 8
+228 : 8
+229 : 8
+230 : 8
+231 : 8
+232 : 8
+233 : 8
+234 : 8
+235 : 8
+236 : 8
+237 : 8
+238 : 8
+239 : 8
+240 : 8
+241 : 8
+242 : 8
+243 : 8
+244 : 8
+245 : 8
+246 : 8
+247 : 8
+248 : 8
+249 : 8
+250 : 8
+251 : 8
+252 : 8
+253 : 8
+254 : 8
+255 : 8
+256 : 8
+257 : 8
+258 : 8
+259 : 8
+260 : 8
+261 : 8
+262 : 8
+263 : 8
+264 : 8
+265 : 8
+266 : 8
+267 : 8
+268 : 8
+269 : 8
+270 : 8
+271 : 8
+272 : 8
+273 : 8
+274 : 8
+275 : 8
+276 : 8
+277 : 8
+278 : 8
+279 : 8
+280 : 8
+281 : 8
+282 : 8
+283 : 8
+284 : 8
+285 : 8
+286 : 8
+287 : 8
+288 : 8
+289 : 8
+290 : 8
+291 : 8
+292 : 8
+293 : 8
+294 : 8
+295 : 8
+296 : 8
+297 : 8
+298 : 8
+299 : 8
+300 : 8
+301 : 8
+302 : 8
+303 : 8
+304 : 8
+305 : 8
+306 : 8
+307 : 8
+308 : 8
+309 : 8
+310 : 8
+311 : 8
+312 : 8
+313 : 8
+314 : 8
+315 : 8
+316 : 8
+317 : 8
+318 : 8
+319 : 8
+320 : 8
+321 : 8
+322 : 8
+323 : 8
+324 : 8
+325 : 8
+326 : 8
+327 : 8
+328 : 8
+329 : 8
+330 : 8
+331 : 8
+332 : 8
+333 : 8
+334 : 8
+335 : 8
+336 : 8
+337 : 8
+338 : 8
+339 : 8
+340 : 8
+341 : 8
+342 : 8
+343 : 8
+344 : 8
+345 : 8
+346 : 8
+347 : 8
+348 : 8
+349 : 8
+350 : 8
+351 : 8
+352 : 8
+353 : 8
+354 : 8
+355 : 8
+356 : 8
+357 : 8
+358 : 8
+359 : 8
+360 : 8
+361 : 8
+362 : 8
+363 : 8
+364 : 8
+365 : 8
+366 : 8
+367 : 8
+368 : 8
+369 : 8
+370 : 8
+371 : 8
+372 : 8
+373 : 8
+374 : 8
+375 : 8
+376 : 8
+377 : 8
+378 : 8
+379 : 8
+380 : 8
+381 : 8
+382 : 8
+383 : 8
+384 : 8
+385 : 8
+386 : 8
+387 : 8
+388 : 8
+389 : 8
+390 : 8
+391 : 8
+392 : 8
+393 : 8
+394 : 8
+395 : 8
+396 : 8
+397 : 8
+398 : 8
+399 : 8
+400 : 8
+401 : 8
+402 : 8
+403 : 8
+404 : 8
+405 : 8
+406 : 8
+407 : 8
+408 : 8
+409 : 8
+410 : 8
+411 : 8
+412 : 8
+413 : 8
+414 : 8
+415 : 8
+416 : 8
+417 : 8
+418 : 8
+419 : 8
+420 : 8
+421 : 8
+422 : 8
+423 : 8
+424 : 8
+425 : 8
+426 : 8
+427 : 8
+428 : 8
+429 : 8
+430 : 8
+431 : 8
+432 : 8
+433 : 8
+434 : 8
+435 : 8
+436 : 8
+437 : 8
+438 : 8
+439 : 8
+440 : 8
+441 : 8
+442 : 8
+443 : 8
+444 : 8
+445 : 8
+446 : 8
+447 : 8
+448 : 8
+449 : 8
+450 : 8
+451 : 8
+452 : 16
+453 : 32
+454 : 64
+455 : 128
+456 : 256
+457 : 480
+458 : 912
+476 : 400
+477 : 104
+478 : 8
+flopsAboveAvg:
+459 : 1824
+460 : 3480
+461 : 6816
+462 : 13008
+463 : 22520
+464 : 34808
+465 : 47320
+466 : 57184
+467 : 60792
+468 : 56488
+469 : 47264
+470 : 34600
+471 : 22112
+472 : 12920
+473 : 6712
+474 : 2896
+475 : 1080
+
+ALC: 914.058
+AIR: 2 ARL: 4
+costmap improved
+REPORT:, AFTER
+num. of levels:, 23
+306
+304
+304
+304
+252
+456
+870
+1704
+3252
+5630
+8702
+11830
+14296
+15198
+14122
+11816
+8650
+5528
+3230
+1678
+724
+270
+34
+
+total cost:, 436502
+avg. cost per level:, 18978.3
+cost(FLOPS) per Level:
+914
+914
+914
+914
+914
+1824
+3480
+6816
+13008
+22520
+34808
+47320
+57184
+60792
+56488
+47264
+34600
+22112
+12920
+6712
+2896
+1080
+108
+
+REPORT:, AFTER
+
+num. of rewritten rows: 1332
+Rows to be rewritten:
+row : 2 at level 1 to 0
+row : 3 at level 1 to 0
+row : 4 at level 2 to 0
+row : 5 at level 2 to 0
+row : 6 at level 3 to 0
+row : 7 at level 3 to 0
+row : 8 at level 4 to 0
+row : 9 at level 4 to 0
+row : 10 at level 5 to 0
+row : 11 at level 5 to 0
+row : 12 at level 6 to 0
+row : 13 at level 6 to 0
+row : 14 at level 7 to 0
+row : 15 at level 7 to 0
+row : 16 at level 8 to 0
+row : 17 at level 8 to 0
+row : 18 at level 9 to 0
+row : 19 at level 9 to 0
+row : 20 at level 10 to 0
+row : 21 at level 10 to 0
+row : 22 at level 11 to 0
+row : 23 at level 11 to 0
+row : 24 at level 12 to 0
+row : 25 at level 12 to 0
+row : 26 at level 13 to 0
+row : 27 at level 13 to 0
+row : 28 at level 14 to 0
+row : 29 at level 14 to 0
+row : 30 at level 15 to 0
+row : 31 at level 15 to 0
+row : 32 at level 16 to 0
+row : 33 at level 16 to 0
+row : 34 at level 17 to 0
+row : 35 at level 17 to 0
+row : 36 at level 18 to 0
+row : 37 at level 18 to 0
+row : 38 at level 19 to 0
+row : 39 at level 19 to 0
+row : 40 at level 20 to 0
+row : 41 at level 20 to 0
+row : 42 at level 21 to 0
+row : 43 at level 21 to 0
+row : 44 at level 22 to 0
+row : 45 at level 22 to 0
+row : 46 at level 23 to 0
+row : 47 at level 23 to 0
+row : 48 at level 24 to 0
+row : 49 at level 24 to 0
+row : 50 at level 25 to 0
+row : 51 at level 25 to 0
+row : 52 at level 26 to 0
+row : 53 at level 26 to 0
+row : 54 at level 27 to 0
+row : 55 at level 27 to 0
+row : 56 at level 28 to 0
+row : 57 at level 28 to 0
+row : 58 at level 29 to 0
+row : 59 at level 29 to 0
+row : 60 at level 30 to 0
+row : 61 at level 30 to 0
+row : 62 at level 31 to 0
+row : 63 at level 31 to 0
+row : 64 at level 32 to 0
+row : 65 at level 32 to 0
+row : 66 at level 33 to 0
+row : 67 at level 33 to 0
+row : 68 at level 34 to 0
+row : 69 at level 34 to 0
+row : 70 at level 35 to 0
+row : 71 at level 35 to 0
+row : 72 at level 36 to 0
+row : 73 at level 36 to 0
+row : 74 at level 37 to 0
+row : 75 at level 37 to 0
+row : 76 at level 38 to 0
+row : 77 at level 38 to 0
+row : 78 at level 39 to 0
+row : 79 at level 39 to 0
+row : 80 at level 40 to 0
+row : 81 at level 40 to 0
+row : 82 at level 41 to 0
+row : 83 at level 41 to 0
+row : 84 at level 42 to 0
+row : 85 at level 42 to 0
+row : 86 at level 43 to 0
+row : 87 at level 43 to 0
+row : 88 at level 44 to 0
+row : 89 at level 44 to 0
+row : 90 at level 45 to 0
+row : 91 at level 45 to 0
+row : 92 at level 46 to 0
+row : 93 at level 46 to 0
+row : 94 at level 47 to 0
+row : 95 at level 47 to 0
+row : 96 at level 48 to 0
+row : 97 at level 48 to 0
+row : 98 at level 49 to 0
+row : 99 at level 49 to 0
+row : 100 at level 50 to 0
+row : 101 at level 50 to 0
+row : 102 at level 51 to 0
+row : 103 at level 51 to 0
+row : 104 at level 52 to 0
+row : 105 at level 52 to 0
+row : 106 at level 53 to 0
+row : 107 at level 53 to 0
+row : 108 at level 54 to 0
+row : 109 at level 54 to 0
+row : 110 at level 55 to 0
+row : 111 at level 55 to 0
+row : 112 at level 56 to 0
+row : 113 at level 56 to 0
+row : 114 at level 57 to 0
+row : 115 at level 57 to 0
+row : 116 at level 58 to 0
+row : 117 at level 58 to 0
+row : 118 at level 59 to 0
+row : 119 at level 59 to 0
+row : 120 at level 60 to 0
+row : 121 at level 60 to 0
+row : 122 at level 61 to 0
+row : 123 at level 61 to 0
+row : 124 at level 62 to 0
+row : 125 at level 62 to 0
+row : 126 at level 63 to 0
+row : 127 at level 63 to 0
+row : 128 at level 64 to 0
+row : 129 at level 64 to 0
+row : 130 at level 65 to 0
+row : 131 at level 65 to 0
+row : 132 at level 66 to 0
+row : 133 at level 66 to 0
+row : 134 at level 67 to 0
+row : 135 at level 67 to 0
+row : 136 at level 68 to 0
+row : 137 at level 68 to 0
+row : 138 at level 69 to 0
+row : 139 at level 69 to 0
+row : 140 at level 70 to 0
+row : 141 at level 70 to 0
+row : 142 at level 71 to 0
+row : 143 at level 71 to 0
+row : 144 at level 72 to 0
+row : 145 at level 72 to 0
+row : 146 at level 73 to 0
+row : 147 at level 73 to 0
+row : 148 at level 74 to 0
+row : 149 at level 74 to 0
+row : 150 at level 75 to 0
+row : 151 at level 75 to 0
+row : 152 at level 76 to 0
+row : 153 at level 76 to 0
+row : 154 at level 77 to 0
+row : 155 at level 77 to 0
+row : 156 at level 78 to 0
+row : 157 at level 78 to 0
+row : 158 at level 79 to 0
+row : 159 at level 79 to 0
+row : 160 at level 80 to 0
+row : 161 at level 80 to 0
+row : 162 at level 81 to 0
+row : 163 at level 81 to 0
+row : 164 at level 82 to 0
+row : 165 at level 82 to 0
+row : 166 at level 83 to 0
+row : 167 at level 83 to 0
+row : 168 at level 84 to 0
+row : 169 at level 84 to 0
+row : 170 at level 85 to 0
+row : 171 at level 85 to 0
+row : 172 at level 86 to 0
+row : 173 at level 86 to 0
+row : 174 at level 87 to 0
+row : 175 at level 87 to 0
+row : 176 at level 88 to 0
+row : 177 at level 88 to 0
+row : 178 at level 89 to 0
+row : 179 at level 89 to 0
+row : 180 at level 90 to 0
+row : 181 at level 90 to 0
+row : 182 at level 91 to 0
+row : 183 at level 91 to 0
+row : 184 at level 92 to 0
+row : 185 at level 92 to 0
+row : 186 at level 93 to 0
+row : 187 at level 93 to 0
+row : 188 at level 94 to 0
+row : 189 at level 94 to 0
+row : 190 at level 95 to 0
+row : 191 at level 95 to 0
+row : 192 at level 96 to 0
+row : 193 at level 96 to 0
+row : 194 at level 97 to 0
+row : 195 at level 97 to 0
+row : 196 at level 98 to 0
+row : 197 at level 98 to 0
+row : 198 at level 99 to 0
+row : 199 at level 99 to 0
+row : 200 at level 100 to 0
+row : 201 at level 100 to 0
+row : 202 at level 101 to 0
+row : 203 at level 101 to 0
+row : 204 at level 102 to 0
+row : 205 at level 102 to 0
+row : 206 at level 103 to 0
+row : 207 at level 103 to 0
+row : 208 at level 104 to 0
+row : 209 at level 104 to 0
+row : 210 at level 105 to 0
+row : 211 at level 105 to 0
+row : 212 at level 106 to 0
+row : 213 at level 106 to 0
+row : 214 at level 107 to 0
+row : 215 at level 107 to 0
+row : 216 at level 108 to 0
+row : 217 at level 108 to 0
+row : 218 at level 109 to 0
+row : 219 at level 109 to 0
+row : 220 at level 110 to 0
+row : 221 at level 110 to 0
+row : 222 at level 111 to 0
+row : 223 at level 111 to 0
+row : 224 at level 112 to 0
+row : 225 at level 112 to 0
+row : 226 at level 113 to 0
+row : 227 at level 113 to 0
+row : 228 at level 114 to 0
+row : 229 at level 114 to 0
+row : 230 at level 115 to 0
+row : 231 at level 115 to 0
+row : 232 at level 116 to 0
+row : 233 at level 116 to 0
+row : 234 at level 117 to 0
+row : 235 at level 117 to 0
+row : 236 at level 118 to 0
+row : 237 at level 118 to 0
+row : 238 at level 119 to 0
+row : 239 at level 119 to 0
+row : 240 at level 120 to 0
+row : 241 at level 120 to 0
+row : 242 at level 121 to 0
+row : 243 at level 121 to 0
+row : 244 at level 122 to 0
+row : 245 at level 122 to 0
+row : 246 at level 123 to 0
+row : 247 at level 123 to 0
+row : 248 at level 124 to 0
+row : 249 at level 124 to 0
+row : 250 at level 125 to 0
+row : 251 at level 125 to 0
+row : 252 at level 126 to 0
+row : 253 at level 126 to 0
+row : 254 at level 127 to 0
+row : 255 at level 127 to 0
+row : 256 at level 128 to 0
+row : 257 at level 128 to 0
+row : 258 at level 129 to 0
+row : 259 at level 129 to 0
+row : 260 at level 130 to 0
+row : 261 at level 130 to 0
+row : 262 at level 131 to 0
+row : 263 at level 131 to 0
+row : 264 at level 132 to 0
+row : 265 at level 132 to 0
+row : 266 at level 133 to 0
+row : 267 at level 133 to 0
+row : 268 at level 134 to 0
+row : 269 at level 134 to 0
+row : 270 at level 135 to 0
+row : 271 at level 135 to 0
+row : 272 at level 136 to 0
+row : 273 at level 136 to 0
+row : 274 at level 137 to 0
+row : 275 at level 137 to 0
+row : 276 at level 138 to 0
+row : 277 at level 138 to 0
+row : 278 at level 139 to 0
+row : 279 at level 139 to 0
+row : 280 at level 140 to 0
+row : 281 at level 140 to 0
+row : 282 at level 141 to 0
+row : 283 at level 141 to 0
+row : 284 at level 142 to 0
+row : 285 at level 142 to 0
+row : 286 at level 143 to 0
+row : 287 at level 143 to 0
+row : 288 at level 144 to 0
+row : 289 at level 144 to 0
+row : 290 at level 145 to 0
+row : 291 at level 145 to 0
+row : 292 at level 146 to 0
+row : 293 at level 146 to 0
+row : 294 at level 147 to 0
+row : 295 at level 147 to 0
+row : 296 at level 148 to 0
+row : 297 at level 148 to 0
+row : 298 at level 149 to 0
+row : 299 at level 149 to 0
+row : 300 at level 150 to 0
+row : 301 at level 150 to 0
+row : 302 at level 151 to 0
+row : 303 at level 151 to 0
+row : 304 at level 152 to 0
+row : 305 at level 152 to 0
+row : 308 at level 154 to 153
+row : 309 at level 154 to 153
+row : 310 at level 155 to 153
+row : 311 at level 155 to 153
+row : 312 at level 156 to 153
+row : 313 at level 156 to 153
+row : 314 at level 157 to 153
+row : 315 at level 157 to 153
+row : 316 at level 158 to 153
+row : 317 at level 158 to 153
+row : 318 at level 159 to 153
+row : 319 at level 159 to 153
+row : 320 at level 160 to 153
+row : 321 at level 160 to 153
+row : 322 at level 161 to 153
+row : 323 at level 161 to 153
+row : 324 at level 162 to 153
+row : 325 at level 162 to 153
+row : 326 at level 163 to 153
+row : 327 at level 163 to 153
+row : 328 at level 164 to 153
+row : 329 at level 164 to 153
+row : 330 at level 165 to 153
+row : 331 at level 165 to 153
+row : 332 at level 166 to 153
+row : 333 at level 166 to 153
+row : 334 at level 167 to 153
+row : 335 at level 167 to 153
+row : 336 at level 168 to 153
+row : 337 at level 168 to 153
+row : 338 at level 169 to 153
+row : 339 at level 169 to 153
+row : 340 at level 170 to 153
+row : 341 at level 170 to 153
+row : 342 at level 171 to 153
+row : 343 at level 171 to 153
+row : 344 at level 172 to 153
+row : 345 at level 172 to 153
+row : 346 at level 173 to 153
+row : 347 at level 173 to 153
+row : 348 at level 174 to 153
+row : 349 at level 174 to 153
+row : 350 at level 175 to 153
+row : 351 at level 175 to 153
+row : 352 at level 176 to 153
+row : 353 at level 176 to 153
+row : 354 at level 177 to 153
+row : 355 at level 177 to 153
+row : 356 at level 178 to 153
+row : 357 at level 178 to 153
+row : 358 at level 179 to 153
+row : 359 at level 179 to 153
+row : 360 at level 180 to 153
+row : 361 at level 180 to 153
+row : 362 at level 181 to 153
+row : 363 at level 181 to 153
+row : 364 at level 182 to 153
+row : 365 at level 182 to 153
+row : 366 at level 183 to 153
+row : 367 at level 183 to 153
+row : 368 at level 184 to 153
+row : 369 at level 184 to 153
+row : 370 at level 185 to 153
+row : 371 at level 185 to 153
+row : 372 at level 186 to 153
+row : 373 at level 186 to 153
+row : 374 at level 187 to 153
+row : 375 at level 187 to 153
+row : 376 at level 188 to 153
+row : 377 at level 188 to 153
+row : 378 at level 189 to 153
+row : 379 at level 189 to 153
+row : 380 at level 190 to 153
+row : 381 at level 190 to 153
+row : 382 at level 191 to 153
+row : 383 at level 191 to 153
+row : 384 at level 192 to 153
+row : 385 at level 192 to 153
+row : 386 at level 193 to 153
+row : 387 at level 193 to 153
+row : 388 at level 194 to 153
+row : 389 at level 194 to 153
+row : 390 at level 195 to 153
+row : 391 at level 195 to 153
+row : 392 at level 196 to 153
+row : 393 at level 196 to 153
+row : 394 at level 197 to 153
+row : 395 at level 197 to 153
+row : 396 at level 198 to 153
+row : 397 at level 198 to 153
+row : 398 at level 199 to 153
+row : 399 at level 199 to 153
+row : 400 at level 200 to 153
+row : 401 at level 200 to 153
+row : 402 at level 201 to 153
+row : 403 at level 201 to 153
+row : 404 at level 202 to 153
+row : 405 at level 202 to 153
+row : 406 at level 203 to 153
+row : 407 at level 203 to 153
+row : 408 at level 204 to 153
+row : 409 at level 204 to 153
+row : 410 at level 205 to 153
+row : 411 at level 205 to 153
+row : 412 at level 206 to 153
+row : 413 at level 206 to 153
+row : 414 at level 207 to 153
+row : 415 at level 207 to 153
+row : 416 at level 208 to 153
+row : 417 at level 208 to 153
+row : 418 at level 209 to 153
+row : 419 at level 209 to 153
+row : 420 at level 210 to 153
+row : 421 at level 210 to 153
+row : 422 at level 211 to 153
+row : 423 at level 211 to 153
+row : 424 at level 212 to 153
+row : 425 at level 212 to 153
+row : 426 at level 213 to 153
+row : 427 at level 213 to 153
+row : 428 at level 214 to 153
+row : 429 at level 214 to 153
+row : 430 at level 215 to 153
+row : 431 at level 215 to 153
+row : 432 at level 216 to 153
+row : 433 at level 216 to 153
+row : 434 at level 217 to 153
+row : 435 at level 217 to 153
+row : 436 at level 218 to 153
+row : 437 at level 218 to 153
+row : 438 at level 219 to 153
+row : 439 at level 219 to 153
+row : 440 at level 220 to 153
+row : 441 at level 220 to 153
+row : 442 at level 221 to 153
+row : 443 at level 221 to 153
+row : 444 at level 222 to 153
+row : 445 at level 222 to 153
+row : 446 at level 223 to 153
+row : 447 at level 223 to 153
+row : 448 at level 224 to 153
+row : 449 at level 224 to 153
+row : 450 at level 225 to 153
+row : 451 at level 225 to 153
+row : 452 at level 226 to 153
+row : 453 at level 226 to 153
+row : 454 at level 227 to 153
+row : 455 at level 227 to 153
+row : 456 at level 228 to 153
+row : 457 at level 228 to 153
+row : 458 at level 229 to 153
+row : 459 at level 229 to 153
+row : 460 at level 230 to 153
+row : 461 at level 230 to 153
+row : 462 at level 231 to 153
+row : 463 at level 231 to 153
+row : 464 at level 232 to 153
+row : 465 at level 232 to 153
+row : 466 at level 233 to 153
+row : 467 at level 233 to 153
+row : 468 at level 234 to 153
+row : 469 at level 234 to 153
+row : 470 at level 235 to 153
+row : 471 at level 235 to 153
+row : 472 at level 236 to 153
+row : 473 at level 236 to 153
+row : 474 at level 237 to 153
+row : 475 at level 237 to 153
+row : 476 at level 238 to 153
+row : 477 at level 238 to 153
+row : 478 at level 239 to 153
+row : 479 at level 239 to 153
+row : 480 at level 240 to 153
+row : 481 at level 240 to 153
+row : 482 at level 241 to 153
+row : 483 at level 241 to 153
+row : 484 at level 242 to 153
+row : 485 at level 242 to 153
+row : 486 at level 243 to 153
+row : 487 at level 243 to 153
+row : 488 at level 244 to 153
+row : 489 at level 244 to 153
+row : 490 at level 245 to 153
+row : 491 at level 245 to 153
+row : 492 at level 246 to 153
+row : 493 at level 246 to 153
+row : 494 at level 247 to 153
+row : 495 at level 247 to 153
+row : 496 at level 248 to 153
+row : 497 at level 248 to 153
+row : 498 at level 249 to 153
+row : 499 at level 249 to 153
+row : 500 at level 250 to 153
+row : 501 at level 250 to 153
+row : 502 at level 251 to 153
+row : 503 at level 251 to 153
+row : 504 at level 252 to 153
+row : 505 at level 252 to 153
+row : 506 at level 253 to 153
+row : 507 at level 253 to 153
+row : 508 at level 254 to 153
+row : 509 at level 254 to 153
+row : 510 at level 255 to 153
+row : 511 at level 255 to 153
+row : 512 at level 256 to 153
+row : 513 at level 256 to 153
+row : 514 at level 257 to 153
+row : 515 at level 257 to 153
+row : 516 at level 258 to 153
+row : 517 at level 258 to 153
+row : 518 at level 259 to 153
+row : 519 at level 259 to 153
+row : 520 at level 260 to 153
+row : 521 at level 260 to 153
+row : 522 at level 261 to 153
+row : 523 at level 261 to 153
+row : 524 at level 262 to 153
+row : 525 at level 262 to 153
+row : 526 at level 263 to 153
+row : 527 at level 263 to 153
+row : 528 at level 264 to 153
+row : 529 at level 264 to 153
+row : 530 at level 265 to 153
+row : 531 at level 265 to 153
+row : 532 at level 266 to 153
+row : 533 at level 266 to 153
+row : 534 at level 267 to 153
+row : 535 at level 267 to 153
+row : 536 at level 268 to 153
+row : 537 at level 268 to 153
+row : 538 at level 269 to 153
+row : 539 at level 269 to 153
+row : 540 at level 270 to 153
+row : 541 at level 270 to 153
+row : 542 at level 271 to 153
+row : 543 at level 271 to 153
+row : 544 at level 272 to 153
+row : 545 at level 272 to 153
+row : 546 at level 273 to 153
+row : 547 at level 273 to 153
+row : 548 at level 274 to 153
+row : 549 at level 274 to 153
+row : 550 at level 275 to 153
+row : 551 at level 275 to 153
+row : 552 at level 276 to 153
+row : 553 at level 276 to 153
+row : 554 at level 277 to 153
+row : 555 at level 277 to 153
+row : 556 at level 278 to 153
+row : 557 at level 278 to 153
+row : 558 at level 279 to 153
+row : 559 at level 279 to 153
+row : 560 at level 280 to 153
+row : 561 at level 280 to 153
+row : 562 at level 281 to 153
+row : 563 at level 281 to 153
+row : 564 at level 282 to 153
+row : 565 at level 282 to 153
+row : 566 at level 283 to 153
+row : 567 at level 283 to 153
+row : 568 at level 284 to 153
+row : 569 at level 284 to 153
+row : 570 at level 285 to 153
+row : 571 at level 285 to 153
+row : 572 at level 286 to 153
+row : 573 at level 286 to 153
+row : 574 at level 287 to 153
+row : 575 at level 287 to 153
+row : 576 at level 288 to 153
+row : 577 at level 288 to 153
+row : 578 at level 289 to 153
+row : 579 at level 289 to 153
+row : 580 at level 290 to 153
+row : 581 at level 290 to 153
+row : 582 at level 291 to 153
+row : 583 at level 291 to 153
+row : 584 at level 292 to 153
+row : 585 at level 292 to 153
+row : 586 at level 293 to 153
+row : 587 at level 293 to 153
+row : 588 at level 294 to 153
+row : 589 at level 294 to 153
+row : 590 at level 295 to 153
+row : 591 at level 295 to 153
+row : 592 at level 296 to 153
+row : 593 at level 296 to 153
+row : 594 at level 297 to 153
+row : 595 at level 297 to 153
+row : 596 at level 298 to 153
+row : 597 at level 298 to 153
+row : 598 at level 299 to 153
+row : 599 at level 299 to 153
+row : 600 at level 300 to 153
+row : 601 at level 300 to 153
+row : 602 at level 301 to 153
+row : 603 at level 301 to 153
+row : 604 at level 302 to 153
+row : 605 at level 302 to 153
+row : 606 at level 303 to 153
+row : 607 at level 303 to 153
+row : 608 at level 304 to 153
+row : 609 at level 304 to 153
+row : 612 at level 306 to 305
+row : 613 at level 306 to 305
+row : 614 at level 307 to 305
+row : 615 at level 307 to 305
+row : 616 at level 308 to 305
+row : 617 at level 308 to 305
+row : 618 at level 309 to 305
+row : 619 at level 309 to 305
+row : 620 at level 310 to 305
+row : 621 at level 310 to 305
+row : 622 at level 311 to 305
+row : 623 at level 311 to 305
+row : 624 at level 312 to 305
+row : 625 at level 312 to 305
+row : 626 at level 313 to 305
+row : 627 at level 313 to 305
+row : 628 at level 314 to 305
+row : 629 at level 314 to 305
+row : 630 at level 315 to 305
+row : 631 at level 315 to 305
+row : 632 at level 316 to 305
+row : 633 at level 316 to 305
+row : 634 at level 317 to 305
+row : 635 at level 317 to 305
+row : 636 at level 318 to 305
+row : 637 at level 318 to 305
+row : 638 at level 319 to 305
+row : 639 at level 319 to 305
+row : 640 at level 320 to 305
+row : 641 at level 320 to 305
+row : 642 at level 321 to 305
+row : 643 at level 321 to 305
+row : 644 at level 322 to 305
+row : 645 at level 322 to 305
+row : 646 at level 323 to 305
+row : 647 at level 323 to 305
+row : 648 at level 324 to 305
+row : 649 at level 324 to 305
+row : 650 at level 325 to 305
+row : 651 at level 325 to 305
+row : 652 at level 326 to 305
+row : 653 at level 326 to 305
+row : 654 at level 327 to 305
+row : 655 at level 327 to 305
+row : 656 at level 328 to 305
+row : 657 at level 328 to 305
+row : 658 at level 329 to 305
+row : 659 at level 329 to 305
+row : 660 at level 330 to 305
+row : 661 at level 330 to 305
+row : 662 at level 331 to 305
+row : 663 at level 331 to 305
+row : 664 at level 332 to 305
+row : 665 at level 332 to 305
+row : 666 at level 333 to 305
+row : 667 at level 333 to 305
+row : 668 at level 334 to 305
+row : 669 at level 334 to 305
+row : 670 at level 335 to 305
+row : 671 at level 335 to 305
+row : 672 at level 336 to 305
+row : 673 at level 336 to 305
+row : 674 at level 337 to 305
+row : 675 at level 337 to 305
+row : 676 at level 338 to 305
+row : 677 at level 338 to 305
+row : 678 at level 339 to 305
+row : 679 at level 339 to 305
+row : 680 at level 340 to 305
+row : 681 at level 340 to 305
+row : 682 at level 341 to 305
+row : 683 at level 341 to 305
+row : 684 at level 342 to 305
+row : 685 at level 342 to 305
+row : 686 at level 343 to 305
+row : 687 at level 343 to 305
+row : 688 at level 344 to 305
+row : 689 at level 344 to 305
+row : 690 at level 345 to 305
+row : 691 at level 345 to 305
+row : 692 at level 346 to 305
+row : 693 at level 346 to 305
+row : 694 at level 347 to 305
+row : 695 at level 347 to 305
+row : 696 at level 348 to 305
+row : 697 at level 348 to 305
+row : 698 at level 349 to 305
+row : 699 at level 349 to 305
+row : 700 at level 350 to 305
+row : 701 at level 350 to 305
+row : 702 at level 351 to 305
+row : 703 at level 351 to 305
+row : 704 at level 352 to 305
+row : 705 at level 352 to 305
+row : 706 at level 353 to 305
+row : 707 at level 353 to 305
+row : 708 at level 354 to 305
+row : 709 at level 354 to 305
+row : 710 at level 355 to 305
+row : 711 at level 355 to 305
+row : 712 at level 356 to 305
+row : 713 at level 356 to 305
+row : 714 at level 357 to 305
+row : 715 at level 357 to 305
+row : 716 at level 358 to 305
+row : 717 at level 358 to 305
+row : 718 at level 359 to 305
+row : 719 at level 359 to 305
+row : 720 at level 360 to 305
+row : 721 at level 360 to 305
+row : 722 at level 361 to 305
+row : 723 at level 361 to 305
+row : 724 at level 362 to 305
+row : 725 at level 362 to 305
+row : 726 at level 363 to 305
+row : 727 at level 363 to 305
+row : 728 at level 364 to 305
+row : 729 at level 364 to 305
+row : 730 at level 365 to 305
+row : 731 at level 365 to 305
+row : 732 at level 366 to 305
+row : 733 at level 366 to 305
+row : 734 at level 367 to 305
+row : 735 at level 367 to 305
+row : 736 at level 368 to 305
+row : 737 at level 368 to 305
+row : 738 at level 369 to 305
+row : 739 at level 369 to 305
+row : 740 at level 370 to 305
+row : 741 at level 370 to 305
+row : 742 at level 371 to 305
+row : 743 at level 371 to 305
+row : 744 at level 372 to 305
+row : 745 at level 372 to 305
+row : 746 at level 373 to 305
+row : 747 at level 373 to 305
+row : 748 at level 374 to 305
+row : 749 at level 374 to 305
+row : 750 at level 375 to 305
+row : 751 at level 375 to 305
+row : 752 at level 376 to 305
+row : 753 at level 376 to 305
+row : 754 at level 377 to 305
+row : 755 at level 377 to 305
+row : 756 at level 378 to 305
+row : 757 at level 378 to 305
+row : 758 at level 379 to 305
+row : 759 at level 379 to 305
+row : 760 at level 380 to 305
+row : 761 at level 380 to 305
+row : 762 at level 381 to 305
+row : 763 at level 381 to 305
+row : 764 at level 382 to 305
+row : 765 at level 382 to 305
+row : 766 at level 383 to 305
+row : 767 at level 383 to 305
+row : 768 at level 384 to 305
+row : 769 at level 384 to 305
+row : 770 at level 385 to 305
+row : 771 at level 385 to 305
+row : 772 at level 386 to 305
+row : 773 at level 386 to 305
+row : 774 at level 387 to 305
+row : 775 at level 387 to 305
+row : 776 at level 388 to 305
+row : 777 at level 388 to 305
+row : 778 at level 389 to 305
+row : 779 at level 389 to 305
+row : 780 at level 390 to 305
+row : 781 at level 390 to 305
+row : 782 at level 391 to 305
+row : 783 at level 391 to 305
+row : 784 at level 392 to 305
+row : 785 at level 392 to 305
+row : 786 at level 393 to 305
+row : 787 at level 393 to 305
+row : 788 at level 394 to 305
+row : 789 at level 394 to 305
+row : 790 at level 395 to 305
+row : 791 at level 395 to 305
+row : 792 at level 396 to 305
+row : 793 at level 396 to 305
+row : 794 at level 397 to 305
+row : 795 at level 397 to 305
+row : 796 at level 398 to 305
+row : 797 at level 398 to 305
+row : 798 at level 399 to 305
+row : 799 at level 399 to 305
+row : 800 at level 400 to 305
+row : 801 at level 400 to 305
+row : 802 at level 401 to 305
+row : 803 at level 401 to 305
+row : 804 at level 402 to 305
+row : 805 at level 402 to 305
+row : 806 at level 403 to 305
+row : 807 at level 403 to 305
+row : 808 at level 404 to 305
+row : 809 at level 404 to 305
+row : 810 at level 405 to 305
+row : 811 at level 405 to 305
+row : 812 at level 406 to 305
+row : 813 at level 406 to 305
+row : 814 at level 407 to 305
+row : 815 at level 407 to 305
+row : 816 at level 408 to 305
+row : 817 at level 408 to 305
+row : 818 at level 409 to 305
+row : 819 at level 409 to 305
+row : 820 at level 410 to 305
+row : 821 at level 410 to 305
+row : 822 at level 411 to 305
+row : 823 at level 411 to 305
+row : 824 at level 412 to 305
+row : 825 at level 412 to 305
+row : 826 at level 413 to 305
+row : 827 at level 413 to 305
+row : 828 at level 414 to 305
+row : 829 at level 414 to 305
+row : 830 at level 415 to 305
+row : 831 at level 415 to 305
+row : 832 at level 416 to 305
+row : 833 at level 416 to 305
+row : 834 at level 417 to 305
+row : 835 at level 417 to 305
+row : 836 at level 418 to 305
+row : 837 at level 418 to 305
+row : 838 at level 419 to 305
+row : 839 at level 419 to 305
+row : 840 at level 420 to 305
+row : 841 at level 420 to 305
+row : 842 at level 421 to 305
+row : 843 at level 421 to 305
+row : 844 at level 422 to 305
+row : 845 at level 422 to 305
+row : 846 at level 423 to 305
+row : 847 at level 423 to 305
+row : 848 at level 424 to 305
+row : 849 at level 424 to 305
+row : 850 at level 425 to 305
+row : 851 at level 425 to 305
+row : 852 at level 426 to 305
+row : 853 at level 426 to 305
+row : 854 at level 427 to 305
+row : 855 at level 427 to 305
+row : 856 at level 428 to 305
+row : 857 at level 428 to 305
+row : 858 at level 429 to 305
+row : 859 at level 429 to 305
+row : 860 at level 430 to 305
+row : 861 at level 430 to 305
+row : 862 at level 431 to 305
+row : 863 at level 431 to 305
+row : 864 at level 432 to 305
+row : 865 at level 432 to 305
+row : 866 at level 433 to 305
+row : 867 at level 433 to 305
+row : 868 at level 434 to 305
+row : 869 at level 434 to 305
+row : 870 at level 435 to 305
+row : 871 at level 435 to 305
+row : 872 at level 436 to 305
+row : 873 at level 436 to 305
+row : 874 at level 437 to 305
+row : 875 at level 437 to 305
+row : 876 at level 438 to 305
+row : 877 at level 438 to 305
+row : 878 at level 439 to 305
+row : 879 at level 439 to 305
+row : 880 at level 440 to 305
+row : 881 at level 440 to 305
+row : 882 at level 441 to 305
+row : 883 at level 441 to 305
+row : 884 at level 442 to 305
+row : 885 at level 442 to 305
+row : 886 at level 443 to 305
+row : 887 at level 443 to 305
+row : 888 at level 444 to 305
+row : 889 at level 444 to 305
+row : 890 at level 445 to 305
+row : 891 at level 445 to 305
+row : 892 at level 446 to 305
+row : 893 at level 446 to 305
+row : 894 at level 447 to 305
+row : 895 at level 447 to 305
+row : 896 at level 448 to 305
+row : 897 at level 448 to 305
+row : 898 at level 449 to 305
+row : 899 at level 449 to 305
+row : 900 at level 450 to 305
+row : 901 at level 450 to 305
+row : 902 at level 451 to 305
+row : 903 at level 451 to 305
+row : 904 at level 452 to 305
+row : 905 at level 452 to 305
+row : 906 at level 452 to 305
+row : 907 at level 452 to 305
+row : 908 at level 453 to 305
+row : 909 at level 453 to 305
+row : 910 at level 453 to 305
+row : 911 at level 453 to 305
+row : 912 at level 453 to 305
+row : 913 at level 453 to 305
+row : 916 at level 454 to 453
+row : 917 at level 454 to 453
+row : 918 at level 454 to 453
+row : 919 at level 454 to 453
+row : 920 at level 454 to 453
+row : 921 at level 454 to 453
+row : 922 at level 454 to 453
+row : 923 at level 454 to 453
+row : 924 at level 454 to 453
+row : 925 at level 454 to 453
+row : 926 at level 454 to 453
+row : 927 at level 454 to 453
+row : 928 at level 454 to 453
+row : 929 at level 454 to 453
+row : 930 at level 454 to 453
+row : 931 at level 454 to 453
+row : 932 at level 455 to 453
+row : 933 at level 455 to 453
+row : 934 at level 455 to 453
+row : 935 at level 455 to 453
+row : 936 at level 455 to 453
+row : 937 at level 455 to 453
+row : 938 at level 455 to 453
+row : 939 at level 455 to 453
+row : 940 at level 455 to 453
+row : 941 at level 455 to 453
+row : 942 at level 455 to 453
+row : 943 at level 455 to 453
+row : 944 at level 455 to 453
+row : 945 at level 455 to 453
+row : 946 at level 455 to 453
+row : 947 at level 455 to 453
+row : 948 at level 455 to 453
+row : 949 at level 455 to 453
+row : 950 at level 455 to 453
+row : 951 at level 455 to 453
+row : 952 at level 455 to 453
+row : 953 at level 455 to 453
+row : 954 at level 455 to 453
+row : 955 at level 455 to 453
+row : 956 at level 455 to 453
+row : 957 at level 455 to 453
+row : 958 at level 455 to 453
+row : 959 at level 455 to 453
+row : 960 at level 455 to 453
+row : 961 at level 455 to 453
+row : 962 at level 455 to 453
+row : 963 at level 455 to 453
+row : 964 at level 456 to 453
+row : 965 at level 456 to 453
+row : 966 at level 456 to 453
+row : 967 at level 456 to 453
+row : 968 at level 456 to 453
+row : 969 at level 456 to 453
+row : 970 at level 456 to 453
+row : 971 at level 456 to 453
+row : 972 at level 456 to 453
+row : 973 at level 456 to 453
+row : 974 at level 456 to 453
+row : 975 at level 456 to 453
+row : 976 at level 456 to 453
+row : 977 at level 456 to 453
+row : 978 at level 456 to 453
+row : 979 at level 456 to 453
+row : 980 at level 456 to 453
+row : 981 at level 456 to 453
+row : 982 at level 456 to 453
+row : 983 at level 456 to 453
+row : 984 at level 456 to 453
+row : 985 at level 456 to 453
+row : 986 at level 456 to 453
+row : 987 at level 456 to 453
+row : 988 at level 456 to 453
+row : 989 at level 456 to 453
+row : 990 at level 456 to 453
+row : 991 at level 456 to 453
+row : 992 at level 456 to 453
+row : 993 at level 456 to 453
+row : 994 at level 456 to 453
+row : 995 at level 456 to 453
+row : 996 at level 456 to 453
+row : 997 at level 456 to 453
+row : 998 at level 456 to 453
+row : 999 at level 456 to 453
+row : 1000 at level 456 to 453
+row : 1001 at level 456 to 453
+row : 1002 at level 456 to 453
+row : 1003 at level 456 to 453
+row : 1004 at level 456 to 453
+row : 1005 at level 456 to 453
+row : 1006 at level 456 to 453
+row : 1007 at level 456 to 453
+row : 1008 at level 456 to 453
+row : 1009 at level 456 to 453
+row : 1010 at level 456 to 453
+row : 1011 at level 456 to 453
+row : 1012 at level 456 to 453
+row : 1013 at level 456 to 453
+row : 1014 at level 456 to 453
+row : 1015 at level 456 to 453
+row : 1016 at level 456 to 453
+row : 1017 at level 456 to 453
+row : 1018 at level 456 to 453
+row : 1019 at level 456 to 453
+row : 1020 at level 456 to 453
+row : 1021 at level 456 to 453
+row : 1022 at level 456 to 453
+row : 1023 at level 456 to 453
+row : 1024 at level 457 to 453
+row : 1025 at level 457 to 453
+row : 1026 at level 457 to 453
+row : 1027 at level 457 to 453
+row : 1028 at level 457 to 453
+row : 1029 at level 457 to 453
+row : 1030 at level 457 to 453
+row : 1031 at level 457 to 453
+row : 1032 at level 457 to 453
+row : 1033 at level 457 to 453
+row : 1034 at level 457 to 453
+row : 1035 at level 457 to 453
+row : 1036 at level 457 to 453
+row : 1037 at level 457 to 453
+row : 1038 at level 457 to 453
+row : 1039 at level 457 to 453
+row : 1040 at level 457 to 453
+row : 1041 at level 457 to 453
+row : 1042 at level 457 to 453
+row : 1043 at level 457 to 453
+row : 1044 at level 457 to 453
+row : 1045 at level 457 to 453
+row : 1046 at level 457 to 453
+row : 1047 at level 457 to 453
+row : 1048 at level 457 to 453
+row : 1049 at level 457 to 453
+row : 1050 at level 457 to 453
+row : 1051 at level 457 to 453
+row : 1052 at level 457 to 453
+row : 1053 at level 457 to 453
+row : 1054 at level 457 to 453
+row : 1055 at level 457 to 453
+row : 1056 at level 457 to 453
+row : 1057 at level 457 to 453
+row : 1058 at level 457 to 453
+row : 1059 at level 457 to 453
+row : 1060 at level 457 to 453
+row : 1061 at level 457 to 453
+row : 1062 at level 457 to 453
+row : 1063 at level 457 to 453
+row : 1064 at level 457 to 453
+row : 1065 at level 457 to 453
+row : 1066 at level 457 to 453
+row : 1067 at level 457 to 453
+row : 1068 at level 457 to 453
+row : 1069 at level 457 to 453
+row : 1070 at level 457 to 453
+row : 1071 at level 457 to 453
+row : 1072 at level 457 to 453
+row : 1073 at level 457 to 453
+row : 1074 at level 457 to 453
+row : 1075 at level 457 to 453
+row : 1076 at level 457 to 453
+row : 1077 at level 457 to 453
+row : 1078 at level 457 to 453
+row : 1079 at level 457 to 453
+row : 1080 at level 457 to 453
+row : 1081 at level 457 to 453
+row : 1082 at level 457 to 453
+row : 1083 at level 457 to 453
+row : 1084 at level 457 to 453
+row : 1085 at level 457 to 453
+row : 1086 at level 457 to 453
+row : 1087 at level 457 to 453
+row : 1088 at level 457 to 453
+row : 1089 at level 457 to 453
+row : 1090 at level 457 to 453
+row : 1091 at level 457 to 453
+row : 1092 at level 457 to 453
+row : 1093 at level 457 to 453
+row : 1094 at level 457 to 453
+row : 1095 at level 457 to 453
+row : 1096 at level 457 to 453
+row : 1097 at level 457 to 453
+row : 1098 at level 457 to 453
+row : 1099 at level 457 to 453
+row : 1100 at level 457 to 453
+row : 1101 at level 457 to 453
+row : 1102 at level 457 to 453
+row : 1103 at level 457 to 453
+row : 1104 at level 457 to 453
+row : 1105 at level 457 to 453
+row : 1106 at level 457 to 453
+row : 1107 at level 457 to 453
+row : 1108 at level 457 to 453
+row : 1109 at level 457 to 453
+row : 1110 at level 457 to 453
+row : 1111 at level 457 to 453
+row : 1112 at level 457 to 453
+row : 1113 at level 457 to 453
+row : 1114 at level 457 to 453
+row : 1115 at level 457 to 453
+row : 1116 at level 457 to 453
+row : 1117 at level 457 to 453
+row : 1118 at level 457 to 453
+row : 1119 at level 457 to 453
+row : 1120 at level 458 to 453
+row : 1121 at level 458 to 453
+row : 1122 at level 458 to 453
+row : 1123 at level 458 to 453
+row : 1124 at level 458 to 453
+row : 1125 at level 458 to 453
+row : 1126 at level 458 to 453
+row : 1127 at level 458 to 453
+row : 1128 at level 458 to 453
+row : 1129 at level 458 to 453
+row : 1130 at level 458 to 453
+row : 1131 at level 458 to 453
+row : 1132 at level 458 to 453
+row : 1133 at level 458 to 453
+row : 1134 at level 458 to 453
+row : 1135 at level 458 to 453
+row : 1136 at level 458 to 453
+row : 1137 at level 458 to 453
+row : 1138 at level 458 to 453
+row : 1139 at level 458 to 453
+row : 1140 at level 458 to 453
+row : 1141 at level 458 to 453
+row : 1142 at level 458 to 453
+row : 1143 at level 458 to 453
+row : 1144 at level 458 to 453
+row : 1145 at level 458 to 453
+row : 1146 at level 458 to 453
+row : 1147 at level 458 to 453
+row : 1148 at level 458 to 453
+row : 1149 at level 458 to 453
+row : 1150 at level 458 to 453
+row : 1151 at level 458 to 453
+row : 1152 at level 458 to 453
+row : 1153 at level 458 to 453
+row : 1154 at level 458 to 453
+row : 1155 at level 458 to 453
+row : 1156 at level 458 to 453
+row : 1157 at level 458 to 453
+row : 1158 at level 458 to 453
+row : 1159 at level 458 to 453
+row : 1160 at level 458 to 453
+row : 1161 at level 458 to 453
+row : 1162 at level 458 to 453
+row : 1163 at level 458 to 453
+row : 1164 at level 458 to 453
+row : 1165 at level 458 to 453
+row : 1166 at level 458 to 453
+row : 1167 at level 458 to 453
+row : 1168 at level 458 to 453
+row : 1169 at level 458 to 453
+row : 1170 at level 458 to 453
+row : 1171 at level 458 to 453
+row : 1172 at level 458 to 453
+row : 1173 at level 458 to 453
+row : 1174 at level 458 to 453
+row : 1175 at level 458 to 453
+row : 1176 at level 458 to 453
+row : 1177 at level 458 to 453
+row : 1178 at level 458 to 453
+row : 1179 at level 458 to 453
+row : 1180 at level 458 to 453
+row : 1181 at level 458 to 453
+row : 1182 at level 458 to 453
+row : 1183 at level 458 to 453
+row : 1184 at level 458 to 453
+row : 1185 at level 458 to 453
+row : 1186 at level 458 to 453
+row : 1187 at level 458 to 453
+row : 1188 at level 458 to 453
+row : 1189 at level 458 to 453
+row : 1580 at level 456 to 453
+row : 1581 at level 456 to 453
+row : 1582 at level 456 to 453
+row : 1583 at level 456 to 453
+row : 1584 at level 457 to 453
+row : 1585 at level 457 to 453
+row : 1586 at level 457 to 453
+row : 1587 at level 457 to 453
+row : 1588 at level 457 to 453
+row : 1589 at level 457 to 453
+row : 1590 at level 457 to 453
+row : 1591 at level 457 to 453
+row : 2324 at level 457 to 453
+row : 2325 at level 457 to 453
+row : 2326 at level 457 to 453
+row : 2327 at level 457 to 453
+row : 3068 at level 457 to 453
+row : 3069 at level 457 to 453
+row : 3070 at level 457 to 453
+row : 3071 at level 457 to 453
+row : 3812 at level 457 to 453
+row : 3813 at level 457 to 453
+row : 3814 at level 457 to 453
+row : 3815 at level 457 to 453
+row : 4556 at level 457 to 453
+row : 4557 at level 457 to 453
+row : 4558 at level 457 to 453
+row : 4559 at level 457 to 453
+row : 107226 at level 476 to 458
+row : 107227 at level 476 to 458
+row : 107970 at level 476 to 458
+row : 107971 at level 476 to 458
+row : 108690 at level 476 to 458
+row : 108691 at level 476 to 458
+row : 108692 at level 476 to 458
+row : 108693 at level 476 to 458
+row : 108694 at level 476 to 458
+row : 108695 at level 476 to 458
+row : 108696 at level 476 to 458
+row : 108697 at level 476 to 458
+row : 108698 at level 476 to 458
+row : 108699 at level 476 to 458
+row : 108700 at level 476 to 458
+row : 108701 at level 476 to 458
+row : 108702 at level 476 to 458
+row : 108703 at level 476 to 458
+row : 108704 at level 476 to 458
+row : 108705 at level 476 to 458
+row : 108706 at level 476 to 458
+row : 108707 at level 476 to 458
+row : 108708 at level 476 to 458
+row : 108709 at level 476 to 458
+row : 108710 at level 476 to 458
+row : 108711 at level 476 to 458
+row : 108712 at level 476 to 458
+row : 108713 at level 476 to 458
+row : 108714 at level 477 to 476
+row : 108715 at level 477 to 476
+row : 109362 at level 476 to 458
+row : 109363 at level 476 to 458
+row : 109364 at level 476 to 458
+row : 109365 at level 476 to 458
+row : 109366 at level 476 to 458
+row : 109367 at level 476 to 458
+row : 109368 at level 476 to 458
+row : 109369 at level 476 to 458
+row : 109370 at level 476 to 458
+row : 109371 at level 476 to 458
+row : 109372 at level 476 to 458
+row : 109373 at level 476 to 458
+row : 109374 at level 476 to 458
+row : 109375 at level 476 to 458
+row : 109376 at level 476 to 458
+row : 109377 at level 476 to 458
+row : 109378 at level 476 to 458
+row : 109379 at level 476 to 458
+row : 109380 at level 476 to 458
+row : 109381 at level 476 to 458
+row : 109382 at level 476 to 458
+row : 109383 at level 476 to 458
+row : 109384 at level 476 to 458
+row : 109385 at level 476 to 458
+row : 109386 at level 476 to 458
+row : 109387 at level 476 to 458
+row : 109388 at level 476 to 458
+row : 109389 at level 476 to 458
+row : 109390 at level 476 to 458
+row : 109391 at level 476 to 458
+row : 109392 at level 476 to 458
+row : 109393 at level 476 to 458
+row : 109394 at level 476 to 458
+row : 109395 at level 476 to 458
+row : 109396 at level 476 to 458
+row : 109397 at level 476 to 458
+row : 109398 at level 476 to 458
+row : 109399 at level 476 to 458
+row : 109400 at level 476 to 458
+row : 109401 at level 476 to 458
+row : 109402 at level 476 to 458
+row : 109403 at level 476 to 458
+row : 109404 at level 476 to 458
+row : 109405 at level 476 to 458
+row : 109406 at level 476 to 458
+row : 109407 at level 476 to 458
+row : 109408 at level 476 to 458
+row : 109409 at level 476 to 458
+row : 109410 at level 476 to 458
+row : 109411 at level 476 to 458
+row : 109412 at level 476 to 458
+row : 109413 at level 476 to 458
+row : 109414 at level 476 to 458
+row : 109415 at level 476 to 458
+row : 109416 at level 476 to 458
+row : 109417 at level 476 to 458
+row : 109418 at level 476 to 458
+row : 109419 at level 476 to 458
+row : 109420 at level 476 to 458
+row : 109421 at level 476 to 458
+row : 109422 at level 476 to 458
+row : 109423 at level 476 to 458
+row : 109424 at level 476 to 458
+row : 109425 at level 476 to 458
+row : 109426 at level 476 to 458
+row : 109427 at level 476 to 458
+row : 109434 at level 477 to 476
+row : 109435 at level 477 to 476
+row : 109436 at level 477 to 476
+row : 109437 at level 477 to 476
+row : 109438 at level 477 to 476
+row : 109439 at level 477 to 476
+row : 109440 at level 477 to 476
+row : 109441 at level 477 to 476
+row : 109442 at level 477 to 476
+row : 109443 at level 477 to 476
+row : 109444 at level 477 to 476
+row : 109445 at level 477 to 476
+row : 109446 at level 477 to 476
+row : 109447 at level 477 to 476
+row : 109448 at level 477 to 476
+row : 109449 at level 477 to 476
+row : 109450 at level 477 to 476
+row : 109451 at level 477 to 476
+row : 109452 at level 477 to 476
+row : 109453 at level 477 to 476
+row : 109454 at level 477 to 476
+row : 109455 at level 477 to 476
+row : 109456 at level 477 to 476
+row : 109457 at level 477 to 476
+row : 109458 at level 478 to 476
+row : 109459 at level 478 to 476
+
