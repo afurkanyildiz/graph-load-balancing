@@ -38,29 +38,21 @@ int main(int argc, char *argv[]) {
   matrixCSC->extractLCSC();
 
   Analyzer* analyzer = new Analyzer(matrixCSR, matrixCSC);
+ // analyzer->buildRowHist();
   analyzer->buildLevels();
 //  analyzer->printLevelTable();
 //  analyzer->printDAG();
 //  analyzer->printValues();
 //  analyzer->printLevels();
   analyzer->calculateFLOPS();
-//  analyzer->printFLOPSPerLevel();
   analyzer->report(string ("BEFORE"));
 
   #ifdef REWRITE_ENABLED
     //analyzer->printDependencies();
 
-  cout << "rewrite enabled\n";
-    // MUST be called before the rewriting strategy
-    analyzer->calculateLevelsToBeRewritten();
-    //RewriteByLevel* rewritingStrategy = new RewriteByLevel(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, 
-    //                                    analyzer->getLevels(), analyzer->getLevelTable(), analyzer->getDAG(), analyzer->getFlopsBelowAvg());
-    //RewriteByCostMap* rewritingStrategy = new RewriteByCostMap(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, 
-    //                                    analyzer->getLevels(), analyzer->getLevelTable(), analyzer->getDAG(), analyzer->getFlopsPerLevel(),
-    //                                  analyzer->getAvgFLOPSPerLevel(), analyzer->getFlopsBelowAvg());
-    RewriteByThreeCriteria* rewritingStrategy = new RewriteByThreeCriteria(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, 
-                                        analyzer->getLevels(), analyzer->getLevelTable(), analyzer->getDAG(), analyzer->getFlopsPerLevel(),
-                                      analyzer->getAvgFLOPSPerLevel(), analyzer->getFlopsBelowAvg());
+    RewriteByCostMap* rewritingStrategy = new RewriteByCostMap(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, analyzer);
+
+    //RewriteByThreeCriteria* rewritingStrategy = new RewriteByThreeCriteria(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, analyzer);
 
     rewritingStrategy->shiftRowsUp();
     vector<int> emptyLevels;
@@ -69,6 +61,7 @@ int main(int argc, char *argv[]) {
 
     analyzer->report(string ("AFTER"));
     rewritingStrategy->printRowsToBeRewritten();
+
   #endif
 
   #ifdef REWRITE_ENABLED
@@ -82,7 +75,7 @@ int main(int argc, char *argv[]) {
   #ifdef REWRITE_ENABLED
 //    rewritingStrategy->printRowsToBeRewritten();
 //    rewritingStrategy->printRewritingMap();
-//    analyzer->report(string("AFTER"));
+//    analyzer->report(string ("AFTER"));
   #endif
 
   return 0;

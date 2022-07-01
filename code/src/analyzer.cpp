@@ -1,5 +1,6 @@
 #include <limits.h>
 #include <algorithm>
+#include <math.h>
 #include <numeric>
 #include <omp.h>
 #include <typeinfo>
@@ -37,6 +38,10 @@ vector<int>& Analyzer::getFlopsPerLevel() {
   return ref;
 }
 
+void Analyzer::setFlopsPerLevel(vector<int>& levelCost) {
+  flopsPerLevel = levelCost;
+}
+
 map<int,double>& Analyzer::getFlopsBelowAvg() {
   map<int,double>& ref = flopsBelowAvg;
 
@@ -49,13 +54,30 @@ map<int,double>& Analyzer::getFlopsAboveAvg() {
   return ref;
 }
 
-double Analyzer::getAvgFLOPSPerLevel() {
-  return avgFLOPSPerLevel;
-}
-
 bool Analyzer::getSingleLoopRows() {
   return singleLoopRows;
 }
+
+float Analyzer::getALC() {
+  return ALC;
+}
+
+float Analyzer::getAIR() {
+  return AIR;
+}
+
+float Analyzer::getARL() {
+  return ARL;
+}
+
+int Analyzer::getMMAD() {
+  return MMAD;
+}
+
+int Analyzer::getMID() {
+  return MID;
+}
+
 
 #ifdef REWRITE_ENABLED
   vector<int>& Analyzer::getFlopsPerLevelRewrite() {
@@ -101,8 +123,9 @@ bool Analyzer::getSingleLoopRows() {
 
     // recalculate total and avg. cost per level
     totalFLOPSPerLevel = accumulate(flopsPerLevel.begin(), flopsPerLevel.end(), 0.0);
-    avgFLOPSPerLevel = totalFLOPSPerLevel/numOfLevels;
+    ALC = totalFLOPSPerLevel/numOfLevels;
   }
+
 #endif
 
 void Analyzer::buildLevels() {
@@ -269,14 +292,66 @@ void Analyzer::calculateFLOPS() {
   flopsPerLevel.shrink_to_fit();
 
   totalFLOPSPerLevel = accumulate(flopsPerLevel.begin(), flopsPerLevel.end(), 0.0);
-  avgFLOPSPerLevel = totalFLOPSPerLevel/numOfLevels;
+  ALC = totalFLOPSPerLevel/numOfLevels;
+}
+
+void Analyzer::analyzeForCriteria() {
+  AIR = ARL = MMAD = MID = 0;
+  for(int i = 1; i < numOfLevels; i++) {
+    vector<int>& level = levelTable[i];
+
+    for(auto& row : level) {
+      vector<int>& parents = dag[row].first;
+      AIR += parents.size();
+
+    /*  
+     *  REMOVED FROM ANALYSIS SINCE THEY DIDN'T PAY OUT
+     *  // find max distance between indegrees
+      auto minMax = minmax_element(parents.begin(), parents.end());
+      int indegreeDistance = *minMax.second - *minMax.first;
+
+      // find max distance between memory accesses (indegrees & row itself)
+      int memAccessDistance;
+      if(row < *minMax.first)
+        memAccessDistance = *minMax.second - row;
+      else if(row > *minMax.second)
+        memAccessDistance = row - *minMax.first;
+
+      if(MID < indegreeDistance) {
+        MID = indegreeDistance;
+      }
+
+      if(MMAD < memAccessDistance) {
+        MMAD = memAccessDistance;
+      }
+      */
+    }
+  }
+
+  AIR /= matrixCSC->getNumOfRows(); 
+  AIR = ceil(AIR);
+  
+  for(auto& level : flopsBelowAvg) {
+    vector<int>& currLevel = levelTable[level.first];
+    ARL += currLevel.size();
+  }
+
+  ARL /= flopsBelowAvg.size();
+  ARL = ceil(ARL);
+
+  /*// ARL for all
+  ARL = ceil(matrixCSC->getNumOfRows()/levelTable.size());*/
+
+  cout << "\nALC: " << ALC << "\n";
+  cout << "AIR: " << AIR << " ARL: " << ARL << "\n";
+//  cout << "MMAD: " << MMAD << " MID: " << MID << "\n\n";
 }
 
 #ifdef REWRITE_ENABLED
   void Analyzer::calculateLevelsToBeRewritten() {
     if(flopsBelowAvg.empty() && flopsAboveAvg.empty()) {
       for(int i = 0; i < numOfLevels; i++) {
-        if(flopsPerLevel[i] < avgFLOPSPerLevel)
+        if(flopsPerLevel[i] < ALC)
            flopsBelowAvg[i] = flopsPerLevel[i];
         else 
            flopsAboveAvg[i] = flopsPerLevel[i];
@@ -284,7 +359,7 @@ void Analyzer::calculateFLOPS() {
     } else
       cout << "already calculated\n";
 
-    cout << "avg. FLOPS per Level: " << avgFLOPSPerLevel << "\n"; 
+    cout << "avg. FLOPS per Level: " << ALC << "\n"; 
     cout << "flopsBelowAvg:\n";
     for(auto& level : flopsBelowAvg)
       cout << level.first << " : " << level.second << "\n";
@@ -292,6 +367,8 @@ void Analyzer::calculateFLOPS() {
     cout << "flopsAboveAvg:\n";
     for(auto& level : flopsAboveAvg)
       cout << level.first << " : " << level.second << "\n";
+
+    analyzeForCriteria();
   }
 #endif
 
@@ -331,7 +408,7 @@ void Analyzer::printLevelTable() {
 void Analyzer::printLevelSizes(){
   cout << "num. of levels:, " << levelTable.size() << "\n";
   if(matrixCSC != nullptr) {
-    for(auto& level : levelTable)
+   for(auto& level : levelTable)
       cout << level.size() << "\n";
   } else {
     printf("Wrong format while printing level table.\n");
@@ -373,8 +450,9 @@ void Analyzer::printValues() {
 
 void Analyzer::printFLOPSPerLevel() {
   cout << "\ntotal cost:, " << totalFLOPSPerLevel << "\n";
-  cout << "avg. cost per level:, " << avgFLOPSPerLevel << "\n";
+  cout << "avg. cost per level:, " << ALC << "\n";
   cout << "cost(FLOPS) per Level:\n";
+
   for(auto& level : flopsPerLevel)
     cout << level << "\n";
   cout << "\n";

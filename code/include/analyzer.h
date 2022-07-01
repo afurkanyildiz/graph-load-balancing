@@ -32,12 +32,22 @@ class Analyzer {
     vector< vector<double>> values;
     int numOfLevels;
     bool singleLoopRows;  // if at least 2 rows exist with nnzs > 10 in a level, loops will be merged, CSR loop will be used
+    // Criteria for rewriting
     // 2*nnzs-rows FLOPS in total
-    double avgFLOPSPerLevel;
     double totalFLOPSPerLevel;
     vector<int> flopsPerLevel;
     map<int,double> flopsBelowAvg;
     map<int,double> flopsAboveAvg;
+    
+    // ALC: avg. Level Cost
+    // AIR: avg. indegrees(parents/dependencies) per row
+    // ARL: avg. # of rows per level for flopsBelowAvg
+    // MMAD: max. memory access distance of a row
+    // MID: max. indegree distance (I'm curious)
+    float ALC, AIR, ARL;
+    int MMAD, MID;
+
+
     #ifdef REWRITE_ENABLED
       // levels to avoid altering levelTable by rewriting while traversing it.
       vector<int> flopsPerLevelRewrite;
@@ -69,9 +79,19 @@ class Analyzer {
     vector< vector<int>>& getLevelTable();
     vector< vector<double>>& getValues();
     vector<int>& getFlopsPerLevel();
+    void setFlopsPerLevel(vector<int>& levelCost);
     map<int,double>& getFlopsBelowAvg();
     map<int,double>& getFlopsAboveAvg();
-    double getAvgFLOPSPerLevel();
+
+    float getALC();
+    float getAIR();
+    float getARL();
+    int getMMAD();
+    int getMID();
+
+    // compute AIR & ARL & MMAD & MID (ALC is calculated in calculateFLOPS)
+    void analyzeForCriteria();
+
     void separateRows(int levelNum, int rowStartIndex, int rowEndIndex, vector<int>& loopedRows, vector<int>& unrolledRows);
 
     #ifdef REWRITE_ENABLED
