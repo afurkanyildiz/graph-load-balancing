@@ -54,6 +54,12 @@ map<int,double>& Analyzer::getFlopsAboveAvg() {
   return ref;
 }
 
+map<int,int>& Analyzer::getLevelSizeBelowAvg() {
+  map<int,int>& ref = levelSizeBelowAvg;
+
+  return ref;
+}
+
 bool Analyzer::getSingleLoopRows() {
   return singleLoopRows;
 }
@@ -368,6 +374,10 @@ void Analyzer::analyzeForCriteria() {
     for(auto& level : flopsAboveAvg)
       cout << level.first << " : " << level.second << "\n";
 
+    // get # of rows for levels with flopsBelowAvg
+    for(auto& level: flopsBelowAvg)
+      levelSizeBelowAvg[level.first] = levelTable[level.first].size();
+
     analyzeForCriteria();
   }
 #endif
@@ -412,6 +422,16 @@ void Analyzer::printLevelSizes(){
       cout << level.size() << "\n";
   } else {
     printf("Wrong format while printing level table.\n");
+  }
+}
+
+void Analyzer::printThinLevelSizes(){
+  cout << "num. of thin levels:, " << levelSizeBelowAvg.size() << "\n";
+  if(matrixCSC != nullptr) {
+    for(auto& level : levelSizeBelowAvg)
+      cout << level.first << ", " << level.second << "\n";
+  } else {
+    printf("Wrong format while printing thin levels.\n");
   }
 }
 
@@ -461,6 +481,7 @@ void Analyzer::printFLOPSPerLevel() {
 void Analyzer::report(string reportStep) {
   cout << "REPORT:, " << reportStep << "\n";
   printLevelSizes();
+  printThinLevelSizes();
   printFLOPSPerLevel();
   cout << "REPORT:, " << reportStep << "\n\n";
 }

@@ -38,6 +38,7 @@ class Analyzer {
     vector<int> flopsPerLevel;
     map<int,double> flopsBelowAvg;
     map<int,double> flopsAboveAvg;
+    map<int,int> levelSizeBelowAvg;
     
     // ALC: avg. Level Cost
     // AIR: avg. indegrees(parents/dependencies) per row
@@ -82,6 +83,7 @@ class Analyzer {
     void setFlopsPerLevel(vector<int>& levelCost);
     map<int,double>& getFlopsBelowAvg();
     map<int,double>& getFlopsAboveAvg();
+    map<int,int>& getLevelSizeBelowAvg();
 
     float getALC();
     float getAIR();
@@ -111,6 +113,7 @@ class Analyzer {
     void printLevels();
     void printLevelTable();
     void printLevelSizes();
+    void printThinLevelSizes();
     void printDAG();
     void printValues();
     void printFLOPSPerLevel();

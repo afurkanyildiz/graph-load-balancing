@@ -427,8 +427,7 @@ class RewriteByCostMap : public RewritingStrategy {
        // copy the contents so that we can work on it
        levelCost = analyzer->getFlopsPerLevel();
 
-       analyzer->calculateLevelsToBeRewritten();
-//       analyzer->analyzeForCriteria();
+//       analyzer->calculateLevelsToBeRewritten();
 
        this->avgCostPerLevel = analyzer->getALC();
        this->flopsBelowAvg = analyzer->getFlopsBelowAvg();
@@ -582,27 +581,24 @@ class RewriteByThreeCriteria : public RewritingStrategy {
       RewriteByThreeCriteria(int rows, StartPoint startPoint, Analyzer* analyzer) :
                       RewritingStrategy(rows, startPoint, analyzer) {
           levelCost = analyzer->getFlopsPerLevel();
-          analyzer->calculateLevelsToBeRewritten();
+//          analyzer->calculateLevelsToBeRewritten();
           this->flopsBelowAvg = analyzer->getFlopsBelowAvg();
 
           this->avgCostPerLevel = analyzer->getALC();
           this->avgIndegreePerRow = analyzer->getAIR();
           this->avgLevelSize = analyzer->getARL();
+          this->levelSizeBelowAvg = analyzer->getLevelSizeBelowAvg();
 
-          // get # of rows for levels with flopsBelowAvg
+/*          // get # of rows for levels with flopsBelowAvg
           for(auto& level: flopsBelowAvg)
-            levelSizeBelowAvg[level.first] = levelTable[level.first].size();
+            levelSizeBelowAvg[level.first] = levelTable[level.first].size();*/
 
           policy();
-
-          /*cout << "num. of rewritten rows: " << toBeRewritten.size() << "\n";
-          printRowsToBeRewritten();*/
 
           analyzer->setFlopsPerLevel(levelCost);
       }
 
       void policy() {
-        //Rewrite(avgLevelSize, avgCostPerLevel, avgIndegreePerRow);
         Rewrite();
       }
 
@@ -659,8 +655,8 @@ void Rewrite() {
 
        if(levelCost[maxLevel]+costRow < avgCostPerLevel) {
          // relaxing the indegree constraint with rewriting distance == 1
- //      if((parents.size() <= avgIndegreePerRow) || (it->first - maxLevel == 1)) {
-         if(parents.size() <= avgIndegreePerRow) {
+       if((parents.size() <= avgIndegreePerRow) || (it->first - maxLevel == 1)) {
+ //        if(parents.size() <= avgIndegreePerRow) {
             rewriteCount++;
 
 
