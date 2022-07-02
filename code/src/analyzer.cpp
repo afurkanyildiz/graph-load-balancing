@@ -42,6 +42,10 @@ void Analyzer::setFlopsPerLevel(vector<int>& levelCost) {
   flopsPerLevel = levelCost;
 }
 
+void Analyzer::setLevelSizeBelowAvg(map<int,int>& levelSizeBelowAvg) {
+  this->levelSizeBelowAvg = levelSizeBelowAvg;
+}
+
 map<int,double>& Analyzer::getFlopsBelowAvg() {
   map<int,double>& ref = flopsBelowAvg;
 
@@ -429,7 +433,7 @@ void Analyzer::printThinLevelSizes(){
   cout << "num. of thin levels:, " << levelSizeBelowAvg.size() << "\n";
   if(matrixCSC != nullptr) {
     for(auto& level : levelSizeBelowAvg)
-      cout << level.first << ", " << level.second << "\n";
+      cout << level.second << "\n";
   } else {
     printf("Wrong format while printing thin levels.\n");
   }

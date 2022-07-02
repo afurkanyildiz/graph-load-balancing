@@ -596,11 +596,13 @@ class RewriteByThreeCriteria : public RewritingStrategy {
           policy();
 
           analyzer->setFlopsPerLevel(levelCost);
+          analyzer->setLevelSizeBelowAvg(levelSizeBelowAvg);
       }
 
       void policy() {
         Rewrite();
       }
+
 
 void Rewrite() {
     /*// to recalculate AIR, keep the sum

@@ -84,6 +84,7 @@ class Analyzer {
     map<int,double>& getFlopsBelowAvg();
     map<int,double>& getFlopsAboveAvg();
     map<int,int>& getLevelSizeBelowAvg();
+    void setLevelSizeBelowAvg(map<int,int>& levelSizeBelowAvg);
 
     float getALC();
     float getAIR();
