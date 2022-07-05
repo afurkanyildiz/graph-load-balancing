@@ -45,14 +45,15 @@ int main(int argc, char *argv[]) {
 //  analyzer->printValues();
 //  analyzer->printLevels();
   analyzer->calculateFLOPS();
+  analyzer->calculateLevelsToBeRewritten();
   analyzer->report(string ("BEFORE"));
 
   #ifdef REWRITE_ENABLED
     //analyzer->printDependencies();
 
-    RewriteByCostMap* rewritingStrategy = new RewriteByCostMap(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, analyzer);
+//    RewriteByCostMap* rewritingStrategy = new RewriteByCostMap(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, analyzer);
 
-    //RewriteByThreeCriteria* rewritingStrategy = new RewriteByThreeCriteria(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, analyzer);
+    RewriteByThreeCriteria* rewritingStrategy = new RewriteByThreeCriteria(matrixCSR->getL()->getRows() - 1, StartPoint::BottomUp, analyzer);
 
     rewritingStrategy->shiftRowsUp();
     vector<int> emptyLevels;
@@ -70,7 +71,7 @@ int main(int argc, char *argv[]) {
     Rewrite rewriter(matrixCSR, matrixCSC, std::string(matrixCSR->getUF_matrix()->name), analyzer);
   #endif
 
-//  rewriter.rewrite();
+  rewriter.rewrite();
    
   #ifdef REWRITE_ENABLED
 //    rewritingStrategy->printRowsToBeRewritten();
